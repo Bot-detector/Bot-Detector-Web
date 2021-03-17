@@ -24,11 +24,18 @@
     <v-main>
       <Home/>
     </v-main>
+
+    <v-footer>
+      Only one keyboard was destroyed in the making of this site.
+      <v-spacer></v-spacer>
+      Active Installs: {{activeInstalls}}
+    </v-footer>
   </v-app>
 </template>
 
 <script>
 import Home from './components/Home';
+import axios from 'axios';
 
 export default {
   name: 'App',
@@ -38,7 +45,12 @@ export default {
   },
 
   data: () => ({
-    //
+    activeInstalls: 0,
   }),
+  mounted () {
+    axios
+      .get('https://api.runelite.net/runelite-1.7.2.2/pluginhub')
+      .then(response => this.activeInstalls = response.data["bot-detector"])
+  }
 };
 </script>
