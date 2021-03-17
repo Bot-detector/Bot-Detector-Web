@@ -1,4 +1,4 @@
-# bot-detect-web
+# Bot-Detect-Web
 
 ## Project setup
 ```
