@@ -48,9 +48,14 @@ export default {
     activeInstalls: 0,
   }),
   mounted () {
-    axios
+   this.getActiveInstalls()
+  },
+  methods: {
+    getActiveInstalls: function() {
+       axios
       .get('https://api.runelite.net/runelite-1.7.2.2/pluginhub')
       .then(response => this.activeInstalls = response.data["bot-detector"])
+    },
   }
 };
 </script>
