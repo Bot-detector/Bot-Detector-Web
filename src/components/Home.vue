@@ -16,7 +16,7 @@
         </h1>
 
         <p class="subheading font-weight-regular">
-          Bot-Detector is an open-source plugin for use with the popular 
+          Bot-Detector is an open-source plugin built for use with the popular 
           <a herf="https://runelite.net/">
           RuneLite Client
           </a>
@@ -31,14 +31,39 @@
           By using this plugin you allow us to gather data about accounts actively logged into the game around you which we then analyze for botting characteristics. <br/>
           To learn more about the data we collect and how we utilize it, please visit our FAQ page. You also may click here to contact us.
         </p>
-        
-        <p>
-          Total players analyzed: <span style="font-weight: 900; color: #ffd700;">{{totalPlayers}} </span>
-          <br/>
-          Bots confirmed banned so far: <span style="font-weight: 900; color: #ffd700;">{{totalBans}} </span>
-          <br/>
-          And more to come!
-        </p>
+
+        <v-simple-table class="table" id="reports-stats" dense :dark="true">
+          <template v-slot:default>
+            <thead>
+              <tr>
+                <th class="text-left"></th>
+                <th class="text-left"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Total Players Analyzed</td>
+                <td>{{ totalPlayers }}</td>
+              </tr>
+              <tr>
+                <td>Total Reports Submitted</td>
+                <td>{{ totalReports }}</td>
+              </tr>
+              <tr>
+                <td>Total Confirmed Bans</td>
+                <td>{{ totalBans }}</td>
+              </tr>
+              <tr>
+                <td>Total False Reports</td>
+                <td>{{ totalFalseReports }}</td>
+              </tr>
+              <tr>
+                <td>Report Accuracy</td>
+                <td>{{ reportAccuracy * 100 }}%</td>
+              </tr>
+          </tbody>
+          </template>
+        </v-simple-table>
       </v-col>
 
       <v-col
@@ -81,16 +106,26 @@
     data: () => ({
       totalBans: 0,
       totalPlayers: 0,
+      totalReports:0,
+      totalFalseReports: 0,
+      reportAccuracy: 0,
     }),
     mounted () {
       this.getTotalBans(),
       this.getTotalPlayers()
     },
     methods: {
+      setBanStats: function(response) {
+        console.log(response.data)
+        this.totalBans = response.data["bans"];
+        this.totalReports = response.data["total_reports"]
+        this.totalFalseReports = response.data["false_reports"]
+        this.reportAccuracy = response.data["accuracy"]
+      },
       getTotalBans: function() {
         axios
-        .get('http://osrsbot-detector.ddns.net:5000/site/dashboard/gettotalbans')
-        .then(response => this.totalBans = response.data.bans)
+        .get('http://osrsbot-detector.ddns.net:5000/site/dashboard/getreportsstats')
+        .then(response => this.setBanStats(response))
       },
       getTotalPlayers: function() {
         axios
