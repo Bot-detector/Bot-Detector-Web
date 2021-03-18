@@ -42,15 +42,15 @@
             </thead>
             <tbody>
               <tr>
-                <td class="text-left">Total Players Analyzed</td>
+                <td class="text-left">Players Analyzed</td>
                 <td class="text-right">{{ totalPlayers }}</td>
               </tr>
               <tr>
-                <td class="text-left">Total Reports Submitted</td>
+                <td class="text-left">Reports Submitted</td>
                 <td class="text-right">{{ totalReports }}</td>
               </tr>
               <tr>
-                <td class="text-left">Total Confirmed Bans</td>
+                <td class="text-left">Confirmed Bans</td>
                 <td class="text-right">{{ totalBans }}</td>
               </tr>
               <tr>
