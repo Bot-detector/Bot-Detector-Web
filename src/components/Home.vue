@@ -36,30 +36,30 @@
           <template v-slot:default>
             <thead>
               <tr>
-                <th class="text-left"></th>
+                <th class="">Project Stats</th>
                 <th class="text-left"></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Total Players Analyzed</td>
-                <td>{{ totalPlayers }}</td>
+                <td class="text-left">Total Players Analyzed</td>
+                <td class="text-right">{{ totalPlayers }}</td>
               </tr>
               <tr>
-                <td>Total Reports Submitted</td>
-                <td>{{ totalReports }}</td>
+                <td class="text-left">Total Reports Submitted</td>
+                <td class="text-right">{{ totalReports }}</td>
               </tr>
               <tr>
-                <td>Total Confirmed Bans</td>
-                <td>{{ totalBans }}</td>
+                <td class="text-left">Total Confirmed Bans</td>
+                <td class="text-right">{{ totalBans }}</td>
               </tr>
               <tr>
-                <td>Total False Reports</td>
-                <td>{{ totalFalseReports }}</td>
+                <td class="text-left">Total False Reports</td>
+                <td class="text-right">{{ totalFalseReports }}</td>
               </tr>
               <tr>
-                <td>Report Accuracy</td>
-                <td>{{ reportAccuracy * 100 }}%</td>
+                <td class="text-left">Report Accuracy</td>
+                <td class="text-right">{{ reportAccuracy * 100 }}%</td>
               </tr>
           </tbody>
           </template>
@@ -135,3 +135,12 @@
     }
   }
 </script>
+
+<style scoped>
+
+  #reports-stats {
+    margin: auto;
+    width: fit-content; 
+  }
+
+</style>
