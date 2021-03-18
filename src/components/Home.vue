@@ -54,10 +54,6 @@
                 <td class="text-right">{{ totalBans }}</td>
               </tr>
               <tr>
-                <td class="text-left">Total False Reports</td>
-                <td class="text-right">{{ totalFalseReports }}</td>
-              </tr>
-              <tr>
                 <td class="text-left">Report Accuracy</td>
                 <td class="text-right">{{ reportAccuracy * 100 }}%</td>
               </tr>
@@ -107,7 +103,6 @@
       totalBans: 0,
       totalPlayers: 0,
       totalReports:0,
-      totalFalseReports: 0,
       reportAccuracy: 0,
     }),
     mounted () {
@@ -119,7 +114,6 @@
         console.log(response.data)
         this.totalBans = response.data["bans"];
         this.totalReports = response.data["total_reports"]
-        this.totalFalseReports = response.data["false_reports"]
         this.reportAccuracy = response.data["accuracy"]
       },
       getTotalBans: function() {
