@@ -3,7 +3,7 @@
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
-          :src="require('../assets/logo.png')"
+          :src="require('../assets/meme.png')"
           class="my-3"
           contain
           height="200"
@@ -29,7 +29,7 @@
         <p class="subheading font-weight-regular">
           Our primary purpose is to use machine learning techniques to automatically identify likely bot accounts and alert Jagex moderators of their presence. <br/>
           By using this plugin you allow us to gather data about accounts actively logged into the game around you which we then analyze for botting characteristics. <br/>
-          To learn more about the data we collect and how we utilize it, please visit our FAQ page. You also may click here to contact us.
+          To learn more about the data we collect and how we utilize it, please visit our <a href="https://github.com/Ferrariic/Bot-Detector-Core-Files#readme">FAQs</a> page.
         </p>
 
         <v-simple-table class="table" id="reports-stats" dense :dark="true">
@@ -55,37 +55,20 @@
               </tr>
               <tr>
                 <td class="text-left">Report Accuracy</td>
-                <td class="text-right">{{ reportAccuracy * 100 }}%</td>
+                <td class="text-right">{{ (reportAccuracy * 100).toFixed(2) }}%</td>
               </tr>
           </tbody>
           </template>
         </v-simple-table>
       </v-col>
 
+
       <v-col
         class="mb-5"
         cols="12"
       >
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-        </h2>
-
-        <v-row justify="center">
-        </v-row>
-          
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-
-      </v-col>
     </v-row>
   </v-container>
 </template>
