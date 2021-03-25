@@ -18,7 +18,7 @@
 
           <router-link class="overline" to="/">Home</router-link> |
           <router-link class="overline" to="/form">Bot Submissions</router-link> |
-          <a href="https://github.com/Ferrariic/Bot-Detector-Core-Files#readme">FAQs</a>
+          <a class="overline" href="https://github.com/Ferrariic/Bot-Detector-Core-Files#readme">FAQs</a>
 
        </div>
 
