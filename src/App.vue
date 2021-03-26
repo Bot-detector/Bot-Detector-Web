@@ -103,6 +103,7 @@
     </v-main>
 
     <v-footer class="footer subtitle-2">
+      <v-icon>mdi-heart</v-icon>
       The Bot Detector Team
       <v-spacer></v-spacer>
       Active Installs: {{activeInstalls}}
