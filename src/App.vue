@@ -5,26 +5,77 @@
       color="#252e34"
       dark
     >
+
       <img
           :src="require('./assets/logo-sm.png')"
       />
-      <div class="d-flex align-center">
-          <h1>Bot-Detector</h1>
+      <div class="d-flex align-center ">
+          <h1 class="hidden-sm-and-down">Bot-Detector</h1>
+          <h3 class="hidden-md-and-up"> Bot-Detector</h3>
       </div>
+
+
+
 
       <v-spacer></v-spacer>
 
-      <div id="nav">
 
-          <router-link class="overline" to="/">Home</router-link> |
-          <router-link class="overline" to="/form">Bot Submissions</router-link> |
-          <a class="overline" href="https://github.com/Ferrariic/Bot-Detector-Core-Files#readme">FAQs</a>
+      <div id="desktop-nav" class="hidden-sm-and-down">
 
+          <router-link class="overline centered" to="/">Home</router-link> |
+          <router-link class="overline centered" to="/form">Bot Submissions</router-link> |
+          <a class="overline centered" href="https://github.com/Ferrariic/Bot-Detector-Core-Files#readme">FAQs</a>
+
+       </div>
+
+       <div class="hidden-md-and-up mobile-nav">
+         <v-menu
+            bottom
+            left
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                dark
+                icon
+                v-bind="attrs"
+                v-on="on"
+              >
+                <v-icon>mdi-menu</v-icon>
+              </v-btn>
+            </template>
+
+            <v-list>
+              <v-list-item
+                v-for="(link, i) in routerLinks"
+                :key="i"
+                :to="link.url"
+              >
+                <v-icon>{{link.icon}}</v-icon>
+                <v-list-item-title>{{ link.title }}</v-list-item-title>
+              </v-list-item>
+
+              <!-- TODO Figure Out How To Have Router Links and Non-Router Links in Same List -->
+
+              <v-list-item href="https://github.com/Ferrariic/Bot-Detector-Core-Files#readme" target="_blank">
+                <v-icon>mdi-help</v-icon>
+                <v-list-item-title>FAQ</v-list-item-title>
+              </v-list-item>
+              <v-list-item href="https://github.com/Ferrariic/bot-detector" target="_blank">
+                <v-icon>mdi-github</v-icon>
+                <v-list-item-title>Github</v-list-item-title>
+              </v-list-item>
+              <v-list-item href="https://www.patreon.com/bot_detector" target="_blank">
+                <v-icon>mdi-patreon</v-icon>
+                <v-list-item-title>Patreon</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
        </div>
 
 
       <v-spacer></v-spacer>
 
+      <div id="external-links" class="hidden-sm-and-down">
       <v-btn
         href="https://github.com/Ferrariic/bot-detector"
         target="_blank"
@@ -42,8 +93,8 @@
         <span class="mr-2">Patreon</span>
         <v-icon>mdi-patreon</v-icon>
       </v-btn>
+      </div>
     </v-app-bar>
-
 
     <v-main>
 
@@ -51,8 +102,8 @@
 
     </v-main>
 
-    <v-footer class="footer">
-      Only&nbsp;&nbsp;<strike>one</strike>&nbsp;&nbsp;two keyboards were destroyed in the making of this site.
+    <v-footer class="footer subtitle-2">
+      The Bot Detector Team
       <v-spacer></v-spacer>
       Active Installs: {{activeInstalls}}
     </v-footer>
@@ -67,6 +118,14 @@ export default {
   },
   data: () => ({
     activeInstalls: 0,
+    routerLinks: [
+      { title: 'Home',
+        url:    '/',
+        icon: 'mdi-home' },
+      { title: 'Submit Bots',
+        url:    '/form',
+        icon: 'mdi-send' },
+    ],
   }),
   mounted () {
    this.getActiveInstalls()
@@ -82,6 +141,10 @@ export default {
 </script>
 
 <style>
+  i {
+    padding-right: 3px;
+  }
+
   .footer {
     position:fixed !important;
     bottom:0;
@@ -89,4 +152,14 @@ export default {
     right:0;
     height:30px;
   }
+
+  .centered {
+    text-align: center;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    right: 0;
+  }
+
 </style>
