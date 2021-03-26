@@ -15,9 +15,10 @@
         <v-text-field
           v-model="label"
           label="Label"
+          @blur="$v.label.$touch()"
         ></v-text-field>
 
-        <div class="error" v-if="$v.label.$dirty ?!$v.label.isValidLabel: null">Label must be an integer.</div>
+        <div class="error" v-if="$v.label.$dirty ? !$v.label.isValidLabel: null">Label must be an integer.</div>
 
         <v-textarea
           clearable
