@@ -6,17 +6,18 @@
         <v-text-field
           v-model="token"
           label="Token"
+          @blur="$v.token.$touch()"
           required
         ></v-text-field>
 
-        <div class="error" v-if="!$v.token.required">You must provide an authorization token.</div>
+        <div class="error" v-if="$v.token.$dirty ? !$v.token.required: null">You must provide an authorization token.</div>
 
         <v-text-field
           v-model="label"
           label="Label"
         ></v-text-field>
 
-        <div class="error" v-if="!$v.label.isValidLabel">Label must be an integer.</div>
+        <div class="error" v-if="$v.label.$dirty ?!$v.label.isValidLabel: null">Label must be an integer.</div>
 
         <v-textarea
           clearable
@@ -39,7 +40,7 @@
           ></v-radio>
           </v-radio-group>
 
-          <div class="error" v-if="!$v.areBots.valid">Please select whether or not the above players are bots.</div>
+          <div class="error" v-if="!$v.areBots.between">Please select whether or not the above players are bots.</div>
 
           <br />
 
@@ -56,7 +57,6 @@
 
     <br/>
     <v-divider></v-divider>
-
 
   </v-container>
 </template>
@@ -84,21 +84,10 @@
         required
       },
       areBots: {
-        valid () {
-          if(this.players.length > 0) { 
-            between(0,1)
-          }else{
-            return true;
-          }
-          
-        },
+        between: between(0,1)
       },
       label: {
         isValidLabel() {
-          if(this.label < 1) {
-            return true;
-          }
-
           if(this.label.match(/^[0-9]+$/)) {
             return true;
           }else{
@@ -125,23 +114,12 @@
           }
         })      
         .then((response) => {
-          alert(response.data)
-          
+          console.log(response.data)
+          this.clearPlayersBox()
         })
         .catch((error) => {
             alert(error)
         })
-
-
-        /*
-        await new axios({
-          method: 'post',
-          headers: { 'Content-Type': 'application/json' },
-          url: url,
-          data: data
-        }).then(response => (this.resultText = response.data))
-        */
-
       },
       
       packageData: function() {
@@ -170,7 +148,10 @@
 
         return endpoint
 
-      }
+      },
+      clearPlayersBox: function() {
+          this.playersBox = "";
+      },
     }
   }
 </script>
