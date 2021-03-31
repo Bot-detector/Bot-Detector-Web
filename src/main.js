@@ -5,6 +5,7 @@ import vuetify from './plugins/vuetify';
 import axios from './plugins/axios';
 import router from './router'
 import Vuelidate from 'vuelidate'
+import 'leaflet/dist/leaflet.css';
 
 Vue.config.productionTip = false
 

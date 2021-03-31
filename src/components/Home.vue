@@ -67,6 +67,7 @@
         class="mb-5"
         cols="12"
       >
+        <activity-map></activity-map>
       </v-col>
 
     </v-row>
@@ -75,10 +76,14 @@
 
 <script>
   import axios from 'axios';
+  import ActivityMap from './ActivityMap.vue'
 
   export default {
     
     name: 'Home',
+    components: {
+      ActivityMap
+    },
     computed: {
         console: () => console,
     },
@@ -101,12 +106,12 @@
       },
       getTotalBans: function() {
         axios
-        .get('http://osrsbot-detector.ddns.net:5000/site/dashboard/getreportsstats')
+        .get('https://www.osrsbotdetector.com/api/site/dashboard/getreportsstats')
         .then(response => this.setBanStats(response))
       },
       getTotalPlayers: function() {
         axios
-        .get('http://osrsbot-detector.ddns.net:5000/site/dashboard/gettotaltrackedplayers')
+        .get('https://www.osrsbotdetector.com/api/site/dashboard/gettotaltrackedplayers')
         .then(response => this.totalPlayers= response.data.players[0])
       },
     }

@@ -141,7 +141,7 @@
         this.players = this.playersBox.split('\n')
       },
       getEndpoint: function() {
-        var endpoint = "http://osrsbot-detector.ddns.net:5000/site/verify/"
+        var endpoint = "https://www.osrsbotdetector.com/api/site/verify/"
 
         if(this.token.length > 0) {
           endpoint += this.token

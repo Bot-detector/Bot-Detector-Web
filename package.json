@@ -11,9 +11,13 @@
     "@braid/vue-formulate": "^2.5.2",
     "chart.js": "^2.9.4",
     "core-js": "^3.6.5",
+    "leaflet": "^1.7.1",
+    "mapbox-gl": "^0.53.1",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.1",
+    "vue-mapbox": "^0.4.1",
     "vue-router": "^3.2.0",
+    "vue2-leaflet": "^2.7.0",
     "vuelidate": "^0.7.6",
     "vuetify": "^2.4.0"
   },
