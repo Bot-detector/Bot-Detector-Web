@@ -5494,9 +5494,14 @@ launch-editor@^2.2.1:
     chalk "^2.3.0"
     shell-quote "^1.6.1"
 
+leaflet.heat@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/leaflet.heat/-/leaflet.heat-0.2.0.tgz"
+  integrity sha1-EJ2M9Ybwre5B8Fr/Ax4np3/swik=
+
 leaflet@^1.7.1:
   version "1.7.1"
-  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.7.1.tgz#10d684916edfe1bf41d688a3b97127c0322a2a19"
+  resolved "https://registry.npmjs.org/leaflet/-/leaflet-1.7.1.tgz"
   integrity sha512-/xwPEBidtg69Q3HlqPdU3DnrXQOvQU/CCHA1tcDQVzOwm91YMYaILjNp7L4Eaw5Z4sOYdbBz6koWyibppd8Zqw==
 
 levn@^0.3.0, levn@~0.3.0:
@@ -9019,6 +9024,11 @@ vue-eslint-parser@^7.0.0:
     esquery "^1.4.0"
     lodash "^4.17.15"
 
+vue-google-oauth2@^1.5.8:
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/vue-google-oauth2/-/vue-google-oauth2-1.5.8.tgz#9ed963aaafc1e80a276c195499024f369b02d5c8"
+  integrity sha512-mATpPrLjzjAoUwgFC2feEZEhyoFyItPQSdEgX3m+rHI17sXLEdKzcMLmk+8B1obu4J/YVuVRR9A1afs+4VEk0Q==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.npmjs.org/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz"
@@ -9079,7 +9089,7 @@ vue-template-es2015-compiler@^1.9.0:
 
 vue2-leaflet@^2.7.0:
   version "2.7.0"
-  resolved "https://registry.yarnpkg.com/vue2-leaflet/-/vue2-leaflet-2.7.0.tgz#e8a78671b8fa843ab19cfd93582bc166a05ec3ed"
+  resolved "https://registry.npmjs.org/vue2-leaflet/-/vue2-leaflet-2.7.0.tgz"
   integrity sha512-uT7lpFoVEDhINMyTpiAthh6aiKFGHuYWLoVH8JJ0YNNSch+XMZFl4YBQ0S2hHYDquQIsh8zx+yINeUI01y9ugw==
 
 vue@^2.6.11:
@@ -9105,6 +9115,11 @@ vuetify@^2.4.0:
   version "2.4.6"
   resolved "https://registry.npmjs.org/vuetify/-/vuetify-2.4.6.tgz"
   integrity sha512-oqAWKAin07ip/QuT/p4bL1LegE3MYPbfojrOcj80RATZDSnJyco2PZD8QuIzd0RhYfdAuSTkY8elvHsLu90RuQ==
+
+vuex@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.6.2.tgz#236bc086a870c3ae79946f107f16de59d5895e71"
+  integrity sha512-ETW44IqCgBpVomy520DT5jf8n0zoCac+sxWnn+hMe/CzaSejb/eVw2YToiXYX+Ex/AuHHia28vWTq4goAexFbw==
 
 watchpack-chokidar2@^2.0.1:
   version "2.0.1"

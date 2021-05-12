@@ -61,14 +61,6 @@
           </template>
         </v-simple-table>
       </v-col>
-
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-      </v-col>
-
     </v-row>
   </v-container>
 </template>
@@ -89,7 +81,7 @@
       totalBans: 0,
       totalPlayers: 0,
       totalReports:0,
-      reportAccuracy: 0,
+      reportAccuracy: 0
     }),
     mounted () {
       this.getTotalBans(),

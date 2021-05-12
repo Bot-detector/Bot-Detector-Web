@@ -12,13 +12,14 @@
 
         <div class="error" v-if="$v.token.$dirty ? !$v.token.required: null">You must provide an authorization token.</div>
 
-        <v-text-field
-          v-model="label"
-          label="Label"
-          @blur="$v.label.$touch()"
-        ></v-text-field>
-
-        <div class="error" v-if="$v.label.$dirty ? !$v.label.isValidLabel: null">Label must be an integer.</div>
+          <v-select
+            v-model="selectedLabel"
+            :items="labels"
+            label="Label"
+            item-text="label"
+            item-value="id"
+            dense
+          ></v-select>
 
         <v-textarea
           clearable
@@ -58,6 +59,14 @@
 
     <br/>
     <v-divider></v-divider>
+    <v-overlay
+      :opacity="0.5"
+      :value="overlay"
+    >
+      <v-progress-circular indeterminate size="128">
+        Bustin' Bots
+      </v-progress-circular>
+    </v-overlay>
 
   </v-container>
 </template>
@@ -73,11 +82,13 @@
     data: function() {
       return {
         token: "",
-        label: "",
         players: [],
+        labels: [],
         areBots: 0,
         playersBox: [],
         resultText: "",
+        overlay: false,
+        selectedLabel: null
       }
     },
     validations: {
@@ -87,17 +98,10 @@
       areBots: {
         between: between(0,1)
       },
-      label: {
-        isValidLabel() {
-          if(this.label.match(/^[0-9]+$/)) {
-            return true;
-          }else{
-            return false;
-          }
-        }
-      },
     },
     mounted () {
+      this.overlay = false;
+      this.getLabels();
 
     },
     computed: {
@@ -109,6 +113,8 @@
         var url = this.getEndpoint();
         var data = this.packageData();
 
+        this.overlay = true;
+
         await axios.post(url, data, {
           headers: {
             'Content-Type': 'application/json',
@@ -117,6 +123,26 @@
         .then((response) => {
           console.log(response.data)
           this.clearPlayersBox()
+          this.overlay = false;
+        })
+        .catch((error) => {
+            alert(error)
+            this.overlay = false;
+        })
+      },
+      async getLabels () {
+
+        var url = "https://www.osrsbotdetector.com/api/labels/get_player_labels";
+
+        await axios.get(url, {
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        })      
+        .then((response) => {
+          console.log(response.data)
+          this.labels = response.data
+
         })
         .catch((error) => {
             alert(error)
@@ -129,7 +155,7 @@
 
         var data = new Object();
           data.bot = this.areBots;
-          data.label = this.label;
+          data.label = this.selectedLabel;
           data.names = this.players
 
           console.log(JSON.stringify(data));

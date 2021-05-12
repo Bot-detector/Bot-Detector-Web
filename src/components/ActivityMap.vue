@@ -15,14 +15,16 @@
       :zoom="zoom"
       :center="center"
       :options="mapOptions"
-      style="height: 80%"
+      style="height: 100%"
       @update:center="centerUpdate"
       @update:zoom="zoomUpdate"
     >
+      <Vue2LeafletHeatmap :lat-lng="latlngs" :radius="60" :min-opacity=".75" :max-zoom="11" :blur="60"></Vue2LeafletHeatmap>
       <l-tile-layer
         :url="url"
         :attribution="attribution"
       />
+      
       <l-marker :lat-lng="withPopup">
         <l-popup>
           <div @click="innerClick">
@@ -54,6 +56,7 @@
 <script>
   import { latLng } from "leaflet";
   import { LMap, LTileLayer, LMarker, LPopup, LTooltip } from 'vue2-leaflet';
+  import Vue2LeafletHeatmap from "./vue2-leaflet-heatmap.vue"
 
   export default {
     
@@ -63,25 +66,27 @@
         LTileLayer,
         LMarker,
         LPopup,
-        LTooltip
+        LTooltip,
+        Vue2LeafletHeatmap
     },
     computed: {
         console: () => console,
     },
     data: () => ({
-      zoom: 7,
-      center: latLng(-79, -137),
+      zoom: 11,
+      center: latLng(3170, 3489),
       url: 'https://raw.githubusercontent.com/Explv/osrs_map_tiles/master/0/{z}/{x}/{y}.png',
       attribution:
         'Test',
-      withPopup: latLng(-79, -137),
-      withTooltip: latLng(-79, -137),
+      withPopup: latLng(3170, 3489),
+      withTooltip: latLng(3170, 3489),
       currentZoom: 7,
-      currentCenter: latLng(-79, -137),
+      currentCenter: latLng(3170, 3489),
       showParagraph: false,
       mapOptions: {
-        zoomSnap: 0.5
+        zoomSnap: 0.5,
       },
+
       showMap: true
     }),
     mounted () {
