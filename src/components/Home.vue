@@ -46,16 +46,12 @@
                 <td class="text-right">{{ totalPlayers }}</td>
               </tr>
               <tr>
-                <td class="text-left">Reports Submitted</td>
-                <td class="text-right">{{ totalReports }}</td>
+                <td class="text-left">Confirmed Real Players</td>
+                <td class="text-right">{{ totalReports - totalBans }}</td>
               </tr>
               <tr>
                 <td class="text-left">Confirmed Bans</td>
                 <td class="text-right">{{ totalBans }}</td>
-              </tr>
-              <tr>
-                <td class="text-left">Report Accuracy</td>
-                <td class="text-right">{{ (reportAccuracy * 100).toFixed(2) }}%</td>
               </tr>
           </tbody>
           </template>

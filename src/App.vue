@@ -148,7 +148,7 @@ export default {
   methods: {
     getActiveInstalls: function() {
        axios
-      .get('https://api.runelite.net/runelite-1.7.6/pluginhub')
+      .get('https://api.runelite.net/runelite-1.7.10/pluginhub')
       .then(response => this.activeInstalls = response.data["bot-detector"])
     },
         async handleClickUpdateScope() {
