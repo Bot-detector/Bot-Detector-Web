@@ -6,6 +6,7 @@ Vue.use(VueRouter)
 const routerOptions = [
   { path: "/", component: "Home" },
   { path: "/form", component: "BotSubmit" },
+  { path: "/dashboard", component: "Dashboard"},
   { path: "*", component: "NotFound" }
 ];
 

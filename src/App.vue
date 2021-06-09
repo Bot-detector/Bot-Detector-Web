@@ -1,8 +1,5 @@
 <template>
   <v-app>
-
-    <sidebar></sidebar>
-
     <v-app-bar
       app
       color="#252e34"
@@ -24,7 +21,7 @@
 
           <router-link class="overline centered" to="/">Home</router-link> |
           <router-link class="overline centered" to="/form">Bot Submissions</router-link> |
-          <router-link class="overline centered" to="/hiscores">Hiscores</router-link> |
+          <router-link class="overline centered" to="/dashboard">Dashboard</router-link> |
           <a class="overline centered" href="https://github.com/Ferrariic/Bot-Detector-Core-Files#readme">FAQs</a>
 
        </div>
@@ -129,6 +126,9 @@ export default {
       { title: 'Submit Bots',
         url:    '/form',
         icon: 'mdi-send' },
+      { title: 'Dashboard',
+        url:    '/dashboard',
+        icon: 'mdi-view-dashboard' },
     ],
   }),
   mounted () {
