@@ -147,7 +147,6 @@ export default {
       .then(response => this.activeInstalls = response.data["bot-detector"])
     }
   }
-  
 };
 </script>
 
