@@ -122,6 +122,7 @@ export default {
   },
   data: () => ({
     activeInstalls: 0,
+    runeLiteVersion: null,
     routerLinks: [
       { title: 'Home',
         url:    '/',
@@ -135,9 +136,14 @@ export default {
    this.getActiveInstalls()
   },
   methods: {
-    getActiveInstalls: function() {
-       axios
-      .get('https://api.runelite.net/runelite-1.7.11.1/pluginhub')
+    getActiveInstalls: async function() {
+
+      await axios
+            .get('https://static.runelite.net/bootstrap.json')
+            .then(response => this.runeLiteVersion = response.data["client"]["version"])
+      
+      axios
+      .get('https://api.runelite.net/runelite-' + this.runeLiteVersion + '/pluginhub')
       .then(response => this.activeInstalls = response.data["bot-detector"])
     }
   }
