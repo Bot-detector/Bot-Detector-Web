@@ -15,6 +15,9 @@ jobs:
     - name: Install Project Requirements
       run: yarn install
 
+    - name: Update caniuse-lite
+      run: npx browserslist@latest --update-db
+
     - name: Build Vue Production Deployment
       run: yarn build
 
