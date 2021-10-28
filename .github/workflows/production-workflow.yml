@@ -12,6 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Install Project Requirements
+      run: yarn install
+
     - name: Build Vue Production Deployment
       run: yarn build
 
