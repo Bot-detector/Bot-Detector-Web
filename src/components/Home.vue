@@ -43,15 +43,15 @@
             <tbody>
               <tr>
                 <td class="text-left">Accounts Analyzed</td>
-                <td class="text-right">{{ totalAccounts }}</td>
+                <td class="text-right">{{ totalAccounts.toLocaleString() }}</td>
               </tr>
               <tr>
                 <td class="text-left">Confirmed Real Players</td>
-                <td class="text-right">{{ totalPlayers }}</td>
+                <td class="text-right">{{ totalPlayers.toLocaleString() }}</td>
               </tr>
               <tr>
                 <td class="text-left">Confirmed Bans</td>
-                <td class="text-right">{{ totalBans }}</td>
+                <td class="text-right">{{ totalBans.toLocaleString() }}</td>
               </tr>
           </tbody>
           </template>
