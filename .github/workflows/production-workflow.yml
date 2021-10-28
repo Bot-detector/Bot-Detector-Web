@@ -5,7 +5,7 @@ on:
 
 jobs:
 
-  build:
+  vue-build:
 
     runs-on: self-hosted
 
@@ -15,12 +15,6 @@ jobs:
     - name: Install Project Requirements
       run: yarn install
 
-    - name: Make Sure caniuse-lite is Installed
-      run:  npm install caniuse-lite
-
-    - name: Update caniuse-lite
-      run: npx browserslist@latest --update-db
-
     - name: Build Vue Production Deployment
       run: yarn build
 
@@ -28,7 +22,7 @@ jobs:
   docker:
 
     runs-on: self-hosted
-    needs: [build]
+    needs: [vue-build]
 
     steps:
 
