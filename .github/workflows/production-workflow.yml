@@ -15,6 +15,9 @@ jobs:
     - name: Install Project Requirements
       run: yarn install
 
+    - name: Make Sure caniuse-lite is Installed
+      run:  npm install caniuse-lite
+
     - name: Update caniuse-lite
       run: npx browserslist@latest --update-db
 
