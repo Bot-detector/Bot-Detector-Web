@@ -42,12 +42,12 @@
             </thead>
             <tbody>
               <tr>
-                <td class="text-left">Players Analyzed</td>
-                <td class="text-right">{{ totalPlayers }}</td>
+                <td class="text-left">Accounts Analyzed</td>
+                <td class="text-right">{{ totalAccounts }}</td>
               </tr>
               <tr>
                 <td class="text-left">Confirmed Real Players</td>
-                <td class="text-right">{{ totalReports - totalBans }}</td>
+                <td class="text-right">{{ totalPlayers }}</td>
               </tr>
               <tr>
                 <td class="text-left">Confirmed Bans</td>
@@ -76,29 +76,22 @@
     data: () => ({
       totalBans: 0,
       totalPlayers: 0,
-      totalReports:0,
-      reportAccuracy: 0
+      totalAccounts:0
     }),
     mounted () {
-      this.getTotalBans(),
-      this.getTotalPlayers()
+      this.getProjectStats()
     },
     methods: {
       setBanStats: function(response) {
         console.log(response.data)
-        this.totalBans = response.data["bans"];
-        this.totalReports = response.data["total_reports"]
-        this.reportAccuracy = response.data["accuracy"]
+        this.totalBans = response.data["total_bans"];
+        this.totalAccounts = response.data["total_accounts"];
+        this.totalPlayers= response.data["total_real_players"]
       },
-      getTotalBans: function() {
+      getProjectStats: function() {
         axios
-        .get('https://www.osrsbotdetector.com/api/site/dashboard/getreportsstats')
+        .get('https://www.osrsbotdetector.com/api/site/dashboard/projectstats')
         .then(response => this.setBanStats(response))
-      },
-      getTotalPlayers: function() {
-        axios
-        .get('https://www.osrsbotdetector.com/api/site/dashboard/gettotaltrackedplayers')
-        .then(response => this.totalPlayers= response.data.players[0])
       },
     }
   }
