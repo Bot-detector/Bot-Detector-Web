@@ -20,15 +20,6 @@
 
       <v-spacer></v-spacer>
 
-      <div id="desktop-nav" class="hidden-sm-and-down">
-
-          <router-link class="overline centered" to="/">Home</router-link> |
-          <router-link class="overline centered" to="/form">Bot Submissions</router-link> |
-          <router-link class="overline centered" to="/hiscores">Hiscores</router-link> |
-          <a class="overline centered" href="https://github.com/Ferrariic/Bot-Detector-Core-Files#readme">FAQs</a>
-
-       </div>
-
        <div class="hidden-md-and-up mobile-nav">
          <v-menu
             bottom
@@ -69,6 +60,10 @@
                 <v-icon>mdi-patreon</v-icon>
                 <v-list-item-title>Patreon</v-list-item-title>
               </v-list-item>
+              <v-list-item href="https://discord.gg/YvVmjyNu">
+                <v-icon>mdi-discord</v-icon>
+                <v-list-item-title>Discord</v-list-item-title>
+              </v-list-item>
             </v-list>
           </v-menu>
        </div>
@@ -93,6 +88,13 @@
       >
         <span class="mr-2">Patreon</span>
         <v-icon>mdi-patreon</v-icon>
+      </v-btn>
+      <v-btn
+        href="https://discord.gg/YvVmjyNu"
+        text
+      >
+        <span class="mr-2">Discord</span>
+        <v-icon>mdi-discord</v-icon>
       </v-btn>
       </div>
     </v-app-bar>
