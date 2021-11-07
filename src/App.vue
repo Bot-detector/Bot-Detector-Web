@@ -64,6 +64,7 @@
                 <v-icon>mdi-discord</v-icon>
                 <v-list-item-title>Discord</v-list-item-title>
               </v-list-item>
+
             </v-list>
           </v-menu>
        </div>
@@ -94,6 +95,14 @@
         text
       >
         <span class="mr-2">Discord</span>
+        <v-icon>mdi-discord</v-icon>
+      </v-btn>
+      <v-btn
+        class="discord-sign-in"
+        href="https://discord.com/api/oauth2/authorize?client_id=825139932817129613&redirect_uri=https%3A%2F%2Fwww.osrsbotdetector.com%2Fdev%2Flogin&response_type=code&scope=identify"
+        text
+      >
+        <span class="mr-2">Sign In</span>
         <v-icon>mdi-discord</v-icon>
       </v-btn>
       </div>
@@ -172,6 +181,12 @@ export default {
   .mobile-nav {
     position: fixed;
     right: 0;
+  }
+
+  .discord-sign-in {
+    color: white;
+    background-color: #5865F2;
+
   }
 
 </style>
