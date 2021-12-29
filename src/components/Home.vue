@@ -1,22 +1,22 @@
 <template>
   <v-container>
       <head>
-        <title>HTML Editor - Full Version</title>
+      <title>Homepage</title>
       </head>
-      <body class="vsc-initialized">
-      <h1 style="text-align: center;"><span style="font-family:tahoma,geneva,sans-serif;">
-        <v-img
-          :src="require('../assets/You_are_here.gif')"
-          contain
-          height="50px"/> 
-          Bot Detector&nbsp;- An Open-Source Machine Learning Plugin</span></h1>
+      <body class="vsc-initialized" style='text-align: center;'>
+        <h1 style="text-align: center;"><span style="font-family:tahoma,geneva,sans-serif;">
+          <v-img
+            :src="require('../assets/You_are_here.gif')"
+            contain
+            height="50px"/> 
+            Bot Detector</span></h1>
+        <h2>An Open-Source Machine Learning Plugin</h2>
       <hr/>
+      </body>
 
       <div style="padding-top: 10px; padding-right: 17%; padding-bottom: 20px; padding-left: 17%">
-        <h3 style="text-align: center;"><span style="font-family:tahoma,geneva,sans-serif;">Who are we?</span></h3>
         <p>
           The Bot Detector Plugin is an open-source community-run machine learning plugin made for <a href="https://www.oldschool.runescape.com/">Old School RuneScape</a> using the popular third-party client <a href="https://runelite.net/">RuneLite</a>.
-          This project was created in response to an ever-growing botting issue in Old School Runescape, and designed make more players aware of how they can help fight the issue of goldfarming and botting by giving the tools of detection to every player.
           We aim to use this plugin and the corresponding machine learning algorithims to seperate players from bots, from a bird's eye view - and send likely bot accounts to Jagex's anti-cheating team for swift removal.
           Since our start on February 28, 2021 - we have analyzed {{totalAccounts.toLocaleString()}} accounts and have logged over {{totalBans.toLocaleString()}} account bans.
           If you wish to join us on <a href='https://discord.gg/YvVmjyNu'>discord</a> or <a href='https://twitter.com/OSRSBotDetector'>twitter</a>, support us on <a href='https://www.patreon.com/bot_detector'>patreon</a> or check out our <a href='https://github.com/Bot-detector/'>github</a> and join the team,
@@ -45,7 +45,11 @@
 
         <div class="row" style="padding-top: 2%; padding-left: 1%; padding-right: 1%">
           <div class="column" style='text-align: left;'>
-              <h3 style="text-align: left;">Contributors</h3>
+              <h2 style="text-align: center;">
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/House.png'>
+                Contributors
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/House.png'>
+              </h2>
               <p>
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Owner.png'> Ferrariic
                 <br>
@@ -57,161 +61,47 @@
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Jmod.png'> Mod Tyran,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Jmod.png'> Mod Twisted
               </p>
-              <h3 style="text-align: left;">Community Moderators</h3>
+
+              <h2 style="text-align: center;">
+                <img style='vertical-align:middle; ' contain height="20px" src='../assets/Clan_icons/Shield.png'>
+                Community Moderators
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Shield.png'>
+              </h2>
+              <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t4.png'> Tier 4</h4>
+              <p style='vertical-align:middle; margin-bottom: 0;'>Lier52</p>
+              <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Tier 3</h4>
+              <p style='vertical-align:middle; margin-bottom: 0;'>Anthony - Some Ranger, ArcaneStars, Candys Skill, Jair, Justproman</p>
+              <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> Tier 2</h4>
+              <p style='vertical-align:middle; margin-bottom: 0;'>7 7 mafia, AlisaWhiteheart, cactus, CreamOfTheCrop, Drew, esc | Keywok, Hydra, LuigiStyl, PigeNug, SoloContent</p>
+              <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t1.png'> Tier 1</h4>
+              <p style='vertical-align:middle; margin-bottom: 10;'>Not Sentry</p>
+
+              <h2 style="vertical-align: top; text-align: center;">
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bank.png'>
+                Patreon Supporters
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bank.png'>
+              </h2>
               <p>
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t4.png'> Lier52,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Anthony - Some Ranger,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> ArcaneStars,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Candys Skill,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Jair,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Justproman,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> 7 7 mafia,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> AlisaWhiteheart,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> cactus,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> CreamOfTheCrop,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> Drew,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> esc | Keywok,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> Hydra,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> LuigiStyl,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> PigeNug,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> SoloContent,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t1.png'> Not Sentry
-              </p>
-              <h3 style="text-align: left;">Patreon Supporters</h3>
-              <p>
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Dragon.png'> DevinDog,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Adamant.png'> Sallysal,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Adamant.png'> Rhikalika,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Mithril.png'> Gottfrid,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Mithril.png'> § Rambo,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Mithril.png'> Ratteo,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Mithril.png'> someranger,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Mithril.png'> 117,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Mithril.png'> PigeonNugget,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Steel.png'> Sophlin,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Steel.png'> SeltzerBro,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Steel.png'> RoopeK,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Steel.png'> Richard Andrew,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> 7 7 7 7,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> AchromiK,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Slappious,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> iamguard,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> TayyabPW,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Snackal,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Gunillion,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Lewdy,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> CreamOfTheCrop,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> gllt,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> ryry3003,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> VRM,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Zephinism,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Python,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> cactus,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> BlueSavior,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Adam,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Iamdrew,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Isaac Shevenell,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Haleigh,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> EL_DEE ,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Infinitykill,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Cody ,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> RadioActiveYeti,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Lexiii223,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Zirhaze,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Lisa Leese (She/They),
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Arcane,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Seatball Mub,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> rasmus godske,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Cortunix,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Beeeooop,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> louis,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Vis,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> oBIGRON,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Amon Havers,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Posti,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Foxo,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> sarunas knabikas,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Hex,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Attilatheguy,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> mciurlionis,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> cykaking187,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Claudio Dekker,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> JMoney,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Not Goode,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Hach,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Heklek,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Jair,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Dennozs,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> grimsli,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Poltergeist,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Toastface5,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> samurai_pr,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Springstof,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> LadyAleksandra,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> 3Pills,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Gertoni Macaroni,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Kryllo,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> RiverRogue,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Basti,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Infernus,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Winning,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Hairyngross,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Fazel,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Jules,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Nechtmarrie,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Anthony Perez,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Anon4777,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> schulz,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> iliketostayanonymous,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> breakthetargets,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Nostalgia,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Darkpi,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Thor,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Sasha,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> val,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Caboose700,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> KuhlGuy,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> FRED,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> AgelessOverkill,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Caldo dpollo,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> No Ego,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Daniël Roek,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> MyCrowSoft,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Faremir ,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Beasst ,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Billy Hunt,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Nicholas Earley,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Joe Stoica,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Tez,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Dawnsnite,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> MrFoxyCracker,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> racklord,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> logan10144,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> fitchett,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> 7 7 mafia,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Jax,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Born2Grind,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Core,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Oondin,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Damply,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> carpetcleaner,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> tylersandman,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Jojy,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Lag,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Pyrotic,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> ify,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> pxjx,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Icarus,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Hotsaucesam,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> LookingForPants,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Sentry,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Oosterbuur
+                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Dragon.png'> Dragon Bot Hunters</h4>
+                <p style='margin-bottom: 0;'>DevinDog</p>
+                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Rune.png'> Rune Bot Hunters</h4>
+                <p style='margin-bottom: 0;'><a href='https://www.patreon.com/bot_detector'>[This slot could be yours!]</a></p>
+                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Adamant.png'> Adamant Bot Hunters</h4>
+                <p style='margin-bottom: 0;'>Sallysal, Rhikalika</p>
+                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Mithril.png'> Mithril Bot Hunters</h4>
+                <p style='margin-bottom: 0;'>Gottfrid, § Rambo, Ratteo, someranger, 117, PigeonNugget</p>
+                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Steel.png'> Steel Bot Hunters</h4>
+                <p style='margin-bottom: 0;'>Sophlin, SeltzerBro, RoopeK, Richard Andrew</p>
+                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Iron Bot Hunters</h4>
+                <p style='margin-bottom: 0;'>7 7 7 7, AchromiK, Slappious, iamguard, TayyabPW, Snackal, Gunillion, Lewdy, CreamOfTheCrop, gllt, ryry3003, VRM, Zephinism, Python, cactus, BlueSavior, Adam, Iamdrew, Isaac Shevenell, Haleigh, EL_DEE , Infinitykill, Cody , RadioActiveYeti</p>
+                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Bronze Bot Hunters</h4>
+                <p style='margin-bottom: 0;'>Lexiii223, Zirhaze, Lisa Leese (She/They), Arcane, Seatball Mub, rasmus godske, Cortunix, Beeeooop, louis, Vis, oBIGRON, Amon Havers, Posti, Foxo, sarunas knabikas, Hex</p>
+                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Starter Bot Hunters</h4>
+                <p style='margin-bottom: 0;'>Attilatheguy, mciurlionis, cykaking187, Claudio Dekker, JMoney, Not Goode, Hach, Heklek, Jair, Dennozs, grimsli, Poltergeist, Toastface5, samurai_pr, Springstof, LadyAleksandra, 3Pills, Gertoni Macaroni, Kryllo, RiverRogue, Basti, Infernus, Winning, Hairyngross, Fazel, Jules, Nechtmarrie, Anthony Perez, Anon4777, schulz, iliketostayanonymous, breakthetargets, Nostalgia, Darkpi, Thor, Sasha, val, Caboose700, KuhlGuy, FRED, AgelessOverkill, Caldo dpollo, No Ego, Daniël Roek, MyCrowSoft, Faremir , Beasst , Billy Hunt, Nicholas Earley, Joe Stoica, Tez, Dawnsnite, MrFoxyCracker, racklord, logan10144, fitchett, 7 7 mafia, Jax, Born2Grind, Core, Oondin, Damply, carpetcleaner, tylersandman, Jojy, Lag, Pyrotic, ify, pxjx, Icarus, Hotsaucesam, LookingForPants, Sentry, Oosterbuur
               </p>
           </div>
         </div>
-        </div>
-      </body>
-
+      </div>
   </v-container>
 </template>
 

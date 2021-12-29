@@ -28,8 +28,6 @@
         <router-link class="nav-item" to="/contact-us"><h3>Contact Us</h3></router-link>
       </div>
 
-
-
        <div class="hidden-md-and-up mobile-nav">
          <v-menu
             bottom
