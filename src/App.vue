@@ -19,6 +19,15 @@
       </div>
 
       <v-spacer></v-spacer>
+      <router-link to="/"><h3>Home</h3></router-link>
+      <h2 style = "padding-right: 0.25%; padding-left: 0.25%">|</h2>
+      <router-link to="/predict-a-player"><h3>Predict an Account</h3></router-link>
+      <h2 style = "padding-right: 0.25%; padding-left: 0.25%">|</h2>
+      <router-link to="/faq"><h3>FAQ</h3></router-link>
+      <h2 style = "padding-right: 0.25%; padding-left: 0.25%">|</h2>
+      <router-link to="/contact-us"><h3>Contact Us</h3></router-link>
+
+
 
        <div class="hidden-md-and-up mobile-nav">
          <v-menu

@@ -5,6 +5,7 @@ Vue.use(VueRouter)
 
 const routerOptions = [
   { path: "/", component: "Home" },
+  { path: "/predict-a-player", component: "Predict" },
   { path: "/form", component: "BotSubmit" },
   { path: "*", component: "NotFound" }
 ];
