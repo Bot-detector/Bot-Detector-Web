@@ -48,14 +48,34 @@
               <h3 style="text-align: left;">Contributors</h3>
               <p>
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Owner.png'> Ferrariic
-                </br>
+                <br>
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Deputy_owner.png'> Seltzer Bro,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Deputy_owner.png'> Extreme4all,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Deputy_owner.png'> Cyborger1
-                </br>
+                <br>
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Jmod.png'> Mod Trident,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Jmod.png'> Mod Tyran,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Jmod.png'> Mod Twisted
+              </p>
+              <h3 style="text-align: left;">Community Moderators</h3>
+              <p>
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t4.png'> Lier52,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Anthony - Some Ranger,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> ArcaneStars,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Candys Skill,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Jair,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Justproman,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> 7 7 mafia,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> AlisaWhiteheart,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> cactus,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> CreamOfTheCrop,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> Drew,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> esc | Keywok,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> Hydra,,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> LuigiStyl,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> PigeNug,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> SoloContent,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t1.png'> Not Sentry
               </p>
               <h3 style="text-align: left;">Patreon Supporters</h3>
               <p>
