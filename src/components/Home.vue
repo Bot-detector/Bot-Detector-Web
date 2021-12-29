@@ -207,10 +207,6 @@
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Sentry,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Oosterbuur
               </p>
-
-          </div>
-          <div class="column" style='text-align: right;'>
-              <iframe src="https://discord.com/widget?id=817916789668708384&theme=dark" width="500" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           </div>
         </div>
         </div>
@@ -260,14 +256,4 @@
   box-sizing: border-box;
 }
 
-.column {
-  float: left;
-  width: 50%;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 </style>
