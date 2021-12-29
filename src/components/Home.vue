@@ -71,7 +71,7 @@
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> CreamOfTheCrop,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> Drew,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> esc | Keywok,
-                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> Hydra,,
+                <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> Hydra,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> LuigiStyl,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> PigeNug,
                 <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> SoloContent,
