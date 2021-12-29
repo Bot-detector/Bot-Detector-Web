@@ -1,24 +1,32 @@
 <template>
   <v-app>
 
-    <sidebar></sidebar>
-
     <v-app-bar
       app
       color="#252e34"
       dark
     >
-
       <img
           
           :src="require('./assets/logo-sm.png')"
       />
+
       <div class="d-flex align-center ">
           <h1 class="hidden-sm-and-down">Bot-Detector</h1>
           <h3 class="hidden-md-and-up"> Bot-Detector</h3>
       </div>
 
       <v-spacer></v-spacer>
+
+      <div class="hidden-sm-and-down nav-links">
+        <router-link class="nav-item" to="/"><h3>Home</h3></router-link>
+        <h2 class="nav-item">|</h2>
+        <router-link class="nav-item" to="/predict-a-player"><h3>Predict an Account</h3></router-link>
+        <h2 class="nav-item">|</h2>
+        <router-link class="nav-item" to="/faq"><h3>FAQ</h3></router-link>
+        <h2 class="nav-item">|</h2>
+        <router-link class="nav-item" to="/contact-us"><h3>Contact Us</h3></router-link>
+      </div>
 
        <div class="hidden-md-and-up mobile-nav">
          <v-menu
@@ -47,7 +55,6 @@
               </v-list-item>
 
               <!-- TODO Figure Out How To Have Router Links and Non-Router Links in Same List -->
-
               <v-list-item href="https://github.com/Ferrariic/Bot-Detector-Core-Files#readme" target="_blank">
                 <v-icon>mdi-help</v-icon>
                 <v-list-item-title>FAQ</v-list-item-title>
@@ -129,9 +136,9 @@ export default {
       { title: 'Home',
         url:    '/',
         icon: 'mdi-home' },
-      { title: 'Submit Bots',
-        url:    '/form',
-        icon: 'mdi-send' },
+      { title: 'Predict an Account',
+        url:    '/predict-a-player',
+        icon: 'mdi-brain' },
     ],
   }),
   mounted () {
@@ -155,6 +162,15 @@ export default {
 <style>
   i {
     padding-right: 3px;
+  }
+
+  .nav-links {
+    white-space: nowrap;
+  }
+
+  .nav-item {
+    display: inline-block;
+    margin-left: 0.3em;
   }
 
   .footer {
