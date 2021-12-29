@@ -21,7 +21,7 @@
       <div class="hidden-sm-and-down nav-links">
         <router-link class="nav-item" to="/"><h3>Home</h3></router-link>
         <h2 class="nav-item">|</h2>
-        <router-link class="nav-item" to="/predict-a-player"><h3>Predict an Account</h3></router-link>
+        <router-link class="nav-item" to="/account-information"><h3>Investigate an Account</h3></router-link>
         <h2 class="nav-item">|</h2>
         <router-link class="nav-item" to="/faq"><h3>FAQ</h3></router-link>
         <h2 class="nav-item">|</h2>
@@ -136,8 +136,8 @@ export default {
       { title: 'Home',
         url:    '/',
         icon: 'mdi-home' },
-      { title: 'Predict an Account',
-        url:    '/predict-a-player',
+      { title: 'Account',
+        url:    '/account-information',
         icon: 'mdi-brain' },
     ],
   }),
