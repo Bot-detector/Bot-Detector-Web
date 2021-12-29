@@ -52,7 +52,7 @@
                 <v-icon>mdi-help</v-icon>
                 <v-list-item-title>FAQ</v-list-item-title>
               </v-list-item>
-              <v-list-item href="https://github.com/Ferrariic/bot-detector" target="_blank">
+              <v-list-item href="https://github.com/Bot-detector" target="_blank">
                 <v-icon>mdi-github</v-icon>
                 <v-list-item-title>Github</v-list-item-title>
               </v-list-item>
@@ -73,7 +73,7 @@
 
       <div id="external-links" class="hidden-sm-and-down">
       <v-btn
-        href="https://github.com/Ferrariic/bot-detector"
+        href="https://github.com/Bot-detector"
         target="_blank"
         text
       >
