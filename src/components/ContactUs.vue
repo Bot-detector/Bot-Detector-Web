@@ -2,7 +2,7 @@
     <v-container>
       <div class='background'>
         <div class='topbanner'>
-            <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+            <img class='topbanner' contain width='88%' src='../assets/top.gif'>
         </div>
         <div class="main">
 
@@ -26,7 +26,7 @@
 
           </div>
             <div class='bottombanner'>
-              <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+              <img class='bottombanner' contain width='88%' src='../assets/bottom.gif'>
             </div>
         </div>
     </v-container>
@@ -74,26 +74,38 @@ div.bottombanner {
 }
 
 div.background {
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
     background-image: url('../assets/background.jpg');
     background-position: center;
+    margin-top: -2%;
+    padding-top: 2%;
+    padding-bottom: 1%;
     background-repeat: repeat-y;
-    background-size: 75%;
+    background-size: 100%;
 }
 
 div.main {
-  margin-top: -1%;
+  margin-top: -2%;
+  padding-top: 1%;
   margin-bottom: -1%;
-  width: 60%;
+  width: 85%;
+
+  background-image: url('../assets/backdrop.gif');
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: 100%;
+
   text-align: center;
   padding-bottom: 300px;
   margin-right: auto;
   margin-left: auto;
   color: #1F1B12;
-  background-color: #B9A170;
 }
 
 hr.break {
-  border: solid #63A266;
+  border: solid #6B7B17;
   width: 80%;
   border-width: 1px;
   height: 1px;

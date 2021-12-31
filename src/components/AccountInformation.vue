@@ -2,7 +2,7 @@
     <v-container>
         <div class='background'>
             <div class='topbanner'>
-                <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+                <img class='topbanner' contain width='88%' src='../assets/top.gif'>
             </div>
         <div class="main">
             <div class='headerimage'>
@@ -30,13 +30,14 @@
                 <body class='field'>First Seen by the Plugin: {{firstSeenDate}}</body>
                 <body class='field'>Last Seen by the Plugin: {{lastSeenDate}}</body>
                 -->
-                <body class='field'>Plugin Prediction: {{pluginPrediction}}</body>
+                <body class='field'><strong>Plugin Prediction:</strong> {{pluginPrediction}}</body>
+                <body class='field'><strong>Plugin Confidence:</strong>  {{pluginConfidence}}%</body>
 
             </div>
             
         </div>
         <div class='bottombanner'>
-            <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+            <img class='bottombanner' contain width='88%' src='../assets/bottom.gif'>
         </div>
         </div>
     </v-container>
@@ -57,7 +58,8 @@
       selectedRSN: "",
       accountStatus: "",
       banDate: "",
-      pluginPrediction: "",
+      pluginPrediction: "Please enter in a valid RSN",
+      pluginConfidence: "0",
       firstSeenDate: "",
       lastSeenDate: ""
     }),
@@ -67,8 +69,10 @@
 
         if (response.data.length == 0) {
             this.pluginPrediction = "No Prediction Found"
+            this.pluginConfidence = "0  "
         } else {
             this.pluginPrediction = response.data[0].Prediction.replace(/_/g, ' ');
+            this.pluginConfidence = response.data[0].Predicted_confidence;
         }
       },
       getAccountInformation: function() {
@@ -132,10 +136,16 @@ div.bottombanner {
 }
 
 div.background {
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
     background-image: url('../assets/background.jpg');
     background-position: center;
+    margin-top: -2%;
+    padding-top: 2%;
+    padding-bottom: 1%;
     background-repeat: repeat-y;
-    background-size: 75%;
+    background-size: 100%;
 }
 
 input.enterrsn {
@@ -164,18 +174,22 @@ p.field {
 }
 
 div.main {
-    margin-top: -1%;
+    margin-top: -2%;
+    padding-top: 1%;
     margin-bottom: -1%;
-    width:60%;
+    width:85%;
     padding-bottom: 300px;
     margin-right: auto;
     margin-left: auto;
     color: #1F1B12;
-    background-color: #B9A170;
+    background-image: url('../assets/backdrop.gif');
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: 100%;
 }
 
 hr.break {
-  border: solid #63A266;
+  border: solid #6B7B17;
   width: 80%;
   border-width: 1px;
   height: 1px;
