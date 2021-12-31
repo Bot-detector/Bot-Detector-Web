@@ -1,9 +1,13 @@
 <template>
     <v-container>
       <div class='background'>
+          <div class='topbanner'>
+            <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+          </div>
         <div class="main">
-
-            <h1>Contributors and Supporters of the Bot Detector Plugin</h1>
+            <div class='headerimage'>
+                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/coins.png'>Contributors and Supporters of the Bot Detector Plugin<img class='headerimage2' contain width='35px' src='../assets/GameAssets/coins.png'></h1>
+            </div>
             <p class = 'description'>The Bot Detector Plugin is an open-source plugin with many highly-dedicated supporters and contributors. Some notable figures of the plugin and its development are noted here, and are added on a manual basis.
                 If you believe that your name is missing, and would like for it to be added - please contact Ferrariic. Thank you to everyone that has supported the production of this plugin, and to everyone that has allowed for it to come to fruition.
             </p>
@@ -72,11 +76,52 @@
                 </div>
               </div>
             </div>
+              <div class='bottombanner'>
+                <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+              </div>
             </div>
     </v-container>
 </template>
 
 <style scoped>
+
+div.headerimage {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+
+img.headerimage1 {
+  position: relative;
+  right: 10px;
+  top: 5px;
+  transform: scaleX(-1);
+}
+img.headerimage2 {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
+
+img.topbanner {
+  position: relative;
+  z-index: 2;
+}
+
+div.topbanner {
+  position: relative;
+  text-align: center;
+}
+
+img.bottombanner {
+  position: relative;
+  z-index: 2;
+}
+
+div.bottombanner {
+  position: relative;
+  text-align: center;
+}
 
 div.background {
     background-image: url('../assets/background.jpg');
@@ -86,10 +131,11 @@ div.background {
 }
 
 div.main {
+  margin-top: -1%;
+  margin-bottom: -1%;
   width:60%;
   text-align: center;
   margin-right: auto;
-  margin-bottom: 2%;
   margin-left: auto;
   color: #1F1B12;
   background-color: #B9A170;

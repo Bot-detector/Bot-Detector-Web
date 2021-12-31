@@ -1,9 +1,15 @@
 <template>
     <v-container>
       <div class='background'>
+        <div class='topbanner'>
+            <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+        </div>
         <div class="main">
 
-            <h1>Contact Us</h1>
+            <div class='headerimage'>
+                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/contact.png'>Contact Us<img class='headerimage2' contain width='35px' src='../assets/GameAssets/contact.png'></h1>
+            </div>
+
             <p class = 'description'>
                 If you're looking to get in touch with us, feel free to message any of the following links at your convenience. They are monitored on a weekly basis, and we will try to respond as quickly as we can!
             </p>
@@ -19,11 +25,53 @@
             </p>
 
           </div>
+            <div class='bottombanner'>
+              <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+            </div>
         </div>
     </v-container>
 </template>
 
 <style scoped>
+
+div.headerimage {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+
+img.headerimage1 {
+  position: relative;
+  right: 10px;
+  top: 5px;
+}
+
+img.headerimage2 {
+  position: relative;
+  left: 10px;
+  transform: scaleX(-1);
+  top: 5px;
+}
+
+img.topbanner {
+  position: relative;
+  z-index: 2;
+}
+
+div.topbanner {
+  position: relative;
+  text-align: center;
+}
+
+img.bottombanner {
+  position: relative;
+  z-index: 2;
+}
+
+div.bottombanner {
+  position: relative;
+  text-align: center;
+}
 
 div.background {
     background-image: url('../assets/background.jpg');
@@ -33,11 +81,12 @@ div.background {
 }
 
 div.main {
+  margin-top: -1%;
+  margin-bottom: -1%;
   width: 60%;
   text-align: center;
-  padding-bottom: 700px;
+  padding-bottom: 300px;
   margin-right: auto;
-  margin-bottom: 2%;
   margin-left: auto;
   color: #1F1B12;
   background-color: #B9A170;
