@@ -10,17 +10,23 @@
 
             <div class = 'enterrsn'>
                 <label style='font-size: 20px;'>Account Name: </label>
-                <input type="text" class='enterrsn' id="RSN" name="RSN" required minlength="1" maxlength="12" size=20px>
+                <input v-model="selectedRSN" type="text" class='enterrsn' required minlength="1" maxlength="12" size=20px>
+                <v-btn @click="getAccountInformation()">Lookup</v-btn>
             </div>
 
             <br>
 
-            <div class='field'>
-                <body class='field'>Account Status: </body>
-                <body class='field'>Ban Date: </body>
-                <body class='field'>Plugin Prediction: </body>
-                <body class='field'>First Seen by the Plugin: </body>
-                <body class='field'>Last Seen by the Plugin: </body>
+            <div class='account-info'>
+                <!-- 
+                    I'm being bad and leaving unused code in a comment. Somebody stop me!!
+                <body class='field'>Account Status: {{accountStatus}}</body>
+                <body class='field'>Ban Date: {{banDate}}</body>
+                <body class='field'>Plugin Prediction: {{pluginPrediction}}</body>
+                <body class='field'>First Seen by the Plugin: {{firstSeenDate}}</body>
+                <body class='field'>Last Seen by the Plugin: {{lastSeenDate}}</body>
+                -->
+                <body class='field'>Plugin Prediction: {{pluginPrediction}}</body>
+
             </div>
             
         </div>
@@ -29,6 +35,52 @@
 </template>
 
 <script>
+  import axios from 'axios';
+  export default {
+    
+    name: 'Home',
+    components: {
+      
+    },
+    computed: {
+        console: () => console,
+    },
+    data: () => ({
+      selectedRSN: "",
+      accountStatus: "",
+      banDate: "",
+      pluginPrediction: "",
+      firstSeenDate: "",
+      lastSeenDate: ""
+    }),
+    methods: {
+      setAccountInformation: function(response) {
+        console.log(response.data)
+
+        if (response.data.length == 0) {
+            this.pluginPrediction = "No Prediction Found"
+        } else {
+            this.pluginPrediction = response.data[0].Prediction.replace(/_/g, ' ');
+        }
+      },
+      getAccountInformation: function() {
+        axios
+        .get('https://www.osrsbotdetector.com/dev/v1/prediction?name=' + this.selectedRSN)
+        .then(response => this.setAccountInformation(response))
+        .catch(function (error) {
+          this.accountStatus = "Unable to obtain account status for " + this.selectedRSN;
+          console.log("Error getting acc info for " + this.selectedRSN);
+
+          if(error.response) {
+              console.log(error.response.status);
+              console.log(error.response.data);
+          } else {
+              console.log("Error", error.message);
+          }
+        })
+      },
+    }
+  }
 </script>
 
 <style scoped>
@@ -44,9 +96,11 @@ input.enterrsn {
     border:2px solid #1F1B12; 
     text-align: center;
     float: center;
+    margin-right: 0.5em;
 }
 
 div.enterrsn {
+    margin-top: 16px;
     margin-left: 5%;
     float: left;
     text-align: left;
@@ -95,6 +149,12 @@ p.description {
   padding-right:5%;
   padding-left:5%;
   padding-top:10px;
+}
+
+div.account-info {
+    margin-left: 5%;
+    margin-top: 2%;
+    clear: both;
 }
 
 </style>
