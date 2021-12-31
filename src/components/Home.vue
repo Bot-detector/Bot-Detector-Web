@@ -5,7 +5,7 @@
       </head>
 
       <div class='background'>
-      <div class='main'>
+        <div class='main'>
 
         <header style="text-align: center; font-family:tahoma,geneva,sans-serif;">
           <h1>Bot Detector</h1>
@@ -52,48 +52,41 @@
 </template>
 
 <script>
-import axios from 'axios';
-
-export default {
-
-  name: 'Home',
-  components: {
-
-  },
-  computed: {
-      console: () => console,
-  },
-  data: () => ({
-    totalBans: 0,
-    totalPlayers: 0,
-    totalAccounts:0
-  }),
-  mounted () {
-    this.getProjectStats()
-  },
-  methods: {
-    setBanStats: function(response) {
-      console.log(response.data)
-      this.totalBans = response.data["total_bans"];
-      this.totalAccounts = response.data["total_accounts"];
-      this.totalPlayers= response.data["total_real_players"]
+  import axios from 'axios';
+  export default {
+    
+    name: 'Home',
+    components: {
+      
+    },
+    computed: {
+        console: () => console,
     },
     data: () => ({
-      totalBans: 500000,
+      totalBans: 50000,
       totalPlayers: 0,
       totalAccounts: 4000000
     }),
     mounted () {
       this.getProjectStats()
     },
+    methods: {
+      setBanStats: function(response) {
+        console.log(response.data)
+        this.totalBans = response.data["total_bans"];
+        this.totalAccounts = response.data["total_accounts"];
+        this.totalPlayers= response.data["total_real_players"]
+      },
+      getProjectStats: function() {
+        axios
+        .get('https://www.osrsbotdetector.com/api/site/dashboard/projectstats')
+        .then(response => this.setBanStats(response))
+      },
+    }
   }
-}
 </script>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
 
 div.background {
     background-image: url('../assets/background.jpg');
@@ -153,3 +146,4 @@ p.description {
   padding-left:5%;
   padding-top:10px;
 }
+</style>
