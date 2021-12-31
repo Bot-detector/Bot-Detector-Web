@@ -1,6 +1,6 @@
 <template>
   <v-container>
-      <head>
+    <head>
       <title>Homepage</title>
       </head>
 
@@ -48,21 +48,35 @@
         </div>
       </div>
     </div>
-
   </v-container>
 </template>
 
 <script>
-  import axios from 'axios';
+import axios from 'axios';
 
-  export default {
-    
-    name: 'Home',
-    components: {
-      
-    },
-    computed: {
-        console: () => console,
+export default {
+
+  name: 'Home',
+  components: {
+
+  },
+  computed: {
+      console: () => console,
+  },
+  data: () => ({
+    totalBans: 0,
+    totalPlayers: 0,
+    totalAccounts:0
+  }),
+  mounted () {
+    this.getProjectStats()
+  },
+  methods: {
+    setBanStats: function(response) {
+      console.log(response.data)
+      this.totalBans = response.data["total_bans"];
+      this.totalAccounts = response.data["total_accounts"];
+      this.totalPlayers= response.data["total_real_players"]
     },
     data: () => ({
       totalBans: 500000,
@@ -72,20 +86,8 @@
     mounted () {
       this.getProjectStats()
     },
-    methods: {
-      setBanStats: function(response) {
-        console.log(response.data)
-        this.totalBans = response.data["total_bans"];
-        this.totalAccounts = response.data["total_accounts"];
-        this.totalPlayers= response.data["total_real_players"]
-      },
-      getProjectStats: function() {
-        axios
-        .get('https://www.osrsbotdetector.com/api/site/dashboard/projectstats')
-        .then(response => this.setBanStats(response))
-      },
-    }
   }
+}
 </script>
 
 <style scoped>
@@ -151,4 +153,3 @@ p.description {
   padding-left:5%;
   padding-top:10px;
 }
-</style>
