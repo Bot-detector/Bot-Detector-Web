@@ -1,0 +1,72 @@
+<template>
+    <v-container>
+        <div class='background'>
+        <div class='main'>
+            <div>
+                <h1>TBD: Banned Accounts</h1>
+                <p class = 'description'>
+                    Uh oh, you caught us! We'll be building this page soon enough. Check back later!
+                </p>
+            </div>
+
+            <hr class='break'>
+
+            <div class='description'>
+                <p>bans go here</p>
+            </div>
+        </div>
+        </div>
+    </v-container>
+</template>
+
+
+<style scoped>
+
+div.background {
+    background-image: url('../assets/background.jpg');
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 75%;
+}
+
+
+div.main {
+  width: 60%;
+  text-align: center;
+  padding-bottom: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #1F1B12;
+  background-color: #B9A170;
+}
+
+hr.break {
+  border: solid #63A266;
+  width: 80%;
+  border-width: 1px;
+  height: 1px;
+  margin:auto;
+
+}
+
+span.link{
+  color: #1b180c;
+  font-weight:bold;
+}
+
+
+p.description {
+  text-align: left;
+  padding-right:5%;
+  padding-left:5%;
+  padding-top:10px;
+}
+
+div.description {
+  text-align: left;
+  padding-right:5%;
+  padding-left:5%;
+  padding-bottom:1%;
+  padding-top:10px;
+}
+</style>
