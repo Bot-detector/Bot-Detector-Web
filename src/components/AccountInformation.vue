@@ -1,6 +1,9 @@
 <template>
     <v-container>
         <div class='background'>
+            <div class='topbanner'>
+                <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+            </div>
         <div class="main">
             <h1 style='text-align: center;'>TBD: OSRS Account Search</h1>
             <p class = 'description'>
@@ -24,6 +27,9 @@
             </div>
             
         </div>
+        <div class='bottombanner'>
+            <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+        </div>
         </div>
     </v-container>
 </template>
@@ -32,6 +38,26 @@
 </script>
 
 <style scoped>
+
+img.topbanner {
+  position: relative;
+  z-index: 2;
+}
+
+div.topbanner {
+  position: relative;
+  text-align: center;
+}
+
+img.bottombanner {
+  position: relative;
+  z-index: 2;
+}
+
+div.bottombanner {
+  position: relative;
+  text-align: center;
+}
 
 div.background {
     background-image: url('../assets/background.jpg');
@@ -64,13 +90,14 @@ p.field {
 }
 
 div.main {
-  width:60%;
-  padding-bottom: 700px;
-  margin-right: auto;
-  margin-bottom: 2%;
-  margin-left: auto;
-  color: #1F1B12;
-  background-color: #B9A170;
+    margin-top: -1%;
+    margin-bottom: -1%;
+    width:60%;
+    padding-bottom: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #1F1B12;
+    background-color: #B9A170;
 }
 
 hr.break {

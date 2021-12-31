@@ -1,6 +1,9 @@
 <template>
     <v-container>
         <div class='background'>
+            <div class='topbanner'>
+                <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+            </div>
         <div class='main'>
             <div>
                 <h1>Frequently Asked Questions</h1>
@@ -276,12 +279,35 @@
                 </div>
             </div>
         </div>
+        <div class='bottombanner'>
+            <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+        </div>
         </div>
     </v-container>
 </template>
 
 
 <style scoped>
+
+img.topbanner {
+  position: relative;
+  z-index: 2;
+}
+
+div.topbanner {
+  position: relative;
+  text-align: center;
+}
+
+img.bottombanner {
+  position: relative;
+  z-index: 2;
+}
+
+div.bottombanner {
+  position: relative;
+  text-align: center;
+}
 
 div.background {
     background-image: url('../assets/background.jpg');
@@ -291,13 +317,15 @@ div.background {
 }
 
 div.main {
-  width: 60%;
-  text-align: center;
-  padding-bottom: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  color: #1F1B12;
-  background-color: #B9A170;
+    margin-top: -1%;
+    margin-bottom: -1%;
+    width: 60%;
+    text-align: center;
+    padding-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #1F1B12;
+    background-color: #B9A170;
 }
 
 div.content {
