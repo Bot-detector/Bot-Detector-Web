@@ -73,7 +73,7 @@
         console: () => console,
     },
     data: () => ({
-      totalBans: 50000,
+      totalBans: 500000,
       totalPlayers: 0,
       totalAccounts: 4000000
     }),

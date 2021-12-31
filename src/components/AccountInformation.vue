@@ -30,7 +30,8 @@
                 <body class='field'>First Seen by the Plugin: {{firstSeenDate}}</body>
                 <body class='field'>Last Seen by the Plugin: {{lastSeenDate}}</body>
                 -->
-                <body class='field'>Plugin Prediction: {{pluginPrediction}}</body>
+                <body class='field'><strong>Plugin Prediction:</strong> {{pluginPrediction}}</body>
+                <body class='field'><strong>Plugin Confidence:</strong>  {{pluginConfidence}}%</body>
 
             </div>
             
@@ -57,7 +58,8 @@
       selectedRSN: "",
       accountStatus: "",
       banDate: "",
-      pluginPrediction: "",
+      pluginPrediction: "Please enter in a valid RSN",
+      pluginConfidence: "0",
       firstSeenDate: "",
       lastSeenDate: ""
     }),
@@ -67,8 +69,10 @@
 
         if (response.data.length == 0) {
             this.pluginPrediction = "No Prediction Found"
+            this.pluginConfidence = "0"
         } else {
             this.pluginPrediction = response.data[0].Prediction.replace(/_/g, ' ');
+            this.pluginConfidence = response.data[0].Predicted_confidence;
         }
       },
       getAccountInformation: function() {
