@@ -6,6 +6,10 @@ Vue.use(VueRouter)
 const routerOptions = [
   { path: "/", component: "Home" },
   { path: "/account-information", component: "AccountInformation" },
+  { path: "/contributors-and-supporters", component: "Contributors" },
+  { path: "/banned-accounts", component: "BannedAccounts" },
+  { path: "/contact-us", component: "ContactUs" },
+  { path: "/faq", component: "FAQ" },
   { path: "/form", component: "BotSubmit" },
   { path: "*", component: "NotFound" }
 ];

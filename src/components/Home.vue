@@ -3,101 +3,52 @@
       <head>
       <title>Homepage</title>
       </head>
-      <body class="vsc-initialized" style='text-align: center;'>
-        <h1 style="text-align: center;"><span style="font-family:tahoma,geneva,sans-serif;">Bot Detector</span></h1>
-        <h2>An Open-Source Machine Learning Plugin</h2>
-      <hr/>
-      </body>
 
-        <div style="padding-top: 10px; padding-right: 17%; padding-bottom: 100px; padding-left: 17%; background-color: #2b2b2b;">
+      <div class='background'>
+      <div class='main'>
 
-          
-          <p>
-            The Bot Detector Plugin is an open-source community-run machine learning plugin made for <a href="https://www.oldschool.runescape.com/">Old School RuneScape</a> using the popular third-party client <a href="https://runelite.net/">RuneLite</a>.
-            We aim to use this plugin and the corresponding machine learning algorithims to seperate players from bots, from a bird's eye view - and send likely bot accounts to Jagex's anti-cheating team for swift removal.
-            Since our start on February 28, 2021 - we have analyzed <span style="color: #00ff00">{{totalAccounts.toLocaleString()}}</span> accounts and have logged over <span style="color: #00ff00">{{totalBans.toLocaleString()}}</span> account bans.
-            If you wish to join us on <a href='https://discord.gg/YvVmjyNu'>discord</a> or <a href='https://twitter.com/OSRSBotDetector'>twitter</a>, support us on <a href='https://www.patreon.com/bot_detector'>patreon</a> or check out our <a href='https://github.com/Bot-detector/'>github</a> and join the team,
-            click any of the previous links, or the site header.
+        <header style="text-align: center; font-family:tahoma,geneva,sans-serif;">
+          <h1>Bot Detector</h1>
+          <h2>An Open-Source Machine Learning Plugin</h2>
+        </header>
+
+        <hr class='break'>
+
+        <p class='description'>
+          The Bot Detector Plugin is an open-source community-run machine learning plugin made for <a href="https://www.oldschool.runescape.com/"><span class='link'>Old School RuneScape</span></a> using the popular third-party client <a href="https://runelite.net/"><span class='link'>RuneLite</span></a>.
+          We aim to use this plugin and the corresponding machine learning algorithims to seperate players from bots, from a bird's eye view - and send likely bot accounts to Jagex's anti-cheating team for swift removal.
+          Since our start on February 28, 2021 - we have analyzed <span class='integer'>{{totalAccounts.toLocaleString()}}</span> accounts and have logged over <span class='integer'>{{totalBans.toLocaleString()}}</span> account bans.
+          If you wish to join us on <a href='https://discord.gg/YvVmjyNu'><span class='link'>discord</span></a> or <a href='https://twitter.com/OSRSBotDetector'><span class='link'>twitter</span></a>, support us on <a href='https://www.patreon.com/bot_detector'><span class='link'>patreon</span></a> or check out our <a href='https://github.com/Bot-detector/'><span class='link'>github</span></a> and join the team,
+          click any of the previous links, or the site header.
+        </p>
+
+        <hr class='break'>
+
+        <div class='servicedescription'>
+          <router-link to="/account-information"><h2><span class='servicelink'>OSRS Account Search</span></h2></router-link>
+          <p class='servicedescription'>
+            Check over <span class='integer'>{{totalAccounts.toLocaleString()}}</span> accounts' ban status, bot prediction likelihood, latest hiscore entry, xp-gains, and more!  
           </p>
+        </div>
 
-          <hr/>
-          <div style='text-align: center;'>
+        <div class='servicedescription'>
+          <router-link to="/banned-accounts"><h2><span class='servicelink'>Banned Accounts</span></h2></router-link>
+          <p class='servicedescription'>
+            Scroll through over <span class='integer'>{{totalBans.toLocaleString()}}</span> account bans here!
+          </p>
+        </div>
 
-            <router-link  class="nav-item" to="/account-information">
-            <h1><span style="color: #00afff">OSRS Account Search</span></h1>
-            </router-link>
-          </div>
-          <h3>Lookup information about an Old School Runescape Account. This includes checking
-            an account's ban status,
-            hiscore data,
-            number of account reports,
-            the bot detector machine learning prediction,
-            and more!
-          </h3>
-          
-          <hr/>
+        <hr class='break'>
 
-          <div class="row" style="padding-top: 2%; padding-left: 1%; padding-right: 1%">
-            <div class="column" style='text-align: left;'>
-                <h2 style="text-align: center;">
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/House.png'>
-                  Contributors
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/House.png'>
-                </h2>
-                <p>
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Owner.png'> Ferrariic
-                  <br>
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Deputy_owner.png'> Seltzer Bro,
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Deputy_owner.png'> Extreme4all,
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Deputy_owner.png'> Cyborger1
-                  <br>
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Jmod.png'> Mod Trident,
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Jmod.png'> Mod Tyran,
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Jmod.png'> Mod Twisted
-                </p>
+        <div class='servicedescription'>
+              <h2><span class='servicelink'>Bot Detector Plugin News & Updates</span></h2>
+          <p class='servicedescription'>
+            Insert news here :)
+          </p>
+        </div>
+      </div>
+    </div>
 
-                <h2 style="text-align: center;">
-                  <img style='vertical-align:middle; ' contain height="20px" src='../assets/Clan_icons/Shield.png'>
-                  Community Moderators
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Shield.png'>
-                </h2>
-                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t4.png'> Tier 4</h4>
-                <p style='vertical-align:middle; margin-bottom: 0;'>Lier52</p>
-                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t3.png'> Tier 3</h4>
-                <p style='vertical-align:middle; margin-bottom: 0;'>Anthony - Some Ranger, ArcaneStars, Candys Skill, Jair, Justproman</p>
-                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t2.png'> Tier 2</h4>
-                <p style='vertical-align:middle; margin-bottom: 0;'>7 7 mafia, AlisaWhiteheart, cactus, CreamOfTheCrop, Drew, esc | Keywok, Hydra, LuigiStyl, PigeNug, SoloContent</p>
-                <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/t1.png'> Tier 1</h4>
-                <p style='vertical-align:middle; margin-bottom: 10;'>Not Sentry</p>
-
-                <h2 style="vertical-align: top; text-align: center;">
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bank.png'>
-                  Patreon Supporters
-                  <img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bank.png'>
-                </h2>
-                <p>
-                  <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Dragon.png'> Dragon Bot Hunters</h4>
-                  <p style='margin-bottom: 0;'>DevinDog</p>
-                  <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Rune.png'> Rune Bot Hunters</h4>
-                  <p style='margin-bottom: 0;'><a href='https://www.patreon.com/bot_detector'>[This slot could be yours!]</a></p>
-                  <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Adamant.png'> Adamant Bot Hunters</h4>
-                  <p style='margin-bottom: 0;'>Sallysal, Rhikalika</p>
-                  <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Mithril.png'> Mithril Bot Hunters</h4>
-                  <p style='margin-bottom: 0;'>Gottfrid, § Rambo, Ratteo, someranger, 117, PigeonNugget</p>
-                  <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Steel.png'> Steel Bot Hunters</h4>
-                  <p style='margin-bottom: 0;'>Sophlin, SeltzerBro, RoopeK, Richard Andrew</p>
-                  <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Iron.png'> Iron Bot Hunters</h4>
-                  <p style='margin-bottom: 0;'>7 7 7 7, AchromiK, Slappious, iamguard, TayyabPW, Snackal, Gunillion, Lewdy, CreamOfTheCrop, gllt, ryry3003, VRM, Zephinism, Python, cactus, BlueSavior, Adam, Iamdrew, Isaac Shevenell, Haleigh, EL_DEE , Infinitykill, Cody , RadioActiveYeti</p>
-                  <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Bronze Bot Hunters</h4>
-                  <p style='margin-bottom: 0;'>Lexiii223, Zirhaze, Lisa Leese (She/They), Arcane, Seatball Mub, rasmus godske, Cortunix, Beeeooop, louis, Vis, oBIGRON, Amon Havers, Posti, Foxo, sarunas knabikas, Hex</p>
-                  <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Starter Bot Hunters</h4>
-                  <p style='margin-bottom: 0;'>Attilatheguy, mciurlionis, cykaking187, Claudio Dekker, JMoney, Not Goode, Hach, Heklek, Jair, Dennozs, grimsli, Poltergeist, Toastface5, samurai_pr, Springstof, LadyAleksandra, 3Pills, Gertoni Macaroni, Kryllo, RiverRogue, Basti, Infernus, Winning, Hairyngross, Fazel, Jules, Nechtmarrie, Anthony Perez, Anon4777, schulz, iliketostayanonymous, breakthetargets, Nostalgia, Darkpi, Thor, Sasha, val, Caboose700, KuhlGuy, FRED, AgelessOverkill, Caldo dpollo, No Ego, Daniël Roek, MyCrowSoft, Faremir , Beasst , Billy Hunt, Nicholas Earley, Joe Stoica, Tez, Dawnsnite, MrFoxyCracker, racklord, logan10144, fitchett, 7 7 mafia, Jax, Born2Grind, Core, Oondin, Damply, carpetcleaner, tylersandman, Jojy, Lag, Pyrotic, ify, pxjx, Icarus, Hotsaucesam, LookingForPants, Sentry, Oosterbuur
-                </p>
-              </div>
-            </div>
-          </div>
-          <div>
-          </div>
   </v-container>
 </template>
 
@@ -114,9 +65,9 @@
         console: () => console,
     },
     data: () => ({
-      totalBans: 0,
+      totalBans: 500000,
       totalPlayers: 0,
-      totalAccounts:0
+      totalAccounts: 4000000
     }),
     mounted () {
       this.getProjectStats()
@@ -137,9 +88,67 @@
   }
 </script>
 
-<style>
+<style scoped>
 * {
   box-sizing: border-box;
 }
 
+div.background {
+    background-image: url('../assets/background.jpg');
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 75%;
+}
+
+div.main {
+  width: 60%;
+  text-align: center;
+  padding-bottom: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #1F1B12;
+  background-color: #B9A170;
+}
+
+div.servicedescription {
+  margin-top:1px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+p.servicedescription {
+  text-align:left;
+  margin-bottom:0;
+}
+
+hr.break {
+  border: solid #63A266;
+  width: 80%;
+  border-width: 1px;
+  height: 1px;
+  margin:auto;
+}
+
+span.link{
+  color: #1b180c;
+  font-weight:bold;
+}
+
+span.integer {
+  color: #409c4f;
+  font-weight: bold;
+}
+
+span.servicelink{
+  color: #1b180c;
+  font-weight:bold;
+  text-align: left;
+}
+
+p.description {
+  text-align: left;
+  padding-right:5%;
+  padding-left:5%;
+  padding-top:10px;
+}
 </style>

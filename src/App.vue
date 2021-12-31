@@ -21,9 +21,13 @@
       <div class="hidden-sm-and-down nav-links">
         <router-link class="nav-item" to="/"><h3>Home</h3></router-link>
         <h2 class="nav-item">|</h2>
-        <router-link class="nav-item" to="/account-information"><h3>Investigate an Account</h3></router-link>
+        <router-link class="nav-item" to="/account-information"><h3>OSRS Account Search</h3></router-link>
+        <h2 class="nav-item">|</h2>
+        <router-link class="nav-item" to="/banned-accounts"><h3>Banned Accounts</h3></router-link>
         <h2 class="nav-item">|</h2>
         <router-link class="nav-item" to="/faq"><h3>FAQ</h3></router-link>
+        <h2 class="nav-item">|</h2>
+        <router-link class="nav-item" to="/contributors-and-supporters"><h3>Contributors</h3></router-link>
         <h2 class="nav-item">|</h2>
         <router-link class="nav-item" to="/contact-us"><h3>Contact Us</h3></router-link>
       </div>
