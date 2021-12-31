@@ -5,8 +5,9 @@
             <img class='topbanner' contain width='65%' src='../assets/top.gif'>
           </div>
         <div class="main">
-
-            <h1>Contributors and Supporters of the Bot Detector Plugin</h1>
+            <div class='headerimage'>
+                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/coins.png'>Contributors and Supporters of the Bot Detector Plugin<img class='headerimage2' contain width='35px' src='../assets/GameAssets/coins.png'></h1>
+            </div>
             <p class = 'description'>The Bot Detector Plugin is an open-source plugin with many highly-dedicated supporters and contributors. Some notable figures of the plugin and its development are noted here, and are added on a manual basis.
                 If you believe that your name is missing, and would like for it to be added - please contact Ferrariic. Thank you to everyone that has supported the production of this plugin, and to everyone that has allowed for it to come to fruition.
             </p>
@@ -83,6 +84,24 @@
 </template>
 
 <style scoped>
+
+div.headerimage {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+
+img.headerimage1 {
+  position: relative;
+  right: 10px;
+  top: 5px;
+  transform: scaleX(-1);
+}
+img.headerimage2 {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
 
 img.topbanner {
   position: relative;

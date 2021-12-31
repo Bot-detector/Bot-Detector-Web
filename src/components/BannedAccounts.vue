@@ -6,7 +6,9 @@
             </div>
         <div class='main'>
             <div>
-                <h1>TBD: Banned Accounts</h1>
+              <div class='headerimage'>
+                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/Skull.png'>Banned Accounts<img class='headerimage2' contain width='35px' src='../assets/GameAssets/Skull.png'></h1>
+              </div>
                 <p class = 'description'>
                     Uh oh, you caught us! We'll be building this page soon enough. Check back later!
                 </p>
@@ -27,6 +29,24 @@
 
 
 <style scoped>
+
+div.headerimage {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+
+img.headerimage1 {
+  position: relative;
+  right: 10px;
+  top: 5px;
+  transform: scaleX(-1);
+}
+img.headerimage2 {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
 
 img.topbanner {
   position: relative;

@@ -4,8 +4,6 @@
       <title>Homepage</title>
       </head>
 
-
-
       <div class='background'>
 
           <div class='topbanner'>
@@ -15,7 +13,9 @@
           <div class='main'>
             
           <header style="text-align: center; font-family:tahoma,geneva,sans-serif;">
-            <h1>Bot Detector</h1>
+              <div class='headerimage'>
+                <h1><img class='headerimage1' contain width='40px' src='../assets/GameAssets/bot.png'>Bot Detector<img class='headerimage2' contain width='40px' src='../assets/GameAssets/bot.png'></h1>
+              </div>
             <h2>An Open-Source Machine Learning Plugin</h2>
           </header>
 
@@ -99,6 +99,24 @@
 </script>
 
 <style scoped>
+
+div.headerimage {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+
+img.headerimage1 {
+  position: relative;
+  right: 10px;
+  top: 5px;
+  transform: scaleX(-1);
+}
+img.headerimage2 {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
 
 div.background {
     background-image: url('../assets/background.jpg');

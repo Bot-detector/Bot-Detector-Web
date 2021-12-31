@@ -6,7 +6,10 @@
         </div>
         <div class="main">
 
-            <h1>Contact Us</h1>
+            <div class='headerimage'>
+                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/contact.png'>Contact Us<img class='headerimage2' contain width='35px' src='../assets/GameAssets/contact.png'></h1>
+            </div>
+
             <p class = 'description'>
                 If you're looking to get in touch with us, feel free to message any of the following links at your convenience. They are monitored on a weekly basis, and we will try to respond as quickly as we can!
             </p>
@@ -30,6 +33,25 @@
 </template>
 
 <style scoped>
+
+div.headerimage {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+
+img.headerimage1 {
+  position: relative;
+  right: 10px;
+  top: 5px;
+}
+
+img.headerimage2 {
+  position: relative;
+  left: 10px;
+  transform: scaleX(-1);
+  top: 5px;
+}
 
 img.topbanner {
   position: relative;

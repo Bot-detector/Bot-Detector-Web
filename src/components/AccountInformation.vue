@@ -5,7 +5,9 @@
                 <img class='topbanner' contain width='65%' src='../assets/top.gif'>
             </div>
         <div class="main">
-            <h1 style='text-align: center;'>TBD: OSRS Account Search</h1>
+            <div class='headerimage'>
+                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/runefullhelm.png'>OSRS Account Search<img class='headerimage2' contain width='35px' src='../assets/GameAssets/runefullhelm.png'></h1>
+            </div>
             <p class = 'description'>
                 If you would like to learn more about an Old School Runescape account, type in the name below. We cannot provide information with 24 hours of a sighting of a player, therefore we cannot provide latest locations and latest gear information for an account.
             </p>
@@ -38,6 +40,24 @@
 </script>
 
 <style scoped>
+
+div.headerimage {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+
+img.headerimage1 {
+  position: relative;
+  right: 10px;
+  top: 5px;
+}
+img.headerimage2 {
+  position: relative;
+  left: 10px;
+  transform: scaleX(-1);
+  top: 5px;
+}
 
 img.topbanner {
   position: relative;

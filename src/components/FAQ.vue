@@ -6,7 +6,9 @@
             </div>
         <div class='main'>
             <div>
-                <h1>Frequently Asked Questions</h1>
+                <div class='headerimage'>
+                    <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/questionmarkcake.png'>Frequently Asked Questions<img class='headerimage2' contain width='35px' src='../assets/GameAssets/questionmarkcake.png'></h1>
+                </div>
                 <p class = 'description'>
                     Have a question about the plugin? We've answered most of them here! If your question still has not been answered - feel free to message us on <a href='https://discord.com/invite/botdetector'><span class='link'>discord</span></a>! 
                 </p>
@@ -288,6 +290,24 @@
 
 
 <style scoped>
+
+div.headerimage {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+
+img.headerimage1 {
+  position: relative;
+  right: 10px;
+  top: 5px;
+  transform: scaleX(-1);
+}
+img.headerimage2 {
+  position: relative;
+  left: 10px;
+  top: 5px;
+}
 
 img.topbanner {
   position: relative;
