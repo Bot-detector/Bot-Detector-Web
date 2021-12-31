@@ -49,10 +49,8 @@
 
           <div class='servicedescription'>
                 <h2><span class='servicelink'>Bot Detector Plugin News & Updates</span></h2>
-            <p class='servicedescription'>
-              Insert news here :)
-            </p>
           </div>
+          <iframe src="https://titanembeds.com/embed/817916789668708384?defaultchannel=833461146391412807" height="600px" width="80%" frameborder="0"></iframe>
         </div>
 
         <div class='bottombanner'>
@@ -151,7 +149,7 @@ div.main {
   position: relative;
   width: 60%;
   text-align: center;
-  padding-bottom: 500px;
+  padding-bottom: 50px;
   margin-right: auto;
   margin-left: auto;
   color: #1F1B12;
