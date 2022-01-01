@@ -5,6 +5,14 @@
       </head>
 
       <div class='background'>
+        <div class='navigationbox'>
+          <router-link style='text-decoration: none;' to="/"><span class='navigationbar'>Home</span></router-link>
+          <router-link style='text-decoration: none;' to="/account-information"><span class='navigationbar'>Account Search</span></router-link>
+          <router-link style='text-decoration: none;' to="/banned-accounts"><span class='navigationbar'>Banned Accounts</span></router-link>
+          <router-link style='text-decoration: none;' to="/contributors-and-supporters"><span class='navigationbar'>Contributors</span></router-link>
+          <router-link style='text-decoration: none;' to="/faq"><span class='navigationbar'>FAQ</span></router-link>
+          <router-link style='text-decoration: none;' to="/contact-us"><span class='navigationbar'>Contact Us</span></router-link>
+        </div>
 
           <div class='topbanner'>
             <img class='topbanner' contain width='88%' src='../assets/top.gif'>
@@ -32,7 +40,7 @@
           <hr class='break'>
 
           <div class='servicedescription'>
-            <router-link to="/account-information"><h2><span class='servicelink'>OSRS Account Search</span></h2></router-link>
+            <router-link to="/account-information"><h2><span class='servicelink'>Account Search</span></h2></router-link>
             <p class='servicedescription'>
               Check over <span class='integer'>{{totalAccounts.toLocaleString()}}</span> accounts' ban status, bot prediction likelihood, latest hiscore entry, xp-gains, and more!  
             </p>
@@ -96,7 +104,7 @@
         console: () => console,
     },
     data: () => ({
-      totalBans: 50000,
+      totalBans: 500000,
       totalPlayers: 0,
       totalAccounts: 4000000
     }),
@@ -120,6 +128,26 @@
 </script>
 
 <style scoped>
+
+div.navigationbox {
+  background-color: #000000;
+  border: 2px solid #382418;
+  width: 80%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+span.navigationbar {
+  color: #90c040;
+  text-decoration: none;
+  font-size: 90%;
+  vertical-align: center;
+}
 
 div.headerimage {
   position: relative;
