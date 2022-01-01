@@ -45,6 +45,27 @@
             </p>
           </div>
 
+          <div class='servicedescription'>
+            <router-link to="/faq"><h2><span class='servicelink'>Frequently Asked Questions</span></h2></router-link>
+            <p class='servicedescription'>
+              Have a question about the Plugin? We've answered most of them here!
+            </p>
+          </div>
+
+          <div class='servicedescription'>
+            <router-link to="/contributors-and-supporters"><h2><span class='servicelink'>Contributors</span></h2></router-link>
+            <p class='servicedescription'>
+              A page where we've displayed everyone that has contributed or supported making the Bot Detector Plugin! 
+            </p>
+          </div>
+
+          <div class='servicedescription'>
+            <router-link to="/contact-us"><h2><span class='servicelink'>Contact Us</span></h2></router-link>
+            <p class='servicedescription'>
+              Want to get in touch with us? Click here!
+            </p>
+          </div>
+
           <hr class='break'>
 
           <div class='servicedescription'>
