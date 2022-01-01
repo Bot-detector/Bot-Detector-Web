@@ -2,11 +2,11 @@
     <v-container>
       <div class='background'>
           <div class='topbanner'>
-            <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+            <img class='topbanner' contain width='88%' src='../assets/top.gif'>
           </div>
         <div class="main">
             <div class='headerimage'>
-                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/coins.png'>Contributors and Supporters of the Bot Detector Plugin<img class='headerimage2' contain width='35px' src='../assets/GameAssets/coins.png'></h1>
+                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/coins.png'>Contributors and Supporters<img class='headerimage2' contain width='35px' src='../assets/GameAssets/coins.png'></h1>
             </div>
             <p class = 'description'>The Bot Detector Plugin is an open-source plugin with many highly-dedicated supporters and contributors. Some notable figures of the plugin and its development are noted here, and are added on a manual basis.
                 If you believe that your name is missing, and would like for it to be added - please contact Ferrariic. Thank you to everyone that has supported the production of this plugin, and to everyone that has allowed for it to come to fruition.
@@ -77,7 +77,7 @@
               </div>
             </div>
               <div class='bottombanner'>
-                <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+                <img class='bottombanner' contain width='88%' src='../assets/bottom.gif'>
               </div>
             </div>
     </v-container>
@@ -124,25 +124,36 @@ div.bottombanner {
 }
 
 div.background {
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
     background-image: url('../assets/background.jpg');
     background-position: center;
+    margin-top: -2%;
+    padding-top: 2%;
+    padding-bottom: 1%;
     background-repeat: repeat-y;
-    background-size: 75%;
+    background-size: 100%;
 }
 
 div.main {
-  margin-top: -1%;
+  margin-top: -2%;
+  padding-top: 1%;
   margin-bottom: -1%;
-  width:60%;
+  padding-bottom: 2%;
+  width:85%;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
   color: #1F1B12;
-  background-color: #B9A170;
+  background-image: url('../assets/backdrop.gif');
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: 100%;
 }
 
 hr.break {
-  border: solid #63A266;
+  border: solid #6B7B17;
   width: 80%;
   border-width: 1px;
   height: 1px;
