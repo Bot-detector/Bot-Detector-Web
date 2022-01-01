@@ -1,12 +1,20 @@
 <template>
     <v-container>
         <div class='background'>
+            <div class='navigationbox'>
+              <router-link style='text-decoration: none;' to="/"><span class='navigationbar'>Home</span></router-link>
+              <router-link style='text-decoration: none;' to="/account-information"><span class='navigationbar'>Account Search</span></router-link>
+              <router-link style='text-decoration: none;' to="/banned-accounts"><span class='navigationbar'>Banned Accounts</span></router-link>
+              <router-link style='text-decoration: none;' to="/contributors-and-supporters"><span class='navigationbar'>Contributors</span></router-link>
+              <router-link style='text-decoration: none;' to="/faq"><span class='navigationbar'>FAQ</span></router-link>
+              <router-link style='text-decoration: none;' to="/contact-us"><span class='navigationbar'>Contact Us</span></router-link>
+            </div>
             <div class='topbanner'>
                 <img class='topbanner' contain width='88%' src='../assets/top.gif'>
             </div>
         <div class="main">
             <div class='headerimage'>
-                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/runefullhelm.png'>OSRS Account Search<img class='headerimage2' contain width='35px' src='../assets/GameAssets/runefullhelm.png'></h1>
+                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/runefullhelm.png'>Account Search<img class='headerimage2' contain width='35px' src='../assets/GameAssets/runefullhelm.png'></h1>
             </div>
             <p class = 'description'>
                 If you would like to learn more about an Old School Runescape account, type in the name below. We cannot provide information with 24 hours of a sighting of a player, therefore we cannot provide latest locations and latest gear information for an account.
@@ -96,6 +104,27 @@
 </script>
 
 <style scoped>
+
+div.navigationbox {
+  background-color: #000000;
+  border: 2px solid #382418;
+  width: 80%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+span.navigationbar {
+  color: #90c040;
+  text-decoration: none;
+  font-size: 90%;
+  vertical-align: center;
+}
+
 
 div.headerimage {
   position: relative;

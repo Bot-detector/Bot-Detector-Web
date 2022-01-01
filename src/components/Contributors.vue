@@ -1,6 +1,14 @@
 <template>
     <v-container>
       <div class='background'>
+          <div class='navigationbox'>
+            <router-link style='text-decoration: none;' to="/"><span class='navigationbar'>Home</span></router-link>
+            <router-link style='text-decoration: none;' to="/account-information"><span class='navigationbar'>Account Search</span></router-link>
+            <router-link style='text-decoration: none;' to="/banned-accounts"><span class='navigationbar'>Banned Accounts</span></router-link>
+            <router-link style='text-decoration: none;' to="/contributors-and-supporters"><span class='navigationbar'>Contributors</span></router-link>
+            <router-link style='text-decoration: none;' to="/faq"><span class='navigationbar'>FAQ</span></router-link>
+            <router-link style='text-decoration: none;' to="/contact-us"><span class='navigationbar'>Contact Us</span></router-link>
+          </div>
           <div class='topbanner'>
             <img class='topbanner' contain width='88%' src='../assets/top.gif'>
           </div>
@@ -8,8 +16,8 @@
             <div class='headerimage'>
                 <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/coins.png'>Contributors and Supporters<img class='headerimage2' contain width='35px' src='../assets/GameAssets/coins.png'></h1>
             </div>
-            <p class = 'description'>The Bot Detector Plugin is an open-source plugin with many highly-dedicated supporters and contributors. Some notable figures of the plugin and its development are noted here, and are added on a manual basis.
-                If you believe that your name is missing, and would like for it to be added - please contact Ferrariic. Thank you to everyone that has supported the production of this plugin, and to everyone that has allowed for it to come to fruition.
+            <p class = 'description'>The Bot Detector Plugin is an open-source plugin with many highly-dedicated supporters and contributors.
+              Some notable members of the community have been listed below, and are added on a manual basis. If you would like to support the production of the plugin, you can donate to our <a href='https://www.patreon.com/bot_detector'><span class='link'>patreon</span></a>, or you can join our <a href='https://github.com/Bot-detector/'><span class='link'>github</span></a>. 
             </p>
 
             <hr class='break'>
@@ -84,6 +92,32 @@
 </template>
 
 <style scoped>
+
+span.link{
+  color: #1b180c;
+  font-weight:bold;
+}
+
+div.navigationbox {
+  background-color: #000000;
+  border: 2px solid #382418;
+  width: 80%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+span.navigationbar {
+  color: #90c040;
+  text-decoration: none;
+  font-size: 90%;
+  vertical-align: center;
+}
+
 
 div.headerimage {
   position: relative;
