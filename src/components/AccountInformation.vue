@@ -80,7 +80,7 @@
             this.pluginConfidence = "0  "
         } else {
             this.pluginPrediction = response.data[0].Prediction.replace(/_/g, ' ');
-            this.pluginConfidence = response.data[0].Predicted_confidence;
+            this.pluginConfidence = response.data[0].Predicted_confidence*100;
         }
       },
       getAccountInformation: function() {
