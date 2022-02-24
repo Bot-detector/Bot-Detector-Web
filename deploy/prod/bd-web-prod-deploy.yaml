@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: bd-web-service
+  name: bd-web-prod-service
 spec:
   selector:
-    app: bd-web
+    app: bd-web-prod
   ports:
   - protocol: "TCP"
     port: 8080
@@ -12,20 +12,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bd-web
+  name: bd-web-prod
 spec:
   selector:
     matchLabels:
-      app: bd-web
+      app: bd-web-prod
   replicas: 1
   template:
     metadata:
-      name: bl-web-app
+      name: bl-web-prod-app
       labels:
-        app: bd-web
+        app: bd-web-prod
     spec:
       containers:
-      - name: bd-web
+      - name: bd-web-prod
         image: hub.osrsbotdetector.com/bot-detector/bd-web:production
         imagePullPolicy: Always
         ports:

@@ -1,8 +1,16 @@
 <template>
     <v-container>
         <div class='background'>
+            <div class='navigationbox'>
+              <router-link style='text-decoration: none;' to="/"><span class='navigationbar'>Home</span></router-link>
+              <router-link style='text-decoration: none;' to="/account-information"><span class='navigationbar'>Account Search</span></router-link>
+              <router-link style='text-decoration: none;' to="/banned-accounts"><span class='navigationbar'>Banned Accounts</span></router-link>
+              <router-link style='text-decoration: none;' to="/contributors-and-supporters"><span class='navigationbar'>Contributors</span></router-link>
+              <router-link style='text-decoration: none;' to="/faq"><span class='navigationbar'>FAQ</span></router-link>
+              <router-link style='text-decoration: none;' to="/contact-us"><span class='navigationbar'>Contact Us</span></router-link>
+            </div>
             <div class='topbanner'>
-                <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+                <img class='topbanner' contain width='88%' src='../assets/top.gif'>
             </div>
         <div class='main'>
             <div>
@@ -10,18 +18,20 @@
                 <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/Skull.png'>Banned Accounts<img class='headerimage2' contain width='35px' src='../assets/GameAssets/Skull.png'></h1>
               </div>
                 <p class = 'description'>
-                    Uh oh, you caught us! We'll be building this page soon enough. Check back later!
+                    A list of all accounts that have been banned since February 28th 2021. Missing an account? Contact us!
                 </p>
             </div>
 
             <hr class='break'>
 
             <div class='description'>
-                <p>bans go here</p>
+                <p>
+                  
+                </p>
             </div>
         </div>
         <div class='bottombanner'>
-            <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+            <img class='bottombanner' contain width='88%' src='../assets/bottom.gif'>
         </div>
         </div>
     </v-container>
@@ -29,6 +39,28 @@
 
 
 <style scoped>
+
+div.navigationbox {
+  background-color: #000000;
+  border: 2px solid #382418;
+  width: 80%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+span.navigationbar {
+  color: #90c040;
+  text-decoration: none;
+  font-size: 90%;
+  vertical-align: center;
+}
+
+
 
 div.headerimage {
   position: relative;
@@ -69,27 +101,37 @@ div.bottombanner {
 }
 
 div.background {
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
     background-image: url('../assets/background.jpg');
     background-position: center;
+    margin-top: -2%;
+    padding-top: 2%;
+    padding-bottom: 1%;
     background-repeat: repeat-y;
-    background-size: 75%;
+    background-size: 100%;
 }
 
 
 div.main {
-    margin-top: -1%;
+    margin-top: -2%;
+    padding-top: 1%;
     margin-bottom: -1%;
-    width: 60%;
+    width: 85%;
     text-align: center;
     padding-bottom: 500px;
     margin-right: auto;
     margin-left: auto;
     color: #1F1B12;
-    background-color: #B9A170;
+    background-image: url('../assets/backdrop.gif');
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: 100%;
 }
 
 hr.break {
-  border: solid #63A266;
+  border: solid #6B7B17;
   width: 80%;
   border-width: 1px;
   height: 1px;

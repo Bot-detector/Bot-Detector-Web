@@ -5,9 +5,17 @@
       </head>
 
       <div class='background'>
+        <div class='navigationbox'>
+          <router-link style='text-decoration: none;' to="/"><span class='navigationbar'>Home</span></router-link>
+          <router-link style='text-decoration: none;' to="/account-information"><span class='navigationbar'>Account Search</span></router-link>
+          <router-link style='text-decoration: none;' to="/banned-accounts"><span class='navigationbar'>Banned Accounts</span></router-link>
+          <router-link style='text-decoration: none;' to="/contributors-and-supporters"><span class='navigationbar'>Contributors</span></router-link>
+          <router-link style='text-decoration: none;' to="/faq"><span class='navigationbar'>FAQ</span></router-link>
+          <router-link style='text-decoration: none;' to="/contact-us"><span class='navigationbar'>Contact Us</span></router-link>
+        </div>
 
           <div class='topbanner'>
-            <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+            <img class='topbanner' contain width='88%' src='../assets/top.gif'>
           </div>
 
           <div class='main'>
@@ -32,7 +40,7 @@
           <hr class='break'>
 
           <div class='servicedescription'>
-            <router-link to="/account-information"><h2><span class='servicelink'>OSRS Account Search</span></h2></router-link>
+            <router-link to="/account-information"><h2><span class='servicelink'>Account Search</span></h2></router-link>
             <p class='servicedescription'>
               Check over <span class='integer'>{{totalAccounts.toLocaleString()}}</span> accounts' ban status, bot prediction likelihood, latest hiscore entry, xp-gains, and more!  
             </p>
@@ -42,6 +50,27 @@
             <router-link to="/banned-accounts"><h2><span class='servicelink'>Banned Accounts</span></h2></router-link>
             <p class='servicedescription'>
               Scroll through over <span class='integer'>{{totalBans.toLocaleString()}}</span> account bans here!
+            </p>
+          </div>
+
+          <div class='servicedescription'>
+            <router-link to="/faq"><h2><span class='servicelink'>Frequently Asked Questions</span></h2></router-link>
+            <p class='servicedescription'>
+              Have a question about the Plugin? We've answered most of them here!
+            </p>
+          </div>
+
+          <div class='servicedescription'>
+            <router-link to="/contributors-and-supporters"><h2><span class='servicelink'>Contributors</span></h2></router-link>
+            <p class='servicedescription'>
+              A page where we've displayed everyone that has contributed or supported making the Bot Detector Plugin! 
+            </p>
+          </div>
+
+          <div class='servicedescription'>
+            <router-link to="/contact-us"><h2><span class='servicelink'>Contact Us</span></h2></router-link>
+            <p class='servicedescription'>
+              Want to get in touch with us? Click here!
             </p>
           </div>
 
@@ -56,7 +85,7 @@
         </div>
 
         <div class='bottombanner'>
-          <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+          <img class='bottombanner' contain width='88%' src='../assets/bottom.gif'>
         </div>
 
       </div>
@@ -75,7 +104,7 @@
         console: () => console,
     },
     data: () => ({
-      totalBans: 50000,
+      totalBans: 500000,
       totalPlayers: 0,
       totalAccounts: 4000000
     }),
@@ -100,6 +129,26 @@
 
 <style scoped>
 
+div.navigationbox {
+  background-color: #000000;
+  border: 2px solid #382418;
+  width: 80%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+span.navigationbar {
+  color: #90c040;
+  text-decoration: none;
+  font-size: 90%;
+  vertical-align: center;
+}
+
 div.headerimage {
   position: relative;
   text-align: center;
@@ -119,10 +168,16 @@ img.headerimage2 {
 }
 
 div.background {
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
     background-image: url('../assets/background.jpg');
     background-position: center;
+    margin-top: -2%;
+    padding-top: 2%;
+    padding-bottom: 1%;
     background-repeat: repeat-y;
-    background-size: 75%;
+    background-size: 100%;
 }
 
 img.topbanner {
@@ -146,16 +201,20 @@ div.bottombanner {
 }
 
 div.main {
-  margin-top: -1%;
+  margin-top: -2%;
+  padding-top: 1%;
   margin-bottom: -1%;
   position: relative;
-  width: 60%;
+  width: 85%;
   text-align: center;
   padding-bottom: 500px;
   margin-right: auto;
   margin-left: auto;
   color: #1F1B12;
-  background-color: #B9A170;
+  background-image: url('../assets/backdrop.gif');
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: 100%;
 }
 
 div.servicedescription {
@@ -170,7 +229,7 @@ p.servicedescription {
 }
 
 hr.break {
-  border: solid #63A266;
+  border: solid #6B7B17;
   width: 80%;
   border-width: 1px;
   height: 1px;
@@ -183,7 +242,8 @@ span.link{
 }
 
 span.integer {
-  color: #409c4f;
+  color: #00ff00;
+  text-shadow: 0px 0px 2px #000000;
   font-weight: bold;
 }
 

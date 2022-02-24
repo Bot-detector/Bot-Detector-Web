@@ -1,15 +1,23 @@
 <template>
     <v-container>
       <div class='background'>
+          <div class='navigationbox'>
+            <router-link style='text-decoration: none;' to="/"><span class='navigationbar'>Home</span></router-link>
+            <router-link style='text-decoration: none;' to="/account-information"><span class='navigationbar'>Account Search</span></router-link>
+            <router-link style='text-decoration: none;' to="/banned-accounts"><span class='navigationbar'>Banned Accounts</span></router-link>
+            <router-link style='text-decoration: none;' to="/contributors-and-supporters"><span class='navigationbar'>Contributors</span></router-link>
+            <router-link style='text-decoration: none;' to="/faq"><span class='navigationbar'>FAQ</span></router-link>
+            <router-link style='text-decoration: none;' to="/contact-us"><span class='navigationbar'>Contact Us</span></router-link>
+          </div>
           <div class='topbanner'>
-            <img class='topbanner' contain width='65%' src='../assets/top.gif'>
+            <img class='topbanner' contain width='88%' src='../assets/top.gif'>
           </div>
         <div class="main">
             <div class='headerimage'>
-                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/coins.png'>Contributors and Supporters of the Bot Detector Plugin<img class='headerimage2' contain width='35px' src='../assets/GameAssets/coins.png'></h1>
+                <h1><img class='headerimage1' contain width='35px' src='../assets/GameAssets/coins.png'>Contributors and Supporters<img class='headerimage2' contain width='35px' src='../assets/GameAssets/coins.png'></h1>
             </div>
-            <p class = 'description'>The Bot Detector Plugin is an open-source plugin with many highly-dedicated supporters and contributors. Some notable figures of the plugin and its development are noted here, and are added on a manual basis.
-                If you believe that your name is missing, and would like for it to be added - please contact Ferrariic. Thank you to everyone that has supported the production of this plugin, and to everyone that has allowed for it to come to fruition.
+            <p class = 'description'>The Bot Detector Plugin is an open-source plugin with many highly-dedicated supporters and contributors.
+              Some notable members of the community have been listed below, and are added on a manual basis. If you would like to support the production of the plugin, you can donate to our <a href='https://www.patreon.com/bot_detector'><span class='link'>patreon</span></a>, or you can join our <a href='https://github.com/Bot-detector/'><span class='link'>github</span></a>. 
             </p>
 
             <hr class='break'>
@@ -72,18 +80,44 @@
                   <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Bronze.png'> Bronze Bot Hunters</h4>
                 Lexiii223, Zirhaze, Lisa Leese (She/They), Arcane, Seatball Mub, rasmus godske, Cortunix, Beeeooop, louis, Vis, oBIGRON, Amon Havers, Posti, Foxo, sarunas knabikas, Hex
                   <h4><img style='vertical-align:middle;' contain height="20px" src='../assets/Clan_icons/Skulled.png'> Starter Bot Hunters</h4>
-                Attilatheguy, mciurlionis, cykaking187, Claudio Dekker, JMoney, Not Goode, Hach, Heklek, Jair, Dennozs, grimsli, Poltergeist, Toastface5, samurai_pr, Springstof, LadyAleksandra, 3Pills, Gertoni Macaroni, Kryllo, RiverRogue, Basti, Infernus, Winning, Hairyngross, Fazel, Jules, Nechtmarrie, Anthony Perez, Anon4777, schulz, iliketostayanonymous, breakthetargets, Nostalgia, Darkpi, Thor, Sasha, val, Caboose700, KuhlGuy, FRED, AgelessOverkill, Caldo dpollo, No Ego, Daniël Roek, MyCrowSoft, Faremir , Beasst , Billy Hunt, Nicholas Earley, Joe Stoica, Tez, Dawnsnite, MrFoxyCracker, racklord, logan10144, fitchett, 7 7 mafia, Jax, Born2Grind, Core, Oondin, Damply, carpetcleaner, tylersandman, Jojy, Lag, Pyrotic, ify, pxjx, Icarus, Hotsaucesam, LookingForPants, Sentry, Oosterbuur
+                shaGGyTZ, Attilatheguy, mciurlionis, cykaking187, Claudio Dekker, JMoney, Not Goode, Hach, Heklek, Jair, Dennozs, grimsli, Poltergeist, Toastface5, samurai_pr, Springstof, LadyAleksandra, 3Pills, Gertoni Macaroni, Kryllo, RiverRogue, Basti, Infernus, Winning, Hairyngross, Fazel, Jules, Nechtmarrie, Anthony Perez, Anon4777, schulz, iliketostayanonymous, breakthetargets, Nostalgia, Darkpi, Thor, Sasha, val, Caboose700, KuhlGuy, FRED, AgelessOverkill, Caldo dpollo, No Ego, Daniël Roek, MyCrowSoft, Faremir , Beasst , Billy Hunt, Nicholas Earley, Joe Stoica, Tez, Dawnsnite, MrFoxyCracker, racklord, logan10144, fitchett, 7 7 mafia, Jax, Born2Grind, Core, Oondin, Damply, carpetcleaner, tylersandman, Jojy, Lag, Pyrotic, ify, pxjx, Icarus, Hotsaucesam, LookingForPants, Sentry, Oosterbuur
                 </div>
               </div>
             </div>
               <div class='bottombanner'>
-                <img class='bottombanner' contain width='65%' src='../assets/bottom.gif'>
+                <img class='bottombanner' contain width='88%' src='../assets/bottom.gif'>
               </div>
             </div>
     </v-container>
 </template>
 
 <style scoped>
+
+span.link{
+  color: #1b180c;
+  font-weight:bold;
+}
+
+div.navigationbox {
+  background-color: #000000;
+  border: 2px solid #382418;
+  width: 80%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+span.navigationbar {
+  color: #90c040;
+  text-decoration: none;
+  font-size: 90%;
+  vertical-align: center;
+}
+
 
 div.headerimage {
   position: relative;
@@ -124,25 +158,36 @@ div.bottombanner {
 }
 
 div.background {
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
     background-image: url('../assets/background.jpg');
     background-position: center;
+    margin-top: -2%;
+    padding-top: 2%;
+    padding-bottom: 1%;
     background-repeat: repeat-y;
-    background-size: 75%;
+    background-size: 100%;
 }
 
 div.main {
-  margin-top: -1%;
+  margin-top: -2%;
+  padding-top: 1%;
   margin-bottom: -1%;
-  width:60%;
+  padding-bottom: 2%;
+  width:85%;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
   color: #1F1B12;
-  background-color: #B9A170;
+  background-image: url('../assets/backdrop.gif');
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: 100%;
 }
 
 hr.break {
-  border: solid #63A266;
+  border: solid #6B7B17;
   width: 80%;
   border-width: 1px;
   height: 1px;

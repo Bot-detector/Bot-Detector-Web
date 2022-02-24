@@ -1,7 +1,7 @@
 name: Production workflow
 on:
   push:
-    branches: [ main ]
+    branches: [ develop ]
 
 jobs:
 
@@ -27,19 +27,19 @@ jobs:
     steps:
 
     - name: Build the Docker image
-      run: docker build . --file deploy/prod/Dockerfile -t bot-detector/bd-web:production
+      run: docker build . --file deploy/dev/Dockerfile -t bot-detector/bd-web:development
 
     - name: Tag Image
-      run: docker tag bot-detector/bd-web:production hub.osrsbotdetector.com/bot-detector/bd-web:production
+      run: docker tag bot-detector/bd-web:development hub.osrsbotdetector.com/bot-detector/bd-web:development
       
     - name: Login to Docker Registry
       run: echo "${{ secrets.DOCKER_REGISTRY_PASSWORD }}" | docker login https://hub.osrsbotdetector.com -u "${{ secrets.DOCKER_REGISTRY_USERNAME }}" --password-stdin
 
     - name: Push Image to Registry
-      run: docker push hub.osrsbotdetector.com/bot-detector/bd-web:production
+      run: docker push hub.osrsbotdetector.com/bot-detector/bd-web:development
 
     - name: Apply Possible Deployment Changes
-      run: kubectl apply -f deploy/prod/bd-web-prod-deploy.yaml
+      run: kubectl apply -f deploy/dev/bd-web-dev-deploy.yaml
 
     - name: Restart Deployment for Possible Container Changes
-      run: kubectl rollout restart deploy bd-web-prod
+      run: kubectl rollout restart deploy bd-web-dev
