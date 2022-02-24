@@ -5,13 +5,22 @@ on:
 
 jobs:
 
-  vue-build:
-
+  set-env-vars:
     runs-on: self-hosted
-
+    
     steps:
     - uses: actions/checkout@v2
 
+    - name: Create .env
+      run: echo "VUE_APP_BASE_URL=/webdev/"
+
+
+  vue-build:
+
+    runs-on: self-hosted
+    needs: [set-env-vars]
+
+    steps:
     - name: Install Project Requirements
       run: yarn install
 
