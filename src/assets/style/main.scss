@@ -1,0 +1,58 @@
+html ,body, #app {
+  margin:0;
+  padding:0;
+  height:100%; /* needed for container min-height */
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    main {
+      position: relative;
+      margin: 2rem auto 0;
+      width: 85%;
+      height: auto !important;
+      min-height: 100%;
+      color: #1f1b12;
+      background-image: url("@/assets/images/backdrop.gif");
+      background-repeat: repeat-y;
+      background-position: center;
+      background-size: 100%;
+
+      h2 {
+        text-align: center;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        width: 104%;
+        height: 50px;
+        background-size: cover;
+      }
+
+      &:before {
+        background-image: url("@/assets/images/top.gif");
+        transform: translate(-2%, -50%);        
+      }
+
+      &:after {
+        background-image: url("@/assets/images/bottom.gif");
+        transform: translate(-2%, +50%);  
+      }
+    }
+
+    div.wrapper {
+        max-width: 900px;
+        margin-right: auto;
+        margin-left: auto;
+        background-image: url("../images/background.jpg");
+        background-position: center;
+        background-repeat: repeat-y;
+        background-size: 100%;
+        min-height: 100%;
+        padding: 0.5rem;
+    }
+}
