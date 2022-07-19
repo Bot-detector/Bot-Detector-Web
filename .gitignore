@@ -26,4 +26,3 @@ coverage
 *.njsproj
 *.sln
 *.sw?
-vue2-old-code/*
