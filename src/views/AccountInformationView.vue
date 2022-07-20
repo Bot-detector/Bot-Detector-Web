@@ -8,13 +8,15 @@
     imageSrc="src/assets/images/GameAssets/runefullhelm.png"
     imageFlipped
   />
-  <p class="description">
+
+  <p>
     If you would like to learn more about an Old School Runescape account,
     type in the name below. We cannot provide information with 24 hours of
     a sighting of a player, therefore we cannot provide latest locations
     and latest gear information for an account.
   </p>
-  <hr class="break" />
+
+  <hr />
 
   <div class="enterrsn">
     <label style="font-size: 20px">Account Name: </label>
@@ -121,43 +123,6 @@ p.field {
   margin-top: 0px;
 }
 
-div.main {
-  margin-top: -2%;
-  padding-top: 1%;
-  margin-bottom: -1%;
-  width: 85%;
-  padding-bottom: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  color: #1f1b12;
-  background-image: url("../assets/images/backdrop.gif");
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: 100%;
-}
-
-hr.break {
-  border: solid #6b7b17;
-  width: 80%;
-  border-width: 1px;
-  height: 1px;
-  margin: auto;
-}
-
-div.description {
-  text-align: left;
-  padding-right: 5%;
-  padding-left: 5%;
-  padding-bottom: 1%;
-  padding-top: 10px;
-}
-
-p.description {
-  text-align: left;
-  padding-right: 5%;
-  padding-left: 5%;
-  padding-top: 10px;
-}
 
 div.account-info {
   margin-left: 5%;

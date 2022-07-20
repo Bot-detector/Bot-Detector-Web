@@ -10,8 +10,10 @@ body {
 
     main {
       position: relative;
-      margin: 2rem auto 0;
+      margin: 1rem auto;
+      box-sizing: border-box;
       width: 85%;
+      padding: 2.5rem;
       height: auto !important;
       min-height: 100%;
       color: #1f1b12;
@@ -30,29 +32,53 @@ body {
         display: block;
         width: 104%;
         height: 50px;
+        position: absolute;
+        left: 0;
         background-size: cover;
       }
 
       &:before {
         background-image: url("@/assets/images/top.gif");
-        transform: translate(-2%, -50%);        
+        transform: translate(-2%, -100%);        
       }
 
       &:after {
         background-image: url("@/assets/images/bottom.gif");
-        transform: translate(-2%, +50%);  
+        transform: translateX(-2%);  
       }
     }
 
-    div.wrapper {
+    a {
+      color: #1b180c;
+      font-weight: bold;
+    }
+    
+    p {
+      line-height: 1.5;
+    }
+
+    hr {
+      border: 1px solid #6b7b17;
+      width: 80%;
+      margin: auto;
+    }
+
+    .wrapper {
         max-width: 900px;
-        margin-right: auto;
-        margin-left: auto;
-        background-image: url("../images/background.jpg");
-        background-position: center;
-        background-repeat: repeat-y;
-        background-size: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        background: url("@/assets/images/background.jpg") center repeat-y;
         min-height: 100%;
         padding: 0.5rem;
+    }
+
+    footer {
+      font-size: 10px;
+      color: white;
+      text-align: center;
+
+      a {
+        color: #90c040;
+      }
     }
 }

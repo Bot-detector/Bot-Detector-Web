@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: "/account-information",
       name: "account-information",
-      component: () => import("@/views/AccountInformation.vue"),
+      component: () => import("@/views/AccountInformationView.vue"),
       meta: {
         title: "Account Information"
       }
@@ -23,7 +23,7 @@ const router = createRouter({
     {
       path: "/contributors-and-supporters",
       name: "Contributors and supporters",
-      component: () => import("@/views/Contributors.vue"),
+      component: () => import("@/views/ContributorsView.vue"),
       meta: {
         title: "Contributors and supporters"
       }
@@ -31,7 +31,7 @@ const router = createRouter({
     {
       path: "/banned-accounts",
       name: "Banned Accounts",
-      component: () => import("@/views/BannedAccounts.vue"),
+      component: () => import("@/views/BannedAccountsView.vue"),
       meta: {
         title: "Banned Accounts"
       }
@@ -39,7 +39,7 @@ const router = createRouter({
     {
       path: "/contact-us",
       name: "Contact",
-      component: () => import("@/views/ContactUs.vue"),
+      component: () => import("@/views/ContactUsView.vue"),
       meta: {
         title: "Contact Us"
       }
@@ -47,7 +47,7 @@ const router = createRouter({
     {
       path: "/faq",
       name: "FAQ",
-      component: () => import("@/views/FAQ.vue"),
+      component: () => import("@/views/FAQView.vue"),
       meta: {
         title: "FAQ"
       }
@@ -55,17 +55,17 @@ const router = createRouter({
     {
       path: "/form",
       name: "Form",
-      component: () => import("@/views/BotSubmit.vue"),
+      component: () => import("@/views/BotSubmitView.vue"),
     },
     {
       path: "/:pathMatch(.*)*",
       name: "not-found",
-      component: () => import("@/views/NotFound.vue"),
+      component: () => import("@/views/NotFoundView.vue"),
     },
     {
       path: "/:pathMatch(.*)",
       name: "bad-not-found",
-      component: () => import("@/views/NotFound.vue"),
+      component: () => import("@/views/NotFoundView.vue"),
     },
   ],
 });

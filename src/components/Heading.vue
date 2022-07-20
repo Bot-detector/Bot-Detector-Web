@@ -32,7 +32,7 @@ export default {
     },
     subTitle: String,
     imageSrc: {
-        type: Image,
+        type: String,
         required: true
     },
     imageFlipped: Boolean

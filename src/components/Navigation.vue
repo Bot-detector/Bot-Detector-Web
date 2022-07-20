@@ -16,6 +16,10 @@ const routes: Array<iRoute> = [
     location: "/account-information",
   },
   {
+    label: "Banned accouts",
+    location: "/banned-accounts"
+  },
+  {
     label: "Contributors",
     location: "/contributors-and-supporters",
   },
@@ -50,15 +54,15 @@ nav {
   text-align: center;
   display: flex;
   justify-content: space-between;
-  margin: 1rem auto;
+  margin: 0.25rem auto;
   padding: 0.25rem 0.5rem;
 
-  .navigationbar-item {
+  a.navigationbar-item {
     color: #90c040;
     text-decoration: none;
     font-size: 90%;
     vertical-align: center;
-    font-weight: bold;
+    font-weight: normal;
   }
 }
 </style>
