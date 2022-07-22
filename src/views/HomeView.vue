@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import Heading from "@/components/Heading.vue";
-  import Socials, { SOCIAL, DISPLAYTYPE } from "@/components/Socials.vue";
+  import Socials, { SOCIAL } from "@/components/Socials.vue";
   import { RouterLink } from "vue-router";
 </script>
 
