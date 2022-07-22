@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import Heading from "@/components/Heading.vue";
+  import Socials, { SOCIAL, DISPLAYTYPE } from "@/components/Socials.vue";
   import { RouterLink } from "vue-router";
 </script>
 
@@ -7,13 +8,13 @@
   <Heading 
     title="Bot Detector"
     subTitle="An Open-Source Machine Learning Plugin"
-    imageSrc="src/assets/images/GameAssets/bot.png"
+    imageSource="src/assets/images/GameAssets/bot.png"
   />
   
   <hr />
 
     <p class="description-">
-      The Bot Detector Plugin is an open-source community-run machine learning plugin made for <a href="https://www.oldschool.runescape.com/">Old School RuneScape</a> using the popular third-party client <a href="https://runelite.net/">RuneLite</a>. We aim to use this plugin and the corresponding machine learning algorithims to seperate players from bots, from a bird's eye view - and send likely bot accounts to Jagex's anti-cheating team for swift removal. Since our start on February 28, 2021 - we have analyzed <span class="integer">{{ totalAccounts.toLocaleString() }}</span> accounts and have logged over <span class="integer">{{ totalBans.toLocaleString() }}</span> account bans. If you wish to join us on <a href="https://discord.gg/YvVmjyNu">discord</a> or <a href="https://twitter.com/SRSBotDetector">Twitter</a>, support us on <a href="https://www.patreon.com/bot_detector">patreon</a> or check out our <a href="https://github.com/Bot-detector/">github</a> and join the team, click any of the previous links, or the site header.
+      The Bot Detector Plugin is an open-source community-run machine learning plugin made for <a href="https://www.oldschool.runescape.com/">Old School RuneScape</a> using the popular third-party client <a href="https://runelite.net/">RuneLite</a>. We aim to use this plugin and the corresponding machine learning algorithims to seperate players from bots, from a bird's eye view - and send likely bot accounts to Jagex's anti-cheating team for swift removal. Since our start on February 28, 2021 - we have analyzed <span class="integer">{{ totalAccounts.toLocaleString() }}</span> accounts and have logged over <span class="integer">{{ totalBans.toLocaleString() }}</span> account bans. If you wish to join us on <Socials :social="SOCIAL.Discord" /> or <Socials :social="SOCIAL.Twitter" />, support us on <Socials :social="SOCIAL.Patreon" /> or check out our <Socials :social="SOCIAL.Github" /> and join the team, click any of the previous links, or the site header.
     </p>
 
     <hr />
@@ -75,12 +76,19 @@
     <h2>
       Bot Detector Plugin News & Updates
     </h2>
-    <p>Insert news here :)</p>
+    <p>News & updates will be added dynamically in here in a near future, for now you join our <Socials :social="SOCIAL.Discord" /> to follow the latest news & updates</p>
 
 </template>
 
 <script lang="ts">
-import axios from "axios";
+import axios, { type AxiosResponse } from "axios";
+
+interface Respose {
+  total_bans: String;
+  total_accounts: String;
+  total_real_players: String;
+}
+
 export default {
   name: "Home",
   components: {},
@@ -96,11 +104,11 @@ export default {
     this.getProjectStats();
   },
   methods: {
-    setBanStats: function (response) {
+    setBanStats: function (response: AxiosResponse<Respose>) {
       console.log(response.data);
-      this.totalBans = response.data["total_bans"];
-      this.totalAccounts = response.data["total_accounts"];
-      this.totalPlayers = response.data["total_real_players"];
+      this.totalBans = Number(response.data["total_bans"]);
+      this.totalAccounts = Number(response.data["total_accounts"]);
+      this.totalPlayers = Number(response.data["total_real_players"]);
     },
     getProjectStats: function () {
       axios
@@ -116,32 +124,6 @@ export default {
 </script>
 
 <style scoped>
-div.navigationbox {
-  background-color: #000000;
-  border: 2px solid #382418;
-  width: 80%;
-  padding-left: 2%;
-  padding-right: 2%;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-span.navigationbar {
-  color: #90c040;
-  text-decoration: none;
-  font-size: 90%;
-  vertical-align: center;
-}
-
-div.headerimage {
-  position: relative;
-  text-align: center;
-  padding-top: 10px;
-}
-
 span.integer {
   color: #00ff00;
   text-shadow: 0px 0px 2px #000000;

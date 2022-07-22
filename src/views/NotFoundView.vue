@@ -7,7 +7,7 @@
   <Heading 
     title="404 Not found."
     subTitle="No bots could be found here..."
-    imageSrc="src/assets/images/GameAssets/bot.png"
+    imageSource="src/assets/images/GameAssets/bot.png"
   />
   <p>If you think this is a mistake <RouterLink to="/contact-us">contact us</RouterLink></p>
 </template>

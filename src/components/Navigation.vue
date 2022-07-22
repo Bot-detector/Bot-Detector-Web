@@ -57,12 +57,21 @@ nav {
   margin: 0.25rem auto;
   padding: 0.25rem 0.5rem;
 
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
+
   a.navigationbar-item {
     color: #90c040;
     text-decoration: none;
     font-size: 90%;
     vertical-align: center;
     font-weight: normal;
+
+    @media screen and (max-width: 720px) {
+      padding: 0.5rem;
+    }
+
   }
 }
 </style>

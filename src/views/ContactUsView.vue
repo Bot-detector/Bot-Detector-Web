@@ -1,11 +1,12 @@
 <script setup lang="ts">
   import Heading from "@/components/Heading.vue";
+  import Socials, { SOCIAL, DISPLAYTYPE } from "@/components/Socials.vue";
 </script>
 
 <template>
   <Heading 
     title="Contact Us" 
-    imageSrc="src/assets/images/GameAssets/contact.png"
+    imageSource="src/assets/images/GameAssets/contact.png"
   />
 
   <p>
@@ -15,9 +16,9 @@
 
   <hr />
 
-  <p>Twitter - <a href="https://twitter.com/osrsbotdetector">@Osrsbotdetector</a></p>
-  <p>Discord - <a href="https://discord.com/invite/botdetector">Bot Detector Plugin Discord</a></p>
+  <p>Twitter - <Socials :social="SOCIAL.Twitter" :displayType="DISPLAYTYPE.FullName" /></p>
+  <p>Discord - <Socials :social="SOCIAL.Discord" :displayType="DISPLAYTYPE.FullName" /></p>
   <p>Email - <a href="mailto:osrsbotdetector@gmail.com">osrsbotdetector@gmail.com</a></p>
-  <p>Patreon - <a href="https://www.patreon.com/bot_detector">https://www.patreon.com/bot_detector</a></p>
-  <p>Github - <a href="osrsbotdetector@gmail.com">https://github.com/Bot-detector/</a></p>
+  <p>Patreon - <Socials :social="SOCIAL.Patreon" :displayType="DISPLAYTYPE.Link" /></p>
+  <p>Github - <Socials :social="SOCIAL.Github" :displayType="DISPLAYTYPE.Link" /></p>
 </template>

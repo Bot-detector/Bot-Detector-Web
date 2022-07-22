@@ -7,7 +7,7 @@ import type { PropType } from "vue";
         <strong>
             <img
             class="headerImg"
-            :src="imageSrc"
+            :src="ranks[rank].imageSource"
             />
             {{ rank }}
         </strong>
@@ -33,15 +33,58 @@ export enum RANK {
     PatreonStarterBotHunters = "Starter Bot Hunter"
 }
 
+const ranks = {
+    [RANK.Owner]: {
+        imageSource: "src/assets/images/Clan_icons/Owner.png"
+    },
+    [RANK.CoOwner]: {
+        imageSource: "src/assets/images/Clan_icons/Deputy_owner.png"
+    },
+    [RANK.JagexMod]: {
+        imageSource: "src/assets/images/Clan_icons/Jmod.png"
+    },
+    [RANK.ModTier4]: {
+        imageSource: "src/assets/images/Clan_icons/t4.png"
+    },
+    [RANK.ModTier3]: {
+        imageSource: "src/assets/images/Clan_icons/t3.png"
+    },
+    [RANK.ModTier2]: {
+        imageSource: "src/assets/images/Clan_icons/t2.png"
+    },
+    [RANK.ModTier1]: {
+        imageSource: "src/assets/images/Clan_icons/t1.png"
+    },
+    [RANK.PatreonDragonBotHunters]: {
+        imageSource: "src/assets/images/Clan_icons/Dragon.png"
+    },
+    [RANK.PatreonRuneBotHunters]: {
+        imageSource: "src/assets/images/Clan_icons/Rune.png"
+    },
+    [RANK.PatreonAdamantBotHunters]: {
+        imageSource: "src/assets/images/Clan_icons/Adamant.png"
+    },
+    [RANK.PatreonMithrilBotHunters]: {
+        imageSource: "src/assets/images/Clan_icons/Mithril.png"
+    },
+    [RANK.PatreonSteelBotHunters]: {
+        imageSource: "src/assets/images/Clan_icons/Steel.png"
+    },
+    [RANK.PatreonIronBotHunters]: {
+        imageSource: "src/assets/images/Clan_icons/Iron.png"
+    },
+    [RANK.PatreonBronzeBotHunters]: {
+        imageSource: "src/assets/images/Clan_icons/Bronze.png"
+    },
+    [RANK.PatreonStarterBotHunters]: {
+        imageSource: "src/assets/images/Clan_icons/Skulled.png"
+    },
+}
 
 export default {
   props: {
     rank: {
         type: String as PropType<RANK>,
-        required: true
-    },
-    imageSrc: {
-        type: String,
         required: true
     },
   },

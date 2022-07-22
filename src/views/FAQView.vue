@@ -1,15 +1,17 @@
 <script setup lang="ts">
   import Heading from "@/components/Heading.vue";
+  import Socials, { SOCIAL } from "@/components/Socials.vue";
+  import ExternalLink from "@/components/ExternalLink.vue";
 </script>
 
 <template>
   <Heading 
     title="Frequently Asked Questions" 
-    imageSrc="src/assets/images/GameAssets/questionmarkcake.png"
+    imageSource="src/assets/images/GameAssets/questionmarkcake.png"
   />
 
   <p>
-    Have a question about the plugin? We've answered most of them here! If your question still has not been answered - feel free to message us on <a href="https://discord.com/invite/botdetector">discord</a>!
+    Have a question about the plugin? We've answered most of them here! If your question still has not been answered - feel free to message us on <Socials :social="SOCIAL.Discord" />
   </p>
 
   <hr />
@@ -338,7 +340,7 @@
   <h3>Is this Plugin malicious?</h3>
 
   <p>
-    The Plugin can be installed through RuneLite's <a href="https://runelite.net/plugin-hub" target="_blank" nofollow>Plugin Hub</a> system, which is curated by the RuneLite developers to not allow anything that's even mildly suspect. If you have any doubt about the Plugin's inner workings, all of its components' source codes are available in this GitHub! You may also contact us through our Discord server if you have any questions you'd like answered.
+    The Plugin can be installed through RuneLite's <ExternalLink to="https://runelite.net/plugin-hub" label="Plugin Hub" /> system, which is curated by the RuneLite developers to not allow anything that's even mildly suspect. If you have any doubt about the Plugin's inner workings, all of its components' source codes are available in this GitHub! You may also contact us through our Discord server if you have any questions you'd like answered.
   </p>
 
   <h3>
@@ -441,7 +443,7 @@
   <h3>Can you unban accounts?</h3>
 
   <p>
-    No, for that you will have to file an appeal with <a href="https://jgx.game/Ban" target="_blank" nofollow>https://jgx.game/Ban</a>.
+    No, for that you will have to file an appeal with <ExternalLink to="https://jgx.game/Ban" label="https://jgx.game/Ban" />.
   </p>
 
   <h3>

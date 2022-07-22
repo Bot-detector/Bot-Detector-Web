@@ -2,13 +2,11 @@
     <header>
         <h2>
             <img
-            class="headerImg"
-            :src="imageSrc"
+            :src="imageSource"
             />
             {{title}}
             <img
-            class="headerImg"
-            :src="imageSrc"
+            :src="imageSource"
             />
         </h2>
     </header>
@@ -21,7 +19,7 @@ export default {
         type: String,
         required: true
     },
-    imageSrc: {
+    imageSource: {
         type: String,
         required: true
     }

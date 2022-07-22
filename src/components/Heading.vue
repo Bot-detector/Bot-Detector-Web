@@ -1,21 +1,23 @@
+<script setup lang="ts">
+import type { PropType } from "vue";
+</script>
+
 <template>
     <header>
         <div class="headerimage">
         <h1>
             <img
             :class="{
-                headerImg: !imageFlipped,
-                headerImgFlipped: imageFlipped
+                imageFlipped: [IMAGE_DISPLAY.mirrored, IMAGE_DISPLAY.reverse].includes(imageDisplay),
             }"
-            :src="imageSrc"
+            :src="imageSource"
             />
             {{title}}
             <img
             :class="{
-                headerImg: !imageFlipped,
-                headerImgFlipped: imageFlipped
+                imageFlipped: [IMAGE_DISPLAY.reversedMirrored, IMAGE_DISPLAY.reverse].includes(imageDisplay),
             }"
-            :src="imageSrc"
+            :src="imageSource"
             />
         </h1>
         </div>
@@ -24,6 +26,13 @@
 </template>
 
 <script lang="ts">
+
+export enum IMAGE_DISPLAY {
+    mirrored = "mirrored",
+    reversedMirrored = "reversedMirrored",
+    normal = "normal",
+    reverse = "reverse"
+}
 export default {
   props: {
     title: {
@@ -31,11 +40,17 @@ export default {
         required: true
     },
     subTitle: String,
-    imageSrc: {
+    imageSource: {
         type: String,
         required: true
     },
-    imageFlipped: Boolean
+    imageDisplay: {
+        type: String as PropType<IMAGE_DISPLAY>,
+        default: IMAGE_DISPLAY.mirrored
+    }
+  },
+  data() {
+    IMAGE_DISPLAY
   }
 }
 </script>
@@ -51,11 +66,7 @@ export default {
         width: 40px;
         margin: 0 1rem;
 
-        &.headerImg:nth-of-type(odd) {
-            transform: rotateY(180deg);
-        }
-
-        &.headerImgFlipped:nth-of-type(even) {
+        &.imageFlipped {
             transform: rotateY(180deg);
         }
     }

@@ -6,7 +6,7 @@
 <template>
   <Heading 
     title="Banned Accounts"
-    imageSrc="src/assets/images/GameAssets/Skull.png"
+    imageSource="src/assets/images/GameAssets/Skull.png"
   />
   <p>
     A list of all accounts that have been banned since February 28th
