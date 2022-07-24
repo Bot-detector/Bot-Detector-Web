@@ -1,50 +1,66 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-
-interface iRoute {
-  label: string;
-  location: string;
-}
-
-const routes: Array<iRoute> = [
-  {
-    label: "Home",
-    location: "/",
-  },
-  {
-    label: "Account search",
-    location: "/account-information",
-  },
-  {
-    label: "Banned accouts",
-    location: "/banned-accounts"
-  },
-  {
-    label: "Contributors",
-    location: "/contributors-and-supporters",
-  },
-  {
-    label: "FAQ",
-    location: "/faq",
-  },
-  {
-    label: "Contact Us",
-    location: "/contact-us",
-  },
-];
 </script>
 
 <template>
   <nav>
     <RouterLink
-      v-for="route in routes"
+      v-for="route in ROUTE"
       class="navigationbar-item"
-      :to="route.location"
-      :key="route.label"
-      >{{ route.label }}</RouterLink
-    >
+      :to="routes[route].location"
+      :key="routes[route].label "
+      >
+      {{ routes[route].label }}
+    </RouterLink>
   </nav>
 </template>
+
+<script lang="ts">
+export enum ROUTE {
+  Home = "Home",
+  AccountSearch = "Account search",
+  BannedAccounts = "Banned accounts",
+  Contributors = "Contributors",
+  FAQ = "FAQ",
+  ContactUs = "Contact Us"
+}
+
+export const routes = {
+  [ROUTE.Home]: {
+    label: "Home",
+    location: "/",
+  },
+  [ROUTE.AccountSearch]: {
+    label: "Account search",
+    location: "/account-information",
+  },
+  [ROUTE.BannedAccounts]: {
+    label: "Banned accounts",
+    location: "/banned-accounts"
+  },
+  [ROUTE.Contributors]: {
+    label: "Contributors",
+    location: "/contributors-and-supporters",
+  },
+  [ROUTE.FAQ]: {
+    label: "FAQ",
+    location: "/faq",
+  },
+  [ROUTE.ContactUs]: {
+    label: "Contact Us",
+    location: "/contact-us",
+  },
+};
+
+export default {
+  data() {
+    return {
+      ROUTE,
+      routes
+    }
+  }
+}
+</script>
 
 <style scroped lang="scss">
 nav {

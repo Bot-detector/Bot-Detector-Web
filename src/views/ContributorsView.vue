@@ -85,8 +85,9 @@ import ExternalLink from "../components/ExternalLink.vue";
     <p>
         <ExternalLink 
             to="https://www.patreon.com/bot_detector"
-            label="[This slot could be yours!]"
-        />
+        >
+        [This slot could be yours!]
+        </ExternalLink>
     </p>
 
     <Role 

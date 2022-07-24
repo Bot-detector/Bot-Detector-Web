@@ -340,7 +340,7 @@
   <h3>Is this Plugin malicious?</h3>
 
   <p>
-    The Plugin can be installed through RuneLite's <ExternalLink to="https://runelite.net/plugin-hub" label="Plugin Hub" /> system, which is curated by the RuneLite developers to not allow anything that's even mildly suspect. If you have any doubt about the Plugin's inner workings, all of its components' source codes are available in this GitHub! You may also contact us through our Discord server if you have any questions you'd like answered.
+    The Plugin can be installed through RuneLite's <ExternalLink to="https://runelite.net/plugin-hub">Plugin Hub</ExternalLink> system, which is curated by the RuneLite developers to not allow anything that's even mildly suspect. If you have any doubt about the Plugin's inner workings, all of its components' source codes are available in this GitHub! You may also contact us through our Discord server if you have any questions you'd like answered.
   </p>
 
   <h3>
@@ -443,7 +443,7 @@
   <h3>Can you unban accounts?</h3>
 
   <p>
-    No, for that you will have to file an appeal with <ExternalLink to="https://jgx.game/Ban" label="https://jgx.game/Ban" />.
+    No, for that you will have to file an appeal with <ExternalLink to="https://jgx.game/Ban">https://jgx.game/Ban</ExternalLink>.
   </p>
 
   <h3>
