@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import Heading, { IMAGE_DISPLAY } from "@/components/Heading.vue";
-  import { useBotDetectorApiStore } from "@/stores/api";
+  import { useBotDetectorApiStore } from "@/stores/apiStore";
   import { replaceUnderscoreWithSpace, toPercentage } from "@/utils";
 
   const botDetectorApiStore = useBotDetectorApiStore();

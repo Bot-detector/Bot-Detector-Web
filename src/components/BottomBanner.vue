@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { mdiHeart } from '@mdi/js';
-import { useRuneLiteStore } from '@/stores/api';
+import { useRuneLiteStore } from '@/stores/apiStore';
 
 const runeLiteStore = useRuneLiteStore();
 runeLiteStore.getProjectStats();

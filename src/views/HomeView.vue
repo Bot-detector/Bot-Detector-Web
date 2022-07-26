@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import Heading from "@/components/Heading.vue";
   import Socials, { SOCIAL } from "@/components/Socials.vue";
-  import { useBotDetectorApiStore } from "@/stores/api";
+  import { useBotDetectorApiStore } from "@/stores/apiStore";
   
   import { RouterLink } from "vue-router";
 

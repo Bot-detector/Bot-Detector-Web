@@ -2,9 +2,14 @@
   import Heading from "@/components/Heading.vue";
   import SubHeading from "@/components/SubHeading.vue";
   import Role, { RANK } from "@/components/Role.vue";
-  import ExternalLinkVue from "@/components/ExternalLink.vue";
+  import ExternalLink from "@/components/ExternalLink.vue";
   import Socials, { SOCIAL } from "@/components/Socials.vue";
-import ExternalLink from "../components/ExternalLink.vue";
+  import { useConfigStore } from "@/stores/configStore";
+
+  const configStore = useConfigStore();
+  configStore.getPatreons();
+
+  const isArrayEmpty = (arr: Array<any>) => arr.length === 0;
 </script>
 
 <template>
@@ -77,46 +82,97 @@ import ExternalLink from "../components/ExternalLink.vue";
     <Role 
         :rank="RANK.PatreonDragonBotHunters" 
     />
-    <p>DevinDog</p>
+    <p v-if="!isArrayEmpty(configStore.DragonBotHunter)">{{ configStore.DragonBotHunter.join(", ") }} </p>
+    <p v-if="isArrayEmpty(configStore.DragonBotHunter)">
+    <ExternalLink 
+        to="https://www.patreon.com/bot_detector"
+    >
+    [This slot could be yours!]
+    </ExternalLink>
+    </p>
+    
 
     <Role 
         :rank="RANK.PatreonRuneBotHunters" 
     />
-    <p>
-        <ExternalLink 
-            to="https://www.patreon.com/bot_detector"
-        >
-        [This slot could be yours!]
-        </ExternalLink>
+    <p v-if="!isArrayEmpty(configStore.RuneBotHunter)">{{ configStore.RuneBotHunter.join(", ") }} </p>
+    <p v-if="isArrayEmpty(configStore.RuneBotHunter)">
+    <ExternalLink 
+        to="https://www.patreon.com/bot_detector"
+    >
+    [This slot could be yours!]
+    </ExternalLink>
     </p>
 
     <Role 
         :rank="RANK.PatreonAdamantBotHunters" 
     />
-    <p>Sallysal, Rhikalika</p>
+    <p v-if="!isArrayEmpty(configStore.AdamantBotHunter)">{{ configStore.AdamantBotHunter.join(", ") }} </p>
+    <p v-if="isArrayEmpty(configStore.AdamantBotHunter)">
+    <ExternalLink 
+        to="https://www.patreon.com/bot_detector"
+    >
+    [This slot could be yours!]
+    </ExternalLink>
+    </p>
 
     <Role 
         :rank="RANK.PatreonMithrilBotHunters" 
     />
-    <p>Gottfrid, § Rambo, Ratteo, someranger, 117, PigeonNugget</p>
+    <p v-if="!isArrayEmpty(configStore.MithrilBotHunter)">{{ configStore.MithrilBotHunter.join(", ") }} </p>
+    <p v-if="isArrayEmpty(configStore.MithrilBotHunter)">
+    <ExternalLink 
+        to="https://www.patreon.com/bot_detector"
+    >
+    [This slot could be yours!]
+    </ExternalLink>
+    </p>
 
     <Role 
         :rank="RANK.PatreonSteelBotHunters" 
     />
-    <p>Sophlin, SeltzerBro, RoopeK, Richard Andrew</p>
+    <p v-if="!isArrayEmpty(configStore.SteelBotHunter)">{{ configStore.SteelBotHunter.join(", ") }} </p>
+    <p v-if="isArrayEmpty(configStore.SteelBotHunter)">
+    <ExternalLink 
+        to="https://www.patreon.com/bot_detector"
+    >
+    [This slot could be yours!]
+    </ExternalLink>
+    </p>
 
     <Role 
         :rank="RANK.PatreonIronBotHunters" 
     />
-    <p>7 7 7 7, AchromiK, Slappious, iamguard, TayyabPW, Snackal, Gunillion, Lewdy, CreamOfTheCrop, gllt, ryry3003, VRM, Zephinism, Python, cactus, BlueSavior, Adam, Iamdrew, Isaac Shevenell, Haleigh, EL_DEE , Infinitykill, Cody , RadioActiveYeti</p>
+    <p v-if="!isArrayEmpty(configStore.IronBotHunter)">{{ configStore.IronBotHunter.join(", ") }} </p>
+    <p v-if="isArrayEmpty(configStore.IronBotHunter)">
+    <ExternalLink 
+        to="https://www.patreon.com/bot_detector"
+    >
+    [This slot could be yours!]
+    </ExternalLink>
+    </p>
     
     <Role 
         :rank="RANK.PatreonBronzeBotHunters" 
     />
-    <p>Lexiii223, Zirhaze, Lisa Leese (She/They), Arcane, Seatball Mub, rasmus godske, Cortunix, Beeeooop, louis, Vis, oBIGRON, Amon Havers, Posti, Foxo, sarunas knabikas, Hex</p>
+    <p v-if="!isArrayEmpty(configStore.BronzeBotHunter)">{{ configStore.BronzeBotHunter.join(", ") }} </p>
+    <p v-if="isArrayEmpty(configStore.BronzeBotHunter)">
+    <ExternalLink 
+        to="https://www.patreon.com/bot_detector"
+    >
+    [This slot could be yours!]
+    </ExternalLink>
+    </p>
 
     <Role 
         :rank="RANK.PatreonStarterBotHunters" 
     />
-    <p>shaGGyTZ, Attilatheguy, mciurlionis, cykaking187, Claudio Dekker, JMoney, Not Goode, Hach, Heklek, Jair, Dennozs, grimsli, Poltergeist, Toastface5, samurai_pr, Springstof, LadyAleksandra, 3Pills, Gertoni Macaroni, Kryllo, RiverRogue, Basti, Infernus, Winning, Hairyngross, Fazel, Jules, Nechtmarrie, Anthony Perez, Anon4777, schulz, iliketostayanonymous, breakthetargets, Nostalgia, Darkpi, Thor, Sasha, val, Caboose700, KuhlGuy, FRED, AgelessOverkill, Caldo dpollo, No Ego, Daniël Roek, MyCrowSoft, Faremir , Beasst , Billy Hunt, Nicholas Earley, Joe Stoica, Tez, Dawnsnite, MrFoxyCracker, racklord, logan10144, fitchett, 7 7 mafia, Jax, Born2Grind, Core, Oondin, Damply, carpetcleaner, tylersandman, Jojy, Lag, Pyrotic, ify, pxjx, Icarus, Hotsaucesam, LookingForPants, Sentry, Oosterbuur</p>
+    <p v-if="!isArrayEmpty(configStore.starterBotHunter)">{{ configStore.starterBotHunter.join(", ") }} </p>
+    <p v-if="isArrayEmpty(configStore.starterBotHunter)">
+    <ExternalLink 
+        to="https://www.patreon.com/bot_detector"
+    >
+    [This slot could be yours!]
+    </ExternalLink>
+    </p>
 </template>
