@@ -1,5 +1,9 @@
 <script setup lang="ts">
   import Heading, { IMAGE_DISPLAY } from "@/components/Heading.vue";
+  import { useBotDetectorApiStore } from "@/stores/api";
+  import { replaceUnderscoreWithSpace, toPercentage } from "@/utils";
+
+  const botDetectorApiStore = useBotDetectorApiStore();
 </script>
 
 <template>
@@ -14,7 +18,7 @@
 
   <hr />
 
-  <form @submit.prevent="getAccountInformation()">
+  <form @submit.prevent="botDetectorApiStore.getAccountInformation()">
     <label for="rsn">Account Name </label>
     <!-- maxlengt=12 -->
     <input
@@ -22,122 +26,33 @@
       type="text"
       required
       minlength="1"
-      v-model="selectedRSN"
+      v-model="botDetectorApiStore.selectedRSN"
       placeholder="Enter account name here"
     />
     <input type="submit" value="Lookup" />
   </form>
 
-  <section v-if="isAwaitingResponse">
+  <section v-if="botDetectorApiStore.isAwaitingResponse">
     Fetching data...
   </section>
 
-  <section v-if="responseStatus === 404">
-    <p><strong>{{ playerName }} </strong> - Player not found.</p>
+  <section v-if="botDetectorApiStore.isReponseStatusNotFound">
+    <p><strong>{{ botDetectorApiStore.playerName }} </strong> - Player not found.</p>
   </section>
 
-  <section id="predictionPanel" v-if="responseStatus === 200">
+  <section id="predictionPanel" v-if="botDetectorApiStore.isResponseStatusOk">
     <h3>Primary Prediction</h3>
-    <p>Player Name: <strong>{{ responseData.player_name }}</strong></p>
-    <p>Prediction: <strong>{{ responseData.prediction_label.replace(/_/g, " ") }}</strong></p>
-    <p>Confidence: <strong>{{ `${(responseData.prediction_confidence * 100).toFixed(2)}%` }}</strong></p>
+    <p>Player Name: <strong>{{ botDetectorApiStore.responseData.player_name }}</strong></p>
+    <p>Prediction: <strong>{{ botDetectorApiStore.getPredictionNameCleaned}}</strong></p>
+    <p>Confidence: <strong>{{ botDetectorApiStore.getPredictionConfidence }}</strong></p>
 
     <h3>Prediction Breakdown</h3>
     <div id="predictionsBreakdown">
-      <p v-for="(prediction, key) in orderdPredictions">{{ key.toString().replace(/_/g, " ") }}: <strong>{{ `${(prediction * 100).toFixed(2)}%` }}</strong></p>
+      <p v-for="(prediction, key) in botDetectorApiStore.orderdPredictions">{{ replaceUnderscoreWithSpace(key.toString()) }}: <strong>{{ toPercentage(prediction) }}</strong></p>
     </div>
     
   </section>
 </template>
-
-<script lang="ts">
-import axios, { type AxiosResponse } from "axios";
-import _ from "lodash";
-
-interface PredictionBreakdown {
-    Real_Player: number,
-    PVM_Melee_bot: number,
-    Smithing_bot: number,
-    Magic_bot: number,
-    Fishing_bot: number,
-    Mining_bot: number,
-    Crafting_bot: number,
-    PVM_Ranged_Magic_bot: number,
-    PVM_Ranged_bot: number,
-    Hunter_bot: number,
-    Fletching_bot: number,
-    Clue_Scroll_bot: number,
-    LMS_bot: number,
-    Agility_bot: number,
-    Wintertodt_bot: number,
-    Runecrafting_bot: number,
-    Zalcano_bot: number,
-    Woodcutting_bot: number,
-    Thieving_bot: number,
-    Soul_Wars_bot: number,
-    Cooking_bot: number,
-    Vorkath_bot: number,
-    Barrows_bot: number,
-    Herblore_bot: number,
-    Unknown_bot: number
-  }
-
-interface Response {
-  player_name: String;
-  player_id: number;
-  prediction_confidence: number;
-  prediction_label: String;
-  predictions_breakdown: PredictionBreakdown;
-}
-
-export default {
-  name: "Home",
-  components: {},
-  computed: {
-    console: () => console,
-    orderdPredictions() {
-      return _(this.responseData.predictions_breakdown)
-        .toPairs()
-        .orderBy([1], ['desc'])
-        .fromPairs()
-        .value();
-    }
-  },
-  data: () => ({
-    selectedRSN: "",
-    responseStatus: 0,
-    isAwaitingResponse: false,
-    playerName: "",
-    responseData: {} as Response
-  }),
-  methods: {
-    setAccountInformation: function (response: AxiosResponse<Response>) {
-      this.responseData = response.data;
-    },
-    getAccountInformation: function () {
-      this.isAwaitingResponse = true;
-      axios
-        .get(
-          import.meta.env.VITE_API_URL + "/v1/prediction?name=" +
-            this.selectedRSN
-        )
-        .then((response) => {
-          this.responseStatus = response.status;
-          this.setAccountInformation(response);
-          this.isAwaitingResponse = false;
-          this.selectedRSN = ""
-        })
-        .catch((error) => {
-          this.responseStatus = error.response.status;
-          this.playerName = this.selectedRSN;
-          this.selectedRSN = ""
-          console.error(error.message);
-          this.isAwaitingResponse = false;
-        });
-    },
-  },
-};
-</script>
 
 <style scoped lang="scss">
 #predictionPanel {
@@ -162,8 +77,7 @@ export default {
       }
     }
     
-  }
-}
+  }}
 
 form {
   margin: 1rem 0;

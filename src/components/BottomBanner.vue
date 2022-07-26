@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { mdiHeart } from '@mdi/js';
+import { useRuneLiteStore } from '@/stores/api';
+
+const runeLiteStore = useRuneLiteStore();
+runeLiteStore.getProjectStats();
 </script>
 
 <template>
@@ -12,43 +16,10 @@ import { mdiHeart } from '@mdi/js';
         </div>
 
         <div id="plugin-stats">
-            <p>Active Installs: {{totalInstalls === 0 ? "Failed getting stats." : totalInstalls}}</p>
+            <p>Active Installs: {{ runeLiteStore.getTotalInstalls }}</p>
         </div>
     </div>
 </template>
-
-<script lang="ts">
-import axios, { type AxiosResponse } from "axios";
-
-interface Respose {
-    "bot-detector": number,
-    [key: string]: number;
-}
-export default {
-  data: () => ({
-    totalInstalls: 0,
-  }),
-  mounted() {
-    this.getProjectStats();
-  },
-  methods: {
-    setProjectStats: function (response: AxiosResponse<Respose>) {
-      console.log(response.data);
-      this.totalInstalls = response.data['bot-detector'];
-    },
-    getProjectStats: function () {
-      axios
-        .get("https://api.runelite.net/runelite/pluginhub", {
-          headers: {
-            'accept': 'application/json'
-          }
-        })
-        .then((response) => this.setProjectStats(response));
-    },
-  },
-};
-</script>
-
 
 <style scoped lang="scss">
 .bottom-banner {
