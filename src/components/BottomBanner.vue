@@ -24,10 +24,15 @@ runeLiteStore.getProjectStats();
 <style scoped lang="scss">
 .bottom-banner {
     max-height: 42px;
+    top: calc(100% - 42px);
 
     p {
         color: white;
         margin: 0;
+
+        @media screen and (max-width: 720px) {
+            font-size: 0.8rem;
+        }
     }
 }
 

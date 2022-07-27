@@ -15,12 +15,18 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': {
+      '/api/osrsbotdetector/': {
            target: "https://api.astrobit.space/",
            changeOrigin: true,   
            ws: false,
-           rewrite: path => path.replace('/api', ''),
-       }
+           rewrite: path => path.replace('/api/osrsbotdetector/', ''),
+       },
+       '/api/runelite/': {
+        target: "https://api.runelite.net/",
+        changeOrigin: true,   
+        ws: false,
+        rewrite: path => path.replace('/api', ''),
+    }
     }
   }
 });

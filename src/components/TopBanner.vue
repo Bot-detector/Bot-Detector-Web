@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="outer-banner">
+    <div class="outer-banner top-banner">
         <RouterLink :to="routes[ROUTE.Home].location">
         <div class="branding">
             <img src="src/assets/images/logo-sm.png" alt="logo bot detector plugin">
@@ -31,8 +31,15 @@
 </template>
 
 <style lang="scss">
+.top-banner {
+    @media screen and (max-width: 720px) {
+        flex-direction: column;
+    }
+}
 
 .outer-banner {
+    top: 0;
+
     a {
         color: white;
         text-decoration: none;
@@ -40,10 +47,6 @@
 
     display: flex;
     justify-content: space-between;
-
-    @media screen and (max-width: 720px) {
-        flex-direction: column;
-    }
 
     .branding {
         display: flex;
@@ -68,6 +71,11 @@
             margin: 0.5rem;
             border-radius: 0.25rem;
             align-items: center;
+
+            @media screen and (max-width: 720px) {
+                font-size: 0.8rem;
+
+            }
 
             &:hover {
                 background-color: rgba(255, 255, 255, 0.1);

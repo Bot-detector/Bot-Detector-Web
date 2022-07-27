@@ -41,12 +41,7 @@ export const useRuneLiteStore = defineStore({
     },
     getProjectStats: function () {
       axios
-        .get("https://api.runelite.net/runelite/pluginhub", {
-          headers: {
-            'accept': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-          }
-        })
+        .get(import.meta.env.VITE_BOT_DETECTOR_API_URL + "/runelite/pluginhub")
         .then((response) => this.setProjectStats(response))
         .catch((error) => console.error(error));
     },
@@ -87,7 +82,7 @@ export const useBotDetectorApiStore = defineStore({
     },
     getProjectStats: function () {
       axios
-        .get(import.meta.env.VITE_BOT_DETECTOR_API_URL + "/site/dashboard/projectstats", {
+        .get(import.meta.env.VITE_BOT_DETECTOR_API_URL + "/osrsbotdetector/site/dashboard/projectstats", {
           headers: {
             'accept': 'application/json'
           }
@@ -102,7 +97,7 @@ export const useBotDetectorApiStore = defineStore({
       this.isAwaitingResponse = true;
       axios
         .get(
-          import.meta.env.VITE_BOT_DETECTOR_API_URL + "/v1/prediction?name=" +
+          import.meta.env.VITE_BOT_DETECTOR_API_URL + "/osrsbotdetector/v1/prediction?name=" +
             this.selectedRSN
         )
         .then((response) => {

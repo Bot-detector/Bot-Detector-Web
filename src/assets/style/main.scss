@@ -9,9 +9,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     .outer-banner {
+      position: fixed;
+      width: 100%;
       box-sizing: border-box;
       background-color: #272727;
       padding: 0.5rem 1rem;
+      z-index: 500;
+
       @media screen and (min-width: 720px) {
         max-height: 65px;
       }
@@ -28,6 +32,10 @@ body {
       background-repeat: repeat-y;
       background-position: center;
       background-size: 100%;
+
+      @media screen and (max-width: 720px) {
+        padding: 2.5rem 1.5rem;
+      }
 
       h2 {
         text-align: center;
@@ -79,8 +87,12 @@ body {
         box-sizing: border-box;
         margin: 0 auto;
         background: url("@/assets/images/background.jpg") center repeat-y;
-        min-height: calc(100% - 65px - 42px); // 65px and 42px accounting for top and bottom banner
-        padding: 0.5rem;
+        min-height: 100%;
+        padding: 65px 0.5rem 42px 0.5rem; // 65px and 42px accounting for top and bottom banner
+
+        @media screen and ( max-width: 720px ) {
+          padding: 115px 0.5rem 42px 0.5rem; // 65px and 42px accounting for top and bottom banner
+        }
     }
 
     footer {
