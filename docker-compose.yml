@@ -1,0 +1,11 @@
+services:
+  bot-detector-web:
+    image: bot-detector-web
+    container_name: bot-detector-web
+    command:
+      - serve
+    volumes:
+      - /config:/usr/share/nginx/html/config
+    ports:
+      - 80:80
+    restart: unless-stopped

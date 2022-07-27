@@ -9,24 +9,23 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
-      //@ts-expect-error import.meta.url is needed, this is a bug
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
   server: {
     proxy: {
-      '/api/osrsbotdetector/': {
-           target: "https://api.astrobit.space/",
-           changeOrigin: true,   
-           ws: false,
-           rewrite: path => path.replace('/api/osrsbotdetector/', ''),
-       },
-       '/api/runelite/': {
-        target: "https://api.runelite.net/",
-        changeOrigin: true,   
+      "/api/osrsbotdetector/": {
+        target: "https://api.astrobit.space/",
+        changeOrigin: true,
         ws: false,
-        rewrite: path => path.replace('/api', ''),
-    }
-    }
-  }
+        rewrite: (path) => path.replace("/api/osrsbotdetector/", ""),
+      },
+      "/api/runelite/": {
+        target: "https://api.runelite.net/",
+        changeOrigin: true,
+        ws: false,
+        rewrite: (path) => path.replace("/api", ""),
+      },
+    },
+  },
 });

@@ -3,105 +3,102 @@ import type { PropType } from "vue";
 </script>
 
 <template>
-    <header>
-        <strong>
-            <img
-            class="headerImg"
-            :src="ranks[rank].imageSource"
-            />
-            {{ rank }}
-        </strong>
-    </header>
+  <header>
+    <strong>
+      <img class="headerImg" :src="ranks[rank].imageSource" />
+      {{ rank }}
+    </strong>
+  </header>
 </template>
 
 <script lang="ts">
 export enum RANK {
-    Owner = "Owner", 
-    CoOwner = "Co-Owners",
-    JagexMod = "Jagex Moderators",
-    ModTier4 = "Tier 4",
-    ModTier3 = "Tier 3",
-    ModTier2 = "Tier 2",
-    ModTier1 = "Tier 1",
-    PatreonDragonBotHunters = "Dragon Bot Hunter",
-    PatreonRuneBotHunters = "Rune Bot Hunter",
-    PatreonAdamantBotHunters = "Adamant Bot Hunter",
-    PatreonMithrilBotHunters = "Mithril Bot Hunter",
-    PatreonSteelBotHunters = "Steel Bot Hunter",
-    PatreonIronBotHunters = "Iron Bot Hunter",
-    PatreonBronzeBotHunters = "Bronze Bot Hunter",
-    PatreonStarterBotHunters = "Starter Bot Hunter"
+  Owner = "Owner",
+  CoOwner = "Co-Owners",
+  JagexMod = "Jagex Moderators",
+  ModTier4 = "Tier 4",
+  ModTier3 = "Tier 3",
+  ModTier2 = "Tier 2",
+  ModTier1 = "Tier 1",
+  PatreonDragonBotHunters = "Dragon Bot Hunter",
+  PatreonRuneBotHunters = "Rune Bot Hunter",
+  PatreonAdamantBotHunters = "Adamant Bot Hunter",
+  PatreonMithrilBotHunters = "Mithril Bot Hunter",
+  PatreonSteelBotHunters = "Steel Bot Hunter",
+  PatreonIronBotHunters = "Iron Bot Hunter",
+  PatreonBronzeBotHunters = "Bronze Bot Hunter",
+  PatreonStarterBotHunters = "Starter Bot Hunter",
 }
 
 const ranks = {
-    [RANK.Owner]: {
-        imageSource: "src/assets/images/Clan_icons/Owner.png"
-    },
-    [RANK.CoOwner]: {
-        imageSource: "src/assets/images/Clan_icons/Deputy_owner.png"
-    },
-    [RANK.JagexMod]: {
-        imageSource: "src/assets/images/Clan_icons/Jmod.png"
-    },
-    [RANK.ModTier4]: {
-        imageSource: "src/assets/images/Clan_icons/t4.png"
-    },
-    [RANK.ModTier3]: {
-        imageSource: "src/assets/images/Clan_icons/t3.png"
-    },
-    [RANK.ModTier2]: {
-        imageSource: "src/assets/images/Clan_icons/t2.png"
-    },
-    [RANK.ModTier1]: {
-        imageSource: "src/assets/images/Clan_icons/t1.png"
-    },
-    [RANK.PatreonDragonBotHunters]: {
-        imageSource: "src/assets/images/Clan_icons/Dragon.png"
-    },
-    [RANK.PatreonRuneBotHunters]: {
-        imageSource: "src/assets/images/Clan_icons/Rune.png"
-    },
-    [RANK.PatreonAdamantBotHunters]: {
-        imageSource: "src/assets/images/Clan_icons/Adamant.png"
-    },
-    [RANK.PatreonMithrilBotHunters]: {
-        imageSource: "src/assets/images/Clan_icons/Mithril.png"
-    },
-    [RANK.PatreonSteelBotHunters]: {
-        imageSource: "src/assets/images/Clan_icons/Steel.png"
-    },
-    [RANK.PatreonIronBotHunters]: {
-        imageSource: "src/assets/images/Clan_icons/Iron.png"
-    },
-    [RANK.PatreonBronzeBotHunters]: {
-        imageSource: "src/assets/images/Clan_icons/Bronze.png"
-    },
-    [RANK.PatreonStarterBotHunters]: {
-        imageSource: "src/assets/images/Clan_icons/Skulled.png"
-    },
-}
+  [RANK.Owner]: {
+    imageSource: "src/assets/images/Clan_icons/Owner.png",
+  },
+  [RANK.CoOwner]: {
+    imageSource: "src/assets/images/Clan_icons/Deputy_owner.png",
+  },
+  [RANK.JagexMod]: {
+    imageSource: "src/assets/images/Clan_icons/Jmod.png",
+  },
+  [RANK.ModTier4]: {
+    imageSource: "src/assets/images/Clan_icons/t4.png",
+  },
+  [RANK.ModTier3]: {
+    imageSource: "src/assets/images/Clan_icons/t3.png",
+  },
+  [RANK.ModTier2]: {
+    imageSource: "src/assets/images/Clan_icons/t2.png",
+  },
+  [RANK.ModTier1]: {
+    imageSource: "src/assets/images/Clan_icons/t1.png",
+  },
+  [RANK.PatreonDragonBotHunters]: {
+    imageSource: "src/assets/images/Clan_icons/Dragon.png",
+  },
+  [RANK.PatreonRuneBotHunters]: {
+    imageSource: "src/assets/images/Clan_icons/Rune.png",
+  },
+  [RANK.PatreonAdamantBotHunters]: {
+    imageSource: "src/assets/images/Clan_icons/Adamant.png",
+  },
+  [RANK.PatreonMithrilBotHunters]: {
+    imageSource: "src/assets/images/Clan_icons/Mithril.png",
+  },
+  [RANK.PatreonSteelBotHunters]: {
+    imageSource: "src/assets/images/Clan_icons/Steel.png",
+  },
+  [RANK.PatreonIronBotHunters]: {
+    imageSource: "src/assets/images/Clan_icons/Iron.png",
+  },
+  [RANK.PatreonBronzeBotHunters]: {
+    imageSource: "src/assets/images/Clan_icons/Bronze.png",
+  },
+  [RANK.PatreonStarterBotHunters]: {
+    imageSource: "src/assets/images/Clan_icons/Skulled.png",
+  },
+};
 
 export default {
   props: {
     rank: {
-        type: String as PropType<RANK>,
-        required: true
+      type: String as PropType<RANK>,
+      required: true,
     },
   },
   data() {
-    return RANK
-  }
-}
+    return RANK;
+  },
+};
 </script>
 
 <style scoped lang="scss">
-    strong {
-        display: flex;
-        align-items: center;
-    }
-    
-    img {
-        width: 20px;
-        margin-right: 0.5rem;
-    }
+strong {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 20px;
+  margin-right: 0.5rem;
+}
 </style>

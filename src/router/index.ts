@@ -9,48 +9,48 @@ const router = createRouter({
       name: "home",
       component: HomeView,
       meta: {
-        title: "Home"
-      }
+        title: "Home",
+      },
     },
     {
       path: "/account-information",
       name: "account-information",
       component: () => import("@/views/AccountInformationView.vue"),
       meta: {
-        title: "Account Information"
-      }
+        title: "Account Information",
+      },
     },
     {
       path: "/contributors-and-supporters",
       name: "Contributors and supporters",
       component: () => import("@/views/ContributorsView.vue"),
       meta: {
-        title: "Contributors and supporters"
-      }
+        title: "Contributors and supporters",
+      },
     },
     {
       path: "/banned-accounts",
       name: "Banned Accounts",
       component: () => import("@/views/BannedAccountsView.vue"),
       meta: {
-        title: "Banned Accounts"
-      }
+        title: "Banned Accounts",
+      },
     },
     {
       path: "/contact-us",
       name: "Contact",
       component: () => import("@/views/ContactUsView.vue"),
       meta: {
-        title: "Contact Us"
-      }
+        title: "Contact Us",
+      },
     },
     {
       path: "/faq",
       name: "FAQ",
       component: () => import("@/views/FAQView.vue"),
       meta: {
-        title: "FAQ"
-      }
+        title: "FAQ",
+      },
     },
     {
       path: "/:pathMatch(.*)*",
@@ -66,8 +66,10 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title ? `${to.meta.title} | Bot Detector` : "Bot Detector";
+  document.title = to.meta.title
+    ? `${to.meta.title} | Bot Detector`
+    : "Bot Detector";
   next();
-})
+});
 
 export default router;

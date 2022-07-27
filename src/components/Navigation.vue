@@ -8,8 +8,8 @@ import { RouterLink } from "vue-router";
       v-for="route in ROUTE"
       class="navigationbar-item"
       :to="routes[route].location"
-      :key="routes[route].label "
-      >
+      :key="routes[route].label"
+    >
       {{ routes[route].label }}
     </RouterLink>
   </nav>
@@ -22,7 +22,7 @@ export enum ROUTE {
   BannedAccounts = "Banned accounts",
   Contributors = "Contributors",
   FAQ = "FAQ",
-  ContactUs = "Contact Us"
+  ContactUs = "Contact Us",
 }
 
 export const routes = {
@@ -36,7 +36,7 @@ export const routes = {
   },
   [ROUTE.BannedAccounts]: {
     label: "Banned accounts",
-    location: "/banned-accounts"
+    location: "/banned-accounts",
   },
   [ROUTE.Contributors]: {
     label: "Contributors",
@@ -56,10 +56,10 @@ export default {
   data() {
     return {
       ROUTE,
-      routes
-    }
-  }
-}
+      routes,
+    };
+  },
+};
 </script>
 
 <style scroped lang="scss">
@@ -87,7 +87,6 @@ nav {
     @media screen and (max-width: 720px) {
       padding: 0.5rem;
     }
-
   }
 }
 </style>

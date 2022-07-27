@@ -1,19 +1,22 @@
 <script setup lang="ts">
-  import Heading, { IMAGE_DISPLAY } from "@/components/Heading.vue";
-  import { useBotDetectorApiStore } from "@/stores/apiStore";
-  import { replaceUnderscoreWithSpace, toPercentage } from "@/utils";
+import Heading, { IMAGE_DISPLAY } from "@/components/Heading.vue";
+import { useBotDetectorApiStore } from "@/stores/apiStore";
+import { replaceUnderscoreWithSpace, toPercentage } from "@/utils";
 
-  const botDetectorApiStore = useBotDetectorApiStore();
+const botDetectorApiStore = useBotDetectorApiStore();
 </script>
 
 <template>
-  <Heading 
-    title="Account Search" 
+  <Heading
+    title="Account Search"
     imageSource="src/assets/images/GameAssets/runefullhelm.png"
     :imageDisplay="IMAGE_DISPLAY.reversedMirrored"
   />
   <p>
-    If you would like to learn more about an Old School Runescape account, type in the name below. We cannot provide information with 24 hours of a sighting of a player, therefore we cannot provide latest locations and latest gear information for an account.
+    If you would like to learn more about an Old School Runescape account, type
+    in the name below. We cannot provide information with 24 hours of a sighting
+    of a player, therefore we cannot provide latest locations and latest gear
+    information for an account.
   </p>
 
   <hr />
@@ -37,20 +40,36 @@
   </section>
 
   <section v-if="botDetectorApiStore.isReponseStatusNotFound">
-    <p><strong>{{ botDetectorApiStore.playerName }} </strong> - Player not found.</p>
+    <p>
+      <strong>{{ botDetectorApiStore.playerName }} </strong> - Player not found.
+    </p>
   </section>
 
   <section id="predictionPanel" v-if="botDetectorApiStore.isResponseStatusOk">
     <h3>Primary Prediction</h3>
-    <p>Player Name: <strong>{{ botDetectorApiStore.responseData.player_name }}</strong></p>
-    <p>Prediction: <strong>{{ botDetectorApiStore.getPredictionNameCleaned}}</strong></p>
-    <p>Confidence: <strong>{{ botDetectorApiStore.getPredictionConfidence }}</strong></p>
+    <p>
+      Player Name:
+      <strong>{{ botDetectorApiStore.responseData.player_name }}</strong>
+    </p>
+    <p>
+      Prediction:
+      <strong>{{ botDetectorApiStore.getPredictionNameCleaned }}</strong>
+    </p>
+    <p>
+      Confidence:
+      <strong>{{ botDetectorApiStore.getPredictionConfidence }}</strong>
+    </p>
 
     <h3>Prediction Breakdown</h3>
     <div id="predictionsBreakdown">
-      <p v-for="(prediction, key) in botDetectorApiStore.orderdPredictions">{{ replaceUnderscoreWithSpace(key.toString()) }}: <strong>{{ toPercentage(prediction) }}</strong></p>
+      <p
+        v-for="(prediction, key) in botDetectorApiStore.orderdPredictions"
+        :key="key"
+      >
+        {{ replaceUnderscoreWithSpace(key.toString()) }}:
+        <strong>{{ toPercentage(prediction) }}</strong>
+      </p>
     </div>
-    
   </section>
 </template>
 
@@ -66,7 +85,7 @@
     @media screen and (min-width: 480px) {
       column-count: 2;
     }
-    
+
     p {
       display: flex;
       justify-content: space-between;
@@ -76,8 +95,8 @@
         background-color: rgba(0, 0, 0, 0.1);
       }
     }
-    
-  }}
+  }
+}
 
 form {
   margin: 1rem 0;
