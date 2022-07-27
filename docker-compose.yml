@@ -1,9 +1,9 @@
 services:
   bot-detector-web:
-    build: .
+    build:
+      context: .
+      target: nginx-prod
     container_name: bot-detector-web
-    volumes:
-      - /config:/usr/share/nginx/html/config
     ports:
       - 8080:8080
     restart: unless-stopped
