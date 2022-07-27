@@ -1,6 +1,7 @@
 {
-  "name": "bot-detector-web-reborn",
-  "version": "0.0.0",
+  "name": "bot-detector-web",
+  "version": "2.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vite --mode dev --host",
     "build": "run-p type-check build-only",
@@ -11,7 +12,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "build:docker": "docker ."
+    "build:docker": "docker build . --tag bot-detector-web",
+    "build:all": "run-p build build:docker"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",

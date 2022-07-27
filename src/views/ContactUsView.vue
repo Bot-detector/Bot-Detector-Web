@@ -4,10 +4,7 @@ import Socials, { SOCIAL, DISPLAYTYPE } from "@/components/Socials.vue";
 </script>
 
 <template>
-  <Heading
-    title="Contact Us"
-    imageSource="src/assets/images/GameAssets/contact.png"
-  />
+  <Heading title="Contact Us" imageSource="/images/GameAssets/contact.png" />
 
   <p>
     If you're looking to get in touch with us, feel free to message any of the

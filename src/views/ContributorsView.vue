@@ -15,7 +15,7 @@ const isArrayEmpty = (arr: Array<unknown>) => arr.length === 0;
 <template>
   <Heading
     title="Contributors and Supporters"
-    imageSource="src/assets/images/GameAssets/coins.png"
+    imageSource="/images/GameAssets/coins.png"
   />
 
   <p>
@@ -29,10 +29,7 @@ const isArrayEmpty = (arr: Array<unknown>) => arr.length === 0;
 
   <hr />
 
-  <SubHeading
-    title="Contributors"
-    imageSource="src/assets/images/Clan_icons/House.png"
-  />
+  <SubHeading title="Contributors" imageSource="/images/Clan_icons/House.png" />
 
   <Role :rank="RANK.Owner" />
   <p>Ferrariic</p>
@@ -47,7 +44,7 @@ const isArrayEmpty = (arr: Array<unknown>) => arr.length === 0;
 
   <SubHeading
     title="Community Moderators"
-    imageSource="src/assets/images/Clan_icons/Shield.png"
+    imageSource="/images/Clan_icons/Shield.png"
   />
 
   <Role :rank="RANK.ModTier4" />
@@ -69,7 +66,7 @@ const isArrayEmpty = (arr: Array<unknown>) => arr.length === 0;
 
   <SubHeading
     title="Patreon Supporters"
-    imageSource="src/assets/images/Clan_icons/Bank.png"
+    imageSource="/images/Clan_icons/Bank.png"
   />
 
   <Role :rank="RANK.PatreonDragonBotHunters" />

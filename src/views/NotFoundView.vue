@@ -7,7 +7,7 @@ import { RouterLink } from "vue-router";
   <Heading
     title="404 Not found."
     subTitle="No bots could be found here..."
-    imageSource="src/assets/images/GameAssets/bot.png"
+    imageSource="/images/GameAssets/bot.png"
   />
   <p>
     If you think this is a mistake

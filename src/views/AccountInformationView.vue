@@ -9,7 +9,7 @@ const botDetectorApiStore = useBotDetectorApiStore();
 <template>
   <Heading
     title="Account Search"
-    imageSource="src/assets/images/GameAssets/runefullhelm.png"
+    imageSource="/images/GameAssets/runefullhelm.png"
     :imageDisplay="IMAGE_DISPLAY.reversedMirrored"
   />
   <p>

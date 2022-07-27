@@ -13,7 +13,7 @@ botDetectorApiStore.getProjectStats();
   <Heading
     title="Bot Detector"
     subTitle="An Open-Source Machine Learning Plugin"
-    imageSource="src/assets/images/GameAssets/bot.png"
+    imageSource="/images/GameAssets/bot.png"
   />
 
   <hr />

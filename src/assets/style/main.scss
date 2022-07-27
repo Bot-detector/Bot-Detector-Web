@@ -28,7 +28,7 @@ body {
       width: 85%;
       padding: 2.5rem;
       color: #1f1b12;
-      background-image: url("@/assets/images/backdrop.gif");
+      background-image: url("/images/backdrop.gif");
       background-repeat: repeat-y;
       background-position: center;
       background-size: 100%;
@@ -53,12 +53,12 @@ body {
       }
 
       &:before {
-        background-image: url("@/assets/images/top.gif");
+        background-image: url("/images/top.gif");
         transform: translate(-2%, -100%);        
       }
 
       &:after {
-        background-image: url("@/assets/images/bottom.gif");
+        background-image: url("/images/bottom.gif");
         transform: translateX(-2%);  
       }
     }
@@ -86,7 +86,7 @@ body {
         max-width: 900px;
         box-sizing: border-box;
         margin: 0 auto;
-        background: url("@/assets/images/background.jpg") center repeat-y;
+        background: url("/images/background.jpg") center repeat-y;
         min-height: 100%;
         padding: 65px 0.5rem 42px 0.5rem; // 65px and 42px accounting for top and bottom banner
 

@@ -8,10 +8,7 @@ import Socials, { SOCIAL } from "@/components/Socials.vue";
   <div class="outer-banner top-banner">
     <RouterLink :to="routes[ROUTE.Home].location">
       <div class="branding">
-        <img
-          src="src/assets/images/logo-sm.png"
-          alt="logo bot detector plugin"
-        />
+        <img src="/images/logo-sm.png" alt="logo bot detector plugin" />
         <strong>Bot-Detector</strong>
       </div>
     </RouterLink>

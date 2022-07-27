@@ -32,49 +32,49 @@ export enum RANK {
 
 const ranks = {
   [RANK.Owner]: {
-    imageSource: "src/assets/images/Clan_icons/Owner.png",
+    imageSource: "/images/Clan_icons/Owner.png",
   },
   [RANK.CoOwner]: {
-    imageSource: "src/assets/images/Clan_icons/Deputy_owner.png",
+    imageSource: "/images/Clan_icons/Deputy_owner.png",
   },
   [RANK.JagexMod]: {
-    imageSource: "src/assets/images/Clan_icons/Jmod.png",
+    imageSource: "/images/Clan_icons/Jmod.png",
   },
   [RANK.ModTier4]: {
-    imageSource: "src/assets/images/Clan_icons/t4.png",
+    imageSource: "/images/Clan_icons/t4.png",
   },
   [RANK.ModTier3]: {
-    imageSource: "src/assets/images/Clan_icons/t3.png",
+    imageSource: "/images/Clan_icons/t3.png",
   },
   [RANK.ModTier2]: {
-    imageSource: "src/assets/images/Clan_icons/t2.png",
+    imageSource: "/images/Clan_icons/t2.png",
   },
   [RANK.ModTier1]: {
-    imageSource: "src/assets/images/Clan_icons/t1.png",
+    imageSource: "/images/Clan_icons/t1.png",
   },
   [RANK.PatreonDragonBotHunters]: {
-    imageSource: "src/assets/images/Clan_icons/Dragon.png",
+    imageSource: "/images/Clan_icons/Dragon.png",
   },
   [RANK.PatreonRuneBotHunters]: {
-    imageSource: "src/assets/images/Clan_icons/Rune.png",
+    imageSource: "/images/Clan_icons/Rune.png",
   },
   [RANK.PatreonAdamantBotHunters]: {
-    imageSource: "src/assets/images/Clan_icons/Adamant.png",
+    imageSource: "/images/Clan_icons/Adamant.png",
   },
   [RANK.PatreonMithrilBotHunters]: {
-    imageSource: "src/assets/images/Clan_icons/Mithril.png",
+    imageSource: "/images/Clan_icons/Mithril.png",
   },
   [RANK.PatreonSteelBotHunters]: {
-    imageSource: "src/assets/images/Clan_icons/Steel.png",
+    imageSource: "/images/Clan_icons/Steel.png",
   },
   [RANK.PatreonIronBotHunters]: {
-    imageSource: "src/assets/images/Clan_icons/Iron.png",
+    imageSource: "/images/Clan_icons/Iron.png",
   },
   [RANK.PatreonBronzeBotHunters]: {
-    imageSource: "src/assets/images/Clan_icons/Bronze.png",
+    imageSource: "/images/Clan_icons/Bronze.png",
   },
   [RANK.PatreonStarterBotHunters]: {
-    imageSource: "src/assets/images/Clan_icons/Skulled.png",
+    imageSource: "/images/Clan_icons/Skulled.png",
   },
 };
 

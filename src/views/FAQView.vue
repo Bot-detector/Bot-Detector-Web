@@ -7,7 +7,7 @@ import ExternalLink from "@/components/ExternalLink.vue";
 <template>
   <Heading
     title="Frequently Asked Questions"
-    imageSource="src/assets/images/GameAssets/questionmarkcake.png"
+    imageSource="/images/GameAssets/questionmarkcake.png"
   />
 
   <p>
@@ -292,7 +292,7 @@ import ExternalLink from "@/components/ExternalLink.vue";
 
   <h3 id="understandingThePluginPanel">Understanding The Plugin Panel</h3>
   <img
-    src="src/assets/images/faqimages/playerstatspanel.png"
+    src="/images/faqimages/playerstatspanel.png"
     alt="A screenshot of the player stats panel for the plugin"
   />
 
@@ -363,7 +363,7 @@ import ExternalLink from "@/components/ExternalLink.vue";
   <h3 class="title" id="predictionPanel">The Prediction Panel</h3>
 
   <img
-    src="src/assets/images/faqimages/predictpanel.png"
+    src="/images/faqimages/predictpanel.png"
     alt="A screenshot from the plugin where you can see the prediction panel"
   />
 
@@ -460,7 +460,7 @@ import ExternalLink from "@/components/ExternalLink.vue";
   </p>
 
   <img
-    src="src/assets/images/faqimages/mlexample.png"
+    src="/images/faqimages/mlexample.png"
     alt="A screenshot of data returned by the machine learning algorithm"
   />
 

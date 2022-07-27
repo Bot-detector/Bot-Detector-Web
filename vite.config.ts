@@ -15,7 +15,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api/osrsbotdetector/": {
-        target: "https://api.astrobit.space/",
+        target: "https://osrsbotdetector.com/api/",
         changeOrigin: true,
         ws: false,
         rewrite: (path) => path.replace("/api/osrsbotdetector/", ""),

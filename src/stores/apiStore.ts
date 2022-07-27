@@ -88,15 +88,11 @@ export const useBotDetectorApiStore = defineStore({
     },
     getProjectStats: function () {
       axios
-        .get(
-          API_URL +
-            "/osrsbotdetector/site/dashboard/projectstats",
-          {
-            headers: {
-              accept: "application/json",
-            },
-          }
-        )
+        .get(API_URL + "/osrsbotdetector/site/dashboard/projectstats", {
+          headers: {
+            accept: "application/json",
+          },
+        })
         .then((response) => this.setBanStats(response))
         .catch((error) => console.error(error));
     },
@@ -109,9 +105,7 @@ export const useBotDetectorApiStore = defineStore({
       this.isAwaitingResponse = true;
       axios
         .get(
-          API_URL +
-            "/osrsbotdetector/v1/prediction?name=" +
-            this.selectedRSN
+          API_URL + "/osrsbotdetector/v1/prediction?name=" + this.selectedRSN
         )
         .then((response) => {
           this.responseStatus = response.status;
