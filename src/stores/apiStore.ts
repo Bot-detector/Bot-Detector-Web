@@ -11,8 +11,6 @@ import type {
 } from "@/interfaces/ApiInterface";
 import { replaceUnderscoreWithSpace, toPercentage } from "@/utils";
 
-const API_URL = window.location.origin + "/api";
-
 // see https://docs.patreon.com/?javascript=#get-api-oauth2-v2-campaigns-campaign_id-members=
 export const usePatreonStore = defineStore({
   id: "patreonApiStore",
@@ -39,12 +37,11 @@ export const useRuneLiteStore = defineStore({
   },
   actions: {
     setProjectStats: function (response: AxiosResponse<RuneLiteApiRespose>) {
-      console.log(response.data);
       this.totalInstalls = response.data["bot-detector"];
     },
     getProjectStats: function () {
       axios
-        .get(API_URL + "/runelite/pluginhub")
+        .get(import.meta.env.VITE_RUNELITE_API_URL)
         .then((response) => this.setProjectStats(response))
         .catch((error) => console.error(error));
     },
@@ -81,14 +78,13 @@ export const useBotDetectorApiStore = defineStore({
   },
   actions: {
     setBanStats: function (response: AxiosResponse<BotDetectorApiResponse>) {
-      console.log(response.data);
       this.totalBans = Number(response.data["total_bans"]);
       this.totalAccounts = Number(response.data["total_accounts"]);
       this.totalPlayers = Number(response.data["total_real_players"]);
     },
     getProjectStats: function () {
       axios
-        .get(API_URL + "/osrsbotdetector/site/dashboard/projectstats", {
+        .get(import.meta.env.VITE_BOTDETECTOR_API_URL + "/site/dashboard/projectstats", {
           headers: {
             accept: "application/json",
           },
@@ -105,7 +101,7 @@ export const useBotDetectorApiStore = defineStore({
       this.isAwaitingResponse = true;
       axios
         .get(
-          API_URL + "/osrsbotdetector/v1/prediction?name=" + this.selectedRSN
+          import.meta.env.VITE_BOTDETECTOR_API_URL  + "/osrsbotdetector/v1/prediction?name=" + this.selectedRSN
         )
         .then((response) => {
           this.responseStatus = response.status;
