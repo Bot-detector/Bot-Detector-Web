@@ -47,7 +47,7 @@ services:
       target: nginx-prod
     container_name: bot-detector-web
     ports:
-      - 5173:8080
+      - 8080:8080
     restart: unless-stopped
     depends_on:
       - api
