@@ -46,6 +46,10 @@ services:
       context: .
       target: nginx-prod
     container_name: bot-detector-web
+    image: bot-detector/bd-web:latest
+    environment:
+      - VITE_BOTDETECTOR_API_URL=http://api:5000
+      - VITE_RUNELITE_API_URL=https://api.runelite.net/runelite/pluginhub
     ports:
       - 8080:8080
     restart: unless-stopped
