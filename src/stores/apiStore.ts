@@ -1,4 +1,4 @@
-import { defineStore } from "pinia";
+import { defineStore, } from "pinia";
 import axios, { type AxiosResponse } from "axios";
 import _ from "lodash";
 import type {
@@ -9,7 +9,11 @@ import type {
   RuneLiteApiRespose,
   RuneLiteStore,
 } from "@/interfaces/ApiInterface";
+import type{ IConfigStore } from "@/interfaces/ConfigInterface";
 import { replaceUnderscoreWithSpace, toPercentage } from "@/utils";
+import { useConfigStore } from "@/stores/configStore";
+
+let configStore: undefined | IConfigStore;
 
 // see https://docs.patreon.com/?javascript=#get-api-oauth2-v2-campaigns-campaign_id-members=
 export const usePatreonStore = defineStore({
@@ -40,8 +44,16 @@ export const useRuneLiteStore = defineStore({
       this.totalInstalls = response.data["bot-detector"];
     },
     getProjectStats: function () {
+      if(!configStore) {
+        configStore = useConfigStore();
+        configStore.getApi();
+      }
+
+      const API_URL = configStore.api.runeLite;
+      if (!API_URL) return console.error("Could not load runelite api url from config", configStore.api.runeLite)
+      
       axios
-        .get(import.meta.env.VITE_RUNELITE_API_URL)
+        .get(API_URL)
         .then((response) => this.setProjectStats(response))
         .catch((error) => console.error(error));
     },
@@ -60,6 +72,7 @@ export const useBotDetectorApiStore = defineStore({
       isAwaitingResponse: false,
       playerName: "",
       responseData: {} as BotDetectorApiPredictionBreakdownResponse,
+      botDetectorApiUrl: ""
     } as BotDetectorApiStore),
   getters: {
     isReponseStatusNotFound: (state) => state.responseStatus === 404,
@@ -83,8 +96,15 @@ export const useBotDetectorApiStore = defineStore({
       this.totalPlayers = Number(response.data["total_real_players"]);
     },
     getProjectStats: function () {
+      if(!configStore) {
+        configStore = useConfigStore();
+        configStore.getApi();
+      }
+
+      const API_URL = configStore.api.botDetector;
+      if (!API_URL) return console.error("Could not load runelite api url from config", configStore.api.botDetector)
       axios
-        .get(import.meta.env.VITE_BOTDETECTOR_API_URL + "/site/dashboard/projectstats", {
+        .get(`${API_URL}/site/dashboard/projectstats`, {
           headers: {
             accept: "application/json",
           },
@@ -98,10 +118,18 @@ export const useBotDetectorApiStore = defineStore({
       this.responseData = response.data;
     },
     getAccountInformation: function () {
+      if(!configStore) {
+        configStore = useConfigStore();
+        configStore.getApi();
+      }
+
+      const API_URL = configStore.api.botDetector;
+      if (!API_URL) return console.error("Could not load runelite api url from config", configStore.api.botDetector);
+
       this.isAwaitingResponse = true;
       axios
         .get(
-          import.meta.env.VITE_BOTDETECTOR_API_URL  + "/osrsbotdetector/v1/prediction?name=" + this.selectedRSN
+          `${API_URL}/v1/prediction?name=${this.selectedRSN}`
         )
         .then((response) => {
           this.responseStatus = response.status;

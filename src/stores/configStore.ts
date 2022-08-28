@@ -1,21 +1,15 @@
 import { defineStore } from "pinia";
-import Patreons from "@/config/patreons.json";
-
-interface ConfigStore {
-  starterBotHunter: string[];
-  BronzeBotHunter: string[];
-  IronBotHunter: string[];
-  SteelBotHunter: string[];
-  MithrilBotHunter: string[];
-  AdamantBotHunter: string[];
-  RuneBotHunter: string[];
-  DragonBotHunter: string[];
-}
+import config from "@/config/config.yaml";
+import type { ConfigStore } from "@/interfaces/ConfigInterface";
 
 export const useConfigStore = defineStore({
   id: "configStore",
   state: () =>
     ({
+      api: {
+        botDetector: "",
+        runeLite: ""
+      },
       starterBotHunter: [],
       BronzeBotHunter: [],
       IronBotHunter: [],
@@ -26,15 +20,19 @@ export const useConfigStore = defineStore({
       DragonBotHunter: [],
     } as ConfigStore),
   actions: {
+    getApi: function() {
+      this.api.botDetector = config.api.botDetector;
+      this.api.runeLite = config.api.runeLite
+    },
     getPatreons: function () {
-      this.starterBotHunter = Patreons.StarterBotHunter;
-      this.BronzeBotHunter = Patreons.BronzeBotHunter;
-      this.IronBotHunter = Patreons.IronBotHunter;
-      this.SteelBotHunter = Patreons.SteelBotHunter;
-      this.MithrilBotHunter = Patreons.MithrilBotHunter;
-      this.AdamantBotHunter = Patreons.AdamantBotHunter;
-      this.RuneBotHunter = Patreons.RuneBotHunter;
-      this.DragonBotHunter = Patreons.DragonBotHunter;
+      this.starterBotHunter = config.data.patreons.StarterBotHunter || [];
+      this.BronzeBotHunter = config.data.patreons.BronzeBotHunter || [];
+      this.IronBotHunter = config.data.patreons.IronBotHunter || [];
+      this.SteelBotHunter = config.data.patreons.SteelBotHunter || [];
+      this.MithrilBotHunter = config.data.patreons.MithrilBotHunter || [];
+      this.AdamantBotHunter = config.data.patreons.AdamantBotHunter || [];
+      this.RuneBotHunter = config.data.patreons.RuneBotHunter || [];
+      this.DragonBotHunter = config.data.patreons.DragonBotHunter || [];
     },
   },
 });
