@@ -1,5 +1,3 @@
-import type { Store } from "pinia";
-
 export interface ConfigStore {
     api: {
         botDetector: string;
@@ -14,8 +12,3 @@ export interface ConfigStore {
     RuneBotHunter: string[];
     DragonBotHunter: string[];
 }
-
-export type IConfigStore = Store<"configStore", ConfigStore, {}, {
-    getApi: () => void;
-    getPatreons: () => void;
-}>

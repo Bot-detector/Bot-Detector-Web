@@ -14,12 +14,10 @@ import type { PropType } from "vue";
 <script lang="ts">
 export enum RANK {
   Owner = "Owner",
-  CoOwner = "Co-Owners",
+  DiscordStaff = "Discord Staff",
   JagexMod = "Jagex Moderators",
-  ModTier4 = "Tier 4",
-  ModTier3 = "Tier 3",
-  ModTier2 = "Tier 2",
-  ModTier1 = "Tier 1",
+  VerificationStaff = "Verification Staff",
+  Mods = "Mods",
   PatreonDragonBotHunters = "Dragon Bot Hunter",
   PatreonRuneBotHunters = "Rune Bot Hunter",
   PatreonAdamantBotHunters = "Adamant Bot Hunter",
@@ -34,23 +32,17 @@ const ranks = {
   [RANK.Owner]: {
     imageSource: "/images/Clan_icons/Owner.png",
   },
-  [RANK.CoOwner]: {
-    imageSource: "/images/Clan_icons/Deputy_owner.png",
-  },
   [RANK.JagexMod]: {
     imageSource: "/images/Clan_icons/Jmod.png",
   },
-  [RANK.ModTier4]: {
-    imageSource: "/images/Clan_icons/t4.png",
+  [RANK.DiscordStaff]: {
+    imageSource: "/images/Clan_icons/Deputy_owner.png",
   },
-  [RANK.ModTier3]: {
-    imageSource: "/images/Clan_icons/t3.png",
-  },
-  [RANK.ModTier2]: {
-    imageSource: "/images/Clan_icons/t2.png",
-  },
-  [RANK.ModTier1]: {
+  [RANK.VerificationStaff]: {
     imageSource: "/images/Clan_icons/t1.png",
+  },
+  [RANK.Mods]: {
+    imageSource: "/images/Clan_icons/t4.png",
   },
   [RANK.PatreonDragonBotHunters]: {
     imageSource: "/images/Clan_icons/Dragon.png",

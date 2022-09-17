@@ -42,6 +42,7 @@ export interface BotDetectorApiStore {
   isAwaitingResponse: boolean;
   playerName: string;
   responseData: BotDetectorApiPredictionBreakdownResponse;
+  botDetectorApiUrl: string;
 }
 
 export interface BotDetectorApiPredictionBreakdown {

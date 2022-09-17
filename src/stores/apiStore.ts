@@ -9,19 +9,18 @@ import type {
   RuneLiteApiRespose,
   RuneLiteStore,
 } from "@/interfaces/ApiInterface";
-import type{ IConfigStore } from "@/interfaces/ConfigInterface";
-import { replaceUnderscoreWithSpace, toPercentage } from "@/utils";
-import { useConfigStore } from "@/stores/configStore";
+import { API_URL_BOTDETECTOR, API_URL_RUNELITE, replaceUnderscoreWithSpace, toPercentage } from "@/utils";
+import type { ConfigStore } from "@/interfaces/ConfigInterface";
 
-let configStore: undefined | IConfigStore;
+let configStore: ConfigStore | undefined;
 
 // see https://docs.patreon.com/?javascript=#get-api-oauth2-v2-campaigns-campaign_id-members=
 export const usePatreonStore = defineStore({
   id: "patreonApiStore",
-  state: () =>
+  state: (): PatreonApiStore =>
     ({
       members: [],
-    } as PatreonApiStore),
+    }),
   getters: {
     getMembersFromTier: (state) =>
       state.members.filter((member) => member.tier),
@@ -31,10 +30,10 @@ export const usePatreonStore = defineStore({
 
 export const useRuneLiteStore = defineStore({
   id: "runeLiteApiStore",
-  state: () =>
+  state: (): RuneLiteStore =>
     ({
       totalInstalls: 0,
-    } as RuneLiteStore),
+    }),
   getters: {
     getTotalInstalls: (state) =>
       state.totalInstalls === 0 ? "Failed getting stats." : state.totalInstalls,
@@ -43,17 +42,9 @@ export const useRuneLiteStore = defineStore({
     setProjectStats: function (response: AxiosResponse<RuneLiteApiRespose>) {
       this.totalInstalls = response.data["bot-detector"];
     },
-    getProjectStats: function () {
-      if(!configStore) {
-        configStore = useConfigStore();
-        configStore.getApi();
-      }
-
-      const API_URL = configStore.api.runeLite;
-      if (!API_URL) return console.error("Could not load runelite api url from config", configStore.api.runeLite)
-      
+    getProjectStats: function () {      
       axios
-        .get(API_URL)
+        .get(`${API_URL_RUNELITE}/pluginhub`)
         .then((response) => this.setProjectStats(response))
         .catch((error) => console.error(error));
     },
@@ -62,7 +53,7 @@ export const useRuneLiteStore = defineStore({
 
 export const useBotDetectorApiStore = defineStore({
   id: "botDetectorApiStore",
-  state: () =>
+  state: (): BotDetectorApiStore =>
     ({
       totalBans: 0,
       totalAccounts: 0,
@@ -73,7 +64,7 @@ export const useBotDetectorApiStore = defineStore({
       playerName: "",
       responseData: {} as BotDetectorApiPredictionBreakdownResponse,
       botDetectorApiUrl: ""
-    } as BotDetectorApiStore),
+    }),
   getters: {
     isReponseStatusNotFound: (state) => state.responseStatus === 404,
     isResponseStatusOk: (state) => state.responseStatus === 200,
@@ -96,15 +87,8 @@ export const useBotDetectorApiStore = defineStore({
       this.totalPlayers = Number(response.data["total_real_players"]);
     },
     getProjectStats: function () {
-      if(!configStore) {
-        configStore = useConfigStore();
-        configStore.getApi();
-      }
-
-      const API_URL = configStore.api.botDetector;
-      if (!API_URL) return console.error("Could not load runelite api url from config", configStore.api.botDetector)
       axios
-        .get(`${API_URL}/site/dashboard/projectstats`, {
+        .get(`${API_URL_BOTDETECTOR}/site/dashboard/projectstats`, {
           headers: {
             accept: "application/json",
           },
@@ -118,18 +102,10 @@ export const useBotDetectorApiStore = defineStore({
       this.responseData = response.data;
     },
     getAccountInformation: function () {
-      if(!configStore) {
-        configStore = useConfigStore();
-        configStore.getApi();
-      }
-
-      const API_URL = configStore.api.botDetector;
-      if (!API_URL) return console.error("Could not load runelite api url from config", configStore.api.botDetector);
-
       this.isAwaitingResponse = true;
       axios
         .get(
-          `${API_URL}/v1/prediction?name=${this.selectedRSN}`
+          `${API_URL_BOTDETECTOR}/v1/prediction?name=${this.selectedRSN}`
         )
         .then((response) => {
           this.responseStatus = response.status;
