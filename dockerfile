@@ -10,10 +10,12 @@ RUN yarn build
 
 # development image
 FROM base as nginx-dev
-COPY deploy/dev/docker-nginx.conf /etc/nginx/conf.d/default.conf
+# writing it to templates so env are set correctly see https://hub.docker.com/_/nginx - Using environment variables in nginx configuration (new in 1.19)
+COPY deploy/dev/docker-nginx.conf /etc/nginx/templates/default.conf.template
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 
 # production image
 FROM base as nginx-prod
-COPY deploy/prod/docker-nginx.conf /etc/nginx/conf.d/default.conf
+# writing it to templates so env are set correctly see https://hub.docker.com/_/nginx - Using environment variables in nginx configuration (new in 1.19)
+COPY deploy/prod/docker-nginx.conf /etc/nginx/templates/default.conf.template
 COPY --from=build-stage /app/dist /usr/share/nginx/html
