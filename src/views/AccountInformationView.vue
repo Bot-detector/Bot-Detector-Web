@@ -23,12 +23,12 @@ const botDetectorApiStore = useBotDetectorApiStore();
 
   <form @submit.prevent="botDetectorApiStore.getAccountInformation()">
     <label for="rsn">Account Name </label>
-    <!-- maxlengt=12 -->
     <input
       id="rsn"
       type="text"
       required
       minlength="1"
+      maxlengt=12 
       v-model="botDetectorApiStore.selectedRSN"
       placeholder="Enter account name here"
     />
