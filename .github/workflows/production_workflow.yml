@@ -18,7 +18,7 @@ jobs:
     needs: setup
     steps:
       - name: Build the Docker image
-        run: docker build . --file Dockerfile -t bot-detector/bd-web:production
+        run: docker build . --file dockerfile -t bot-detector/bd-web:production
 
       - name: Tag Image
         run: docker tag bot-detector/bd-web:production hub.osrsbotdetector.com/bot-detector/bd-web:production
