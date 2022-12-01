@@ -1,0 +1,107 @@
+html ,body, #app {
+  margin:0;
+  padding:0;
+  height:100%; /* needed for container min-height */
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    .outer-banner {
+      position: fixed;
+      width: 100%;
+      box-sizing: border-box;
+      background-color: #272727;
+      padding: 0.5rem 1rem;
+      z-index: 500;
+
+      @media screen and (min-width: 720px) {
+        max-height: 65px;
+      }
+    }
+
+    main {
+      position: relative;
+      margin: 1rem auto;
+      box-sizing: border-box;
+      width: 85%;
+      padding: 2.5rem;
+      color: #1f1b12;
+      background-image: url("/images/backdrop.gif");
+      background-repeat: repeat-y;
+      background-position: center;
+      background-size: 100%;
+
+      @media screen and (max-width: 720px) {
+        padding: 2.5rem 1.5rem;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        width: 104%;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        background-size: cover;
+      }
+
+      &:before {
+        background-image: url("/images/top.gif");
+        transform: translate(-2%, -100%);        
+      }
+
+      &:after {
+        background-image: url("/images/bottom.gif");
+        transform: translateX(-2%);  
+      }
+    }
+
+    a {
+      color: #1b180c;
+      font-weight: bold;
+
+      &:hover {
+        color: #6b7b17;
+      }
+    }
+    
+    p {
+      line-height: 1.5;
+    }
+
+    hr {
+      border: 1px solid #6b7b17;
+      width: 80%;
+      margin: auto;
+    }
+
+    .wrapper {
+        max-width: 900px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        background: url("/images/background.jpg") center repeat-y;
+        min-height: 100%;
+        padding: 65px 0.5rem 42px 0.5rem; // 65px and 42px accounting for top and bottom banner
+
+        @media screen and ( max-width: 720px ) {
+          padding: 115px 0.5rem 42px 0.5rem; // 65px and 42px accounting for top and bottom banner
+        }
+    }
+
+    footer {
+      font-size: 10px;
+      color: white;
+      text-align: center;
+
+      a {
+        color: #90c040;
+      }
+    }
+}

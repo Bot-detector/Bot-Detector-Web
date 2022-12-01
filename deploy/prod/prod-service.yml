@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bd-web-prod-service
+spec:
+  selector:
+    app: bd-web-prod
+  ports:
+  - protocol: "TCP"
+    port: 8080

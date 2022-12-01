@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bd-web-prod
+spec:
+  selector:
+    matchLabels:
+      app: bd-web-prod
+  replicas: 1
+  template:
+    metadata:
+      name: bl-web-prod-app
+      labels:
+        app: bd-web-prod
+    spec:
+      containers:
+      - name: bd-web-prod
+        image: hub.osrsbotdetector.com/bot-detector/bd-web:production
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: regcred

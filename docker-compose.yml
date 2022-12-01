@@ -1,0 +1,62 @@
+
+
+
+version: '3.4'
+services:
+  mysql:
+    build:
+      context: ../bot-detector-mysql
+      dockerfile: Dockerfile
+    image: bot-detector/bd-mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_bot_buster
+      - MYSQL_USER=botssuck
+      - MYSQL_PASSWORD=botdetector
+    volumes:
+      - '../bot-detector-mysql/mount:/var/lib/mysql'
+      - '../bot-detector-mysql/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/'
+    ports:
+      - "3306:3306"
+    networks:
+      - botdetector-network
+
+  api:
+    build:
+      context: ../Bot-Detector-Core-Files
+      dockerfile: Dockerfile
+      args:
+        root_path: ''
+        api_port: 5000
+    image: bot-detector/bd-api:latest
+    environment:
+      - sql_uri=mysql+asyncmy://root:root_bot_buster@mysql:3306/playerdata
+      - discord_sql_uri=mysql+asyncmy://root:root_bot_buster@mysql:3306/discord
+      - token=verify_ban
+    volumes:
+      - '../Bot-Detector-Core-Files/api:/code/api'
+    ports:
+      - "5000:5000"
+    networks:
+      - botdetector-network
+    depends_on:
+      - mysql
+    
+  bot-detector-web:
+    build:
+      context: .
+      target: nginx-prod
+    container_name: bot-detector-web
+    image: bot-detector/bd-web:latest
+    environment:
+      - VITE_BOTDETECTOR_API_URL=http://api:5000
+      - VITE_RUNELITE_API_URL=https://api.runelite.net
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    depends_on:
+      - api
+    networks:
+      - botdetector-network
+      
+networks:
+  botdetector-network:
