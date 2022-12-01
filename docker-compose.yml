@@ -48,13 +48,15 @@ services:
     container_name: bot-detector-web
     image: bot-detector/bd-web:latest
     environment:
-      - VITE_BOTDETECTOR_API_URL=https://osrsbotdetector.com
+      - VITE_BOTDETECTOR_API_URL=http://api:5000
       - VITE_RUNELITE_API_URL=https://api.runelite.net
     ports:
       - "8080:8080"
     restart: unless-stopped
     depends_on:
       - api
-
+    networks:
+      - botdetector-network
+      
 networks:
   botdetector-network:
