@@ -45,6 +45,7 @@ services:
     build:
       context: .
       target: nginx-prod
+      dockerfile: Dockerfile
     container_name: bot-detector-web
     image: bot-detector/bd-web:latest
     environment:
@@ -57,6 +58,6 @@ services:
       - api
     networks:
       - botdetector-network
-      
+
 networks:
   botdetector-network:
