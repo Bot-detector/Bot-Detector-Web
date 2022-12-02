@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set Up ENV
         run: |
-          echo "VITE_BOTDETECTOR_API_URL=https://osrsbotdetector.com" > .env
-          echo "VITE_RUNELITE_API_URL=https://api.runelite.net" >> .env
+          echo 'VITE_BOTDETECTOR_API_URL="https://osrsbotdetector.com"' > .env
+          echo 'VITE_RUNELITE_API_URL="https://api.runelite.net"' >> .env
 
   build-image:
     runs-on: self-hosted
