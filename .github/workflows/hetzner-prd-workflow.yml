@@ -14,7 +14,7 @@ permissions: write-all
 
 
 env:
-  VALUE_FILE: bd-web-dvp/deployment.yaml
+  VALUE_FILE: bd-web-prd/deployment.yaml
   REGISTRY: quay.io/bot_detector/bd-web
 
 
