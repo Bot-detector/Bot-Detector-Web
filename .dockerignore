@@ -1,8 +1,0 @@
-.git
-.git*
-LICENSE
-*.md
-venv/*
-*.log
-.env
-.env*
