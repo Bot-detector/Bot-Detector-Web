@@ -6,5 +6,5 @@ router = APIRouter()
 
 
 @router.get("/")
-async def health():
+async def home():
     return {}

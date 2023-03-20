@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-
-from src.api import v1
+from src.api import home, monitoring
 
 router = APIRouter()
-router.include_router(v1.router, prefix="/v1", tags=["v1"])
+router.include_router(monitoring.router, prefix="/monitoring")
+router.include_router(home.router, prefix="/home")

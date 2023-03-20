@@ -6,8 +6,6 @@ from src import api
 from src.core.config import CONFIG
 
 # TODO: logging
-
-
 def init_routers(_app: FastAPI) -> None:
     _app.include_router(api.router)
 
