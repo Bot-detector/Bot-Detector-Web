@@ -4,8 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from src import api
 from src.core.config import CONFIG
+from fastapi.staticfiles import StaticFiles
 
 # TODO: logging
+
 def init_routers(_app: FastAPI) -> None:
     _app.include_router(api.router)
 
@@ -35,3 +37,4 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+app.mount("/static", StaticFiles(directory="src/static"), name="static")

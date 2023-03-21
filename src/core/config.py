@@ -1,6 +1,11 @@
 from pydantic import BaseSettings, Field
 import os
 
+from fastapi.templating import Jinja2Templates
+
+templates = Jinja2Templates(directory="src/templates")
+
+
 class Config(BaseSettings):
     RELEASE_VERSION: str = "0.1"
 

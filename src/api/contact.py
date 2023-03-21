@@ -6,5 +6,5 @@ router = APIRouter()
 
 
 @router.get("/")
-async def home(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+async def contact(request: Request):
+    return templates.TemplateResponse("contact.html", {"request": request})
