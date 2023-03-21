@@ -1,6 +1,4 @@
-{% extends "base.html" %}
-
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    <script src="{{ url_for('static', path='scripts.js') }}"></script>
 {% endblock %}

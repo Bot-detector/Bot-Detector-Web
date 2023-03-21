@@ -4,11 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title }}</title>
-        {% block head %}{% endblock %}
+        {% block head %}
+            {% include 'head.html' %}
+        {% endblock %}
     </head>
     <body>
-        {% block header %}{% endblock %}
-        {% block content %}{% endblock %}
+        {% block header %}
+            {% include 'header.html' %}
+        {% endblock %}
+        <div class="content-container">
+            {% block content %}{% endblock %}
+        </div>
+        
         {% block footer %}{% endblock %}
     </body>
 </html>

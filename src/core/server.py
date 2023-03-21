@@ -33,8 +33,8 @@ def create_app() -> FastAPI:
         middleware=make_middleware(),
     )
     init_routers(_app=_app)
+    _app.mount("/static", StaticFiles(directory="src/static"), name="static")
     return _app
 
 
 app = create_app()
-app.mount("/static", StaticFiles(directory="src/static"), name="static")

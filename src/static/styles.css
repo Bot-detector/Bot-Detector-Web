@@ -1,0 +1,49 @@
+body {
+    display: block;
+    margin: 0px;
+    background-color: #868e96;
+}
+/* Add styles for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #343a40;
+}
+
+.navbar-brand {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/*add style for content container*/
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: contain;
+    background-image: url('/static/images/background.jpg');
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
