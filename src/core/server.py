@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware import Middleware
 from fastapi.middleware.cors import CORSMiddleware
-
+from fastapi.responses import RedirectResponse
 from src import api
 from src.core.config import CONFIG
 from fastapi.staticfiles import StaticFiles
@@ -38,3 +38,7 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+
+@app.get("/")
+def root():
+    return RedirectResponse(url="/home")
