@@ -46,31 +46,69 @@ div.content-container {
     align-items: center;
     background-size: contain;
     background-image: url('/static/images/background.jpg');
-    max-width: 800px;
+    max-width: 70vh;
+    min-width: 500px;
     margin: 0 auto;
     min-height: 95vh;
     color: whitesmoke;
 }
 
-div.content-backdrop-top {
-    height: 50px;
-    width: 88%;
-    background-size: contain;
-    background-image: url('/static/images/top.gif');
+div.navigation-box {
+    background-color: #000;
+    border: 2px solid #382418;
+    width: 80%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
-div.content-backdrop {
-    width: 88%;
-    height: 86vh;
+.nbox-nav {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 0;
+}
+
+.nbox-item {
+    margin-right: 1rem;
+    color: #90c040;
+    text-decoration: none;
+    font-size: 90%;
+    padding: 0rem; /* added padding */
+}
+
+/*content backdrop*/
+div.content-backdrop-top {
+    position: relative;
+    text-align: center;
+}
+
+img.content-backdrop-top{
+    width: 100%;
+}
+
+
+div.content-backdrop {
+    margin-top: -2%;
+    margin-bottom: -1%;
+    width: 80%;
+    height: 86vh;
+    background-size: contain;
     background-image: url('/static/images/backdrop.gif');
 }
 
 div.content-backdrop-bottom {
-    height: 50px;
-    width: 88%;
-    background-size: contain;
-    background-image: url('/static/images/bottom.gif');
+    position: relative;
+    text-align: center;
+}
+img.content-backdrop-bottom{
+    width: 100%;
+}
+
+main.content{
+    margin-left: 2em;
+    margin-right: 2em;
 }

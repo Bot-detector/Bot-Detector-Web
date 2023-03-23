@@ -15,11 +15,24 @@
         {% include 'header.html' %}
     {% endblock %}
     <div class="content-container">
-        <div class="content-backdrop-top"></div>
-        <div class="content-backdrop">
-            {% block content %}{% endblock %}
+        <div class="navigation-box">
+            <ul class="nbox-nav">
+                <li class="nbox-item">test</li>
+                <li class="nbox-item">test</li>
+            </ul>
         </div>
-        <div class="content-backdrop-bottom"></div>
+        <div class="content-backdrop-top">
+            <img class="content-backdrop-top" src="/static/images/top.gif">
+        </div>
+        <div class="content-backdrop">
+            <main class="content">
+                {% block content %}{% endblock %}
+            </main>
+            
+        </div>
+        <div class="content-backdrop-bottom">
+            <img class="content-backdrop-bottom" src="/static/images/bottom.gif">
+        </div>
     </div>
     {% block footer %}{% endblock %}
 </body>
