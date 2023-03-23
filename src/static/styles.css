@@ -1,15 +1,18 @@
 body {
     display: block;
     margin: 0px;
-    background-color: #868e96;
+    background-color: #1a1a1a;
+    background-color: #151515;
+    
 }
+
 /* Add styles for the navigation bar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
-    background-color: #343a40;
+    background-color: #333333; /* changed to dark gray color */
 }
 
 .navbar-brand {
@@ -37,7 +40,7 @@ body {
 }
 
 /*add style for content container*/
-.content-container {
+div.content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,6 +48,29 @@ body {
     background-image: url('/static/images/background.jpg');
     max-width: 800px;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 95vh;
     color: whitesmoke;
+}
+
+div.content-backdrop-top {
+    height: 50px;
+    width: 88%;
+    background-size: contain;
+    background-image: url('/static/images/top.gif');
+}
+
+div.content-backdrop {
+    width: 88%;
+    height: 86vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('/static/images/backdrop.gif');
+}
+
+div.content-backdrop-bottom {
+    height: 50px;
+    width: 88%;
+    background-size: contain;
+    background-image: url('/static/images/bottom.gif');
 }

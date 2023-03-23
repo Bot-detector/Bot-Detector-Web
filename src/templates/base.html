@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title }}</title>
-        {% block head %}
-            {% include 'head.html' %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block header %}
-            {% include 'header.html' %}
-        {% endblock %}
-        <div class="content-container">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    {% block head %}
+        {% include 'head.html' %}
+    {% endblock %}
+</head>
+
+<body>
+    {% block header %}
+        {% include 'header.html' %}
+    {% endblock %}
+    <div class="content-container">
+        <div class="content-backdrop-top"></div>
+        <div class="content-backdrop">
             {% block content %}{% endblock %}
         </div>
-        
-        {% block footer %}{% endblock %}
-    </body>
+        <div class="content-backdrop-bottom"></div>
+    </div>
+    {% block footer %}{% endblock %}
+</body>
+
 </html>
