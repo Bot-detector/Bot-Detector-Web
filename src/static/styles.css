@@ -55,9 +55,9 @@ div.content-container {
 }
 
 div.navigation-box {
+    display: flex;
     background-color: #000;
     border: 2px solid #382418;
-    width: 80%;
     padding-left: 2%;
     padding-right: 2%;
     margin-right: auto;
@@ -65,18 +65,21 @@ div.navigation-box {
     margin-top: .5em;
     margin-bottom: .5em;
     text-align: center;
-    display: flex;
     justify-content: space-between;
 }
 
 .nbox-nav {
-    list-style: none;
     display: flex;
+    justify-content: space-between;
+    list-style: none;
     padding: 0;
+    margin: 0.5em;
+    width: 100%;
 }
 
 .nbox-item {
-    margin-right: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
     color: #90c040;
     text-decoration: none;
     font-size: 90%;
