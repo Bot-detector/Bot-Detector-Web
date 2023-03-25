@@ -27,8 +27,8 @@ def make_middleware() -> list[Middleware]:
 
 def create_app() -> FastAPI:
     _app = FastAPI(
-        title="Bot-Detector-Discord-API",
-        description="Bot-Detector-Discord-API",
+        title="Bot-Detector-Web",
+        description="Bot-Detector-Web",
         version=CONFIG.RELEASE_VERSION,
         middleware=make_middleware(),
     )
