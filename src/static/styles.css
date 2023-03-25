@@ -50,7 +50,6 @@ div.content-container {
     min-width: 500px;
     margin: 0 auto;
     min-height: 95vh;
-    color: whitesmoke;
 }
 
 div.navigation-box {
@@ -61,6 +60,8 @@ div.navigation-box {
     padding-right: 2%;
     margin-right: auto;
     margin-left: auto;
+    margin-top: .5em;
+    margin-bottom: .5em;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -78,6 +79,11 @@ div.navigation-box {
     text-decoration: none;
     font-size: 90%;
     padding: 0rem;
+}
+
+a.nbox-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 /*content backdrop*/

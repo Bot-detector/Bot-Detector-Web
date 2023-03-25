@@ -14,13 +14,11 @@
     {% block header %}
         {% include 'header.html' %}
     {% endblock %}
+
     <div class="content-container">
-        <div class="navigation-box">
-            <ul class="nbox-nav">
-                <li class="nbox-item">test</li>
-                <li class="nbox-item">test</li>
-            </ul>
-        </div>
+        {% block navigation %}
+            {% include 'navigation.html' %}
+        {% endblock %}
         <div class="content-backdrop-top">
             <img class="content-backdrop-top" src="/static/images/top.gif">
         </div>

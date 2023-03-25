@@ -11,7 +11,8 @@
             "module": "uvicorn",
             "args": [
                 "src.core.server:app",
-                "--reload"
+                "--reload",
+                "--reload-dir","src"
             ],
             "jinja": true,
             "justMyCode": true
