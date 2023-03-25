@@ -1,11 +1,13 @@
 body {
     display: block;
     margin: 0px;
-    background-color: #1a1a1a;
-    background-color: #151515;
-
+    background: linear-gradient(90deg, 
+        #151515 0%, 
+        black 30%,
+        black 70%,
+        #151515 100%
+    );
 }
-
 /* Add styles for the navigation bar */
 .navbar {
     display: flex;
