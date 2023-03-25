@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 
 # TODO: logging
 
+
 def init_routers(_app: FastAPI) -> None:
     _app.include_router(api.router)
 
@@ -38,6 +39,7 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+
 
 @app.get("/")
 def root():
