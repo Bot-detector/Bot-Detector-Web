@@ -100,7 +100,7 @@ div.content-backdrop {
     margin-top: -2%;
     margin-bottom: -1%;
     width: 80%;
-    height: 86vh;
+    min-height: 86vh;
     background-size: contain;
     background-image: url('/static/images/backdrop.gif');
 }
@@ -117,4 +117,8 @@ img.content-backdrop-bottom {
 main.content {
     margin-left: 2em;
     margin-right: 2em;
+}
+
+.title {
+    text-align: center;
 }
