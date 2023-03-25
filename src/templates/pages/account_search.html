@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>account_search</h2>
-    <p>This is the account_search page.</p>
+<div class="title">
+    <h1>
+        <img src="/static/images/GameAssets/runefullhelm.png" width="35px">
+        Account search
+        <img src="/static/images/GameAssets/runefullhelm.png" width="35px">
+    </h1>
+    <p>
+        If you would like to learn more about an Old School Runescape account, type in the name below. We cannot provide information with 24 hours of a sighting of a player, therefore we cannot provide latest locations and latest gear information for an account. 
+    </p>
+</div>
+<hr>
+<div>
+    <input type="text" id="playerName" placeholder="Enter player name">
+    <button onclick="searchPlayer()">Search</button>
+</div>
+<div id="results"></div>
+
 {% endblock %}
