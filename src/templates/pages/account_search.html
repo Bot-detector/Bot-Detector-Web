@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="title">
+    <h1>
+        <img src="/static/images/GameAssets/runefullhelm.png" width="35px">
+        Account search
+        <img src="/static/images/GameAssets/runefullhelm.png" width="35px">
+    </h1>
+    <p>
+        If you would like to learn more about an Old School Runescape account, type in the name below. We cannot provide information with 24 hours of a sighting of a player, therefore we cannot provide latest locations and latest gear information for an account. 
+    </p>
+</div>
+<hr>
+<form action="/account-search" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <input type="submit" value="Submit">
+</form>
+<hr>
+{% if prediction %}
+    <h2>Prediction</h2>
+    <ul>
+        {% for key, value in prediction.items() %}
+            {% if key == "predictions_breakdown" %}
+                <li>{{ key }}:
+                    <ul>
+                        {% for sub_key, sub_value in value.items() %}
+                            {% if sub_value != 0 %}
+                                <li>{{ sub_key }}: {{ sub_value * 100 }}%</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% elif key == "prediction_confidence" %}
+                <li>{{ key }}: {{ value * 100 }}%</li>
+            {% else %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}

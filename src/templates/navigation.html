@@ -1,0 +1,21 @@
+{% block navigation %}
+<div class="navigation-box">
+    <ul class="nbox-nav">
+        <li class="nbox-item">
+            <a class="nbox-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+        <li class="nbox-item">
+            <a class="nbox-link" href="{{ url_for('account_search') }}">Account search</a>
+        </li>
+        <li class="nbox-item">
+            <a class="nbox-link" href="{{ url_for('contributors') }}">Contributors</a>
+        </li>
+        <li class="nbox-item">
+            <a class="nbox-link" href="{{ url_for('faq') }}">FAQ</a>
+        </li>
+        <li class="nbox-item">
+            <a class="nbox-link" href="{{ url_for('contact') }}">Contact</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
