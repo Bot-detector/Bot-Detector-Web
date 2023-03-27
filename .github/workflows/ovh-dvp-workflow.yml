@@ -18,7 +18,7 @@ jobs:
     needs: setup
     steps:
       - name: Build the Docker image
-        run: docker build . --file dockerfile --target nginx-dev -t bot-detector/bd-web:development
+        run: docker build . --file dockerfile -t bot-detector/bd-web:development
 
       - name: Tag Image
         run: docker tag bot-detector/bd-web:development hub.osrsbotdetector.com/bot-detector/bd-web:development
