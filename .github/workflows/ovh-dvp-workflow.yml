@@ -1,4 +1,4 @@
-name: Development workflow
+name: ovh development workflow
 on:
   push:
     branches: [develop]
