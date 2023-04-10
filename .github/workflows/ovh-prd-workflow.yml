@@ -8,6 +8,9 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
+      - name: Set Up ENV
+        run: |
+          echo "${{ secrets.TOKEN }}" > ./src/.env
 
   build-image:
     runs-on: self-hosted
@@ -24,7 +27,7 @@ jobs:
 
       - name: Push Image to Registry
         run: docker push hub.osrsbotdetector.com/bot-detector/bd-web:production
-        
+
   deploy:
     runs-on: self-hosted
     needs: build-image
