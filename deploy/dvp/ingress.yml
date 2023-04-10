@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bd-dvp-web-ingress
+  namespace: default
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: bd-dvp-web-service
+            port:
+              number: 8001
+        path: /dvp/web(/|$)(.*)
+        pathType: Prefix
