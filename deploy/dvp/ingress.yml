@@ -9,7 +9,7 @@ spec:
     - host: osrsbotdetector.com
       http:
         paths:
-          - path: /dvp/web(/|$)(.*)
+          - path: /webdev(/|$)(.*)
             pathType: Prefix
             backend:
               service:
