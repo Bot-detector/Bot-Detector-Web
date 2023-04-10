@@ -7,11 +7,7 @@ jobs:
   setup:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
-      - name: Set Up ENV
-        run: |
-          echo 'VITE_BOTDETECTOR_API_URL="https://osrsbotdetector.com"' > .env
-          echo 'VITE_RUNELITE_API_URL="https://api.runelite.net"' >> .env
+      - uses: actions/checkout@v3
 
   build-image:
     runs-on: self-hosted
@@ -34,7 +30,7 @@ jobs:
     needs: build-image
     steps:
       - name: Apply Possible Deployment Changes
-        run: kubectl apply -f deploy/prod/
+        run: kubectl apply -f deploy/prd/
 
       - name: Restart Deployment for Possible Container Changes
-        run: kubectl rollout restart deploy bd-web-prod
+        run: kubectl rollout restart deploy bd-prd-web
