@@ -4,15 +4,13 @@ metadata:
   name: bd-dvp-web-ingress
   namespace: default
 spec:
-  ingressClassName: nginx
   rules:
-    - host: osrsbotdetector.com
-      http:
+    - http:
         paths:
-          - path: /webdev(/|$)(.*)
-            pathType: Prefix
-            backend:
+          - backend:
               service:
                 name: bd-dvp-web-service
                 port:
                   number: 8001
+            path: /webdev(/|$)(.*)
+            pathType: Prefix
