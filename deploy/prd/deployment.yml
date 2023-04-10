@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bd-prd-web
+  namespace: default
 spec:
   selector:
     matchLabels:
@@ -9,43 +10,12 @@ spec:
   replicas: 1
   template:
     metadata:
-      name: bl-prd-web-app
       labels:
         app: bd-prd-web
     spec:
-      affinity:
-        podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-            - weight: 100
-              podAffinityTerm:
-                labelSelector:
-                  matchExpressions:
-                    - key: app
-                      operator: In
-                      values:
-                        - bd-prd-web
-                topologyKey: kubernetes.io/hostname
-
       containers:
         - name: bd-prd-web
           image: hub.osrsbotdetector.com/bot-detector/bd-api:production
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
-          resources:
-            requests:
-              cpu: 1000m
-              memory: 100Mi
-            limits:
-              cpu: 2000m
-              memory: 3000Mi
-          livenessProbe:
-            httpGet:
-              path: /
-              port: 8000
-            failureThreshold: 3
-            periodSeconds: 60
-            timeoutSeconds: 30
-            initialDelaySeconds: 15
-      imagePullSecrets:
-        - name: regcred

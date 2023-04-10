@@ -4,13 +4,15 @@ metadata:
   name: bd-prd-web-ingress
   namespace: default
 spec:
+  ingressClassName: nginx
   rules:
-  - http:
-      paths:
-      - backend:
-          service:
-            name: bd-prd-web-service
-            port:
-              number: 8000
-        path: /web(/|$)(.*)
-        pathType: Prefix
+    - host: osrsbotdetector.com
+      http:
+        paths:
+          - path: /web(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: bd-prd-web-service
+                port:
+                  number: 8000
