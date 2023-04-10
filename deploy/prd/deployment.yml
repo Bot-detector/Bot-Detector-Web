@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: bd-prd-web
-          image: hub.osrsbotdetector.com/bot-detector/bd-api:production
+          image: hub.osrsbotdetector.com/bot-detector/bd-web:production
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
