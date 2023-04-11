@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware import Middleware
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
@@ -42,5 +42,5 @@ app = create_app()
 
 
 @app.get("/")
-def root():
-    return RedirectResponse(url="/home")
+def root(request:Request):
+    return RedirectResponse(request.url_for("home"))

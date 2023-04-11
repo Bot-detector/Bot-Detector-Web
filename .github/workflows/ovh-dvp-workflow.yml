@@ -17,7 +17,7 @@ jobs:
     needs: setup
     steps:
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --build-arg api_port=8001 --build-arg root_path=/dvp/web -t bot-detector/bd-web:development
+        run: docker build . --file Dockerfile --build-arg api_port=8001 --build-arg root_path=/webdev -t bot-detector/bd-web:development
 
       - name: Tag Image
         run: docker tag bot-detector/bd-web:development hub.osrsbotdetector.com/bot-detector/bd-web:development
