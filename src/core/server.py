@@ -6,8 +6,6 @@ from src import api
 from src.core.config import CONFIG
 from fastapi.staticfiles import StaticFiles
 
-# TODO: logging
-
 
 def init_routers(_app: FastAPI) -> None:
     _app.include_router(api.router)
@@ -42,5 +40,5 @@ app = create_app()
 
 
 @app.get("/")
-def root(request:Request):
+def root(request: Request):
     return RedirectResponse(request.url_for("home"))
