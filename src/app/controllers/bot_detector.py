@@ -3,7 +3,7 @@ import aiohttp
 
 class BotDetector:
     def __init__(
-        self, token: str, base_url: str = "https://www.api.prd.osrsbotdetector.com"
+        self, token: str, base_url: str = "https://api.prd.osrsbotdetector.com"
     ):
         self.base_url = base_url
         self.session = aiohttp.ClientSession()
