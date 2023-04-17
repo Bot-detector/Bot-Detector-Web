@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bd-prd-web
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: bd-prd-web
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bd-prd-web
+    spec:
+      containers:
+        - name: bd-prd-web
+          image: hub.osrsbotdetector.com/bot-detector/bd-web:production
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+      imagePullSecrets:
+        - name: regcred

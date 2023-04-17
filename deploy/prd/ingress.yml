@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bd-dvp-web-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - host: osrsbotdetector.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: bd-dvp-web-services
+                port:
+                  number: 8000
+            path: /web(/|$)(.*)
+            pathType: Prefix

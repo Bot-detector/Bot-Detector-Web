@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bd-dvp-web
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: bd-dvp-web
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bd-dvp-web
+    spec:
+      containers:
+        - name: bd-dvp-web
+          image: hub.osrsbotdetector.com/bot-detector/bd-web:development
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8001
+      imagePullSecrets:
+        - name: regcred

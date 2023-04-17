@@ -1,0 +1,39 @@
+name: ovh production workflow
+on:
+  push:
+    branches: [main]
+
+jobs:
+  setup:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set Up ENV
+        run: |
+          echo "${{ secrets.TOKEN }}" > ./src/.env
+
+  build-image:
+    runs-on: self-hosted
+    needs: setup
+    steps:
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --target production --build-arg api_port=8000 --build-arg root_path=/web -t bot-detector/bd-web:production
+
+      - name: Tag Image
+        run: docker tag bot-detector/bd-web:production hub.osrsbotdetector.com/bot-detector/bd-web:production
+
+      - name: Login to Docker Registry
+        run: echo "${{ secrets.DOCKER_REGISTRY_PASSWORD }}" | docker login https://hub.osrsbotdetector.com -u "${{ secrets.DOCKER_REGISTRY_USERNAME }}" --password-stdin
+
+      - name: Push Image to Registry
+        run: docker push hub.osrsbotdetector.com/bot-detector/bd-web:production
+
+  deploy:
+    runs-on: self-hosted
+    needs: build-image
+    steps:
+      - name: Apply Possible Deployment Changes
+        run: kubectl apply -f deploy/prd/
+
+      - name: Restart Deployment for Possible Container Changes
+        run: kubectl rollout restart deploy bd-prd-web

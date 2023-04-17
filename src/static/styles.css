@@ -1,0 +1,131 @@
+body {
+    display: block;
+    margin: 0px;
+    background: linear-gradient(90deg, 
+        #151515 0%, 
+        black 30%,
+        black 70%,
+        #151515 100%
+    );
+}
+/* Add styles for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #333333;
+}
+
+.navbar-brand {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/*add style for content container*/
+div.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: contain;
+    background-image: url('/static/images/background.jpg');
+    max-width: 70vh;
+    min-width: 500px;
+    margin: 0 auto;
+    min-height: 95vh;
+}
+
+div.navigation-box {
+    display: flex;
+    background-color: #000;
+    border: 2px solid #382418;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.nbox-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0.5em;
+    width: 100%;
+}
+
+.nbox-item {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    color: #90c040;
+    text-decoration: none;
+    font-size: 90%;
+    padding: 0rem;
+}
+
+a.nbox-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*content backdrop*/
+div.content-backdrop-top {
+    position: relative;
+    text-align: center;
+}
+
+img.content-backdrop-top {
+    width: 100%;
+}
+
+div.content-backdrop {
+    margin-top: -2%;
+    margin-bottom: -1%;
+    width: 80%;
+    min-height: 80vh;
+    background-size: contain;
+    background-image: url('/static/images/backdrop.gif');
+}
+
+div.content-backdrop-bottom {
+    position: relative;
+    text-align: center;
+}
+
+img.content-backdrop-bottom {
+    width: 100%;
+}
+
+main.content {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+div.title h1,
+div.title h2,
+div.title h3 {
+    text-align: center;
+}

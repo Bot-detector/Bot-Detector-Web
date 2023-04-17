@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="title">
+    <h1>
+        <img src="/static/images/GameAssets/questionmarkcake.png" width="35px">
+        Frequently AskedQuestions
+        <img src="/static/images/GameAssets/questionmarkcake.png" width="35px">
+    </h1>
+    <p>
+        Have a question about the plugin? We've answered most of them here!
+        If your question still has not been answered - feel free to message us on
+        <a href="https://discord.gg/RZEf2ms4gs">discord</a>
+    </p>
+</div>
+
+<hr>
+<div>
+    <div class="title">
+        <h2>What is the OSRS Bot Detector plugin?</h2>
+    </div>
+    <p>The OSRS Bot Detector plugin is an open-source community-run machine learning plugin made for Old School
+        RuneScape using the popular third-party client RuneLite. The plugin aims to use machine learning algorithms to
+        separate players from bots and send likely bot accounts to Jagex's anti-cheating team for swift removal.</p>
+</div>
+<hr>
+<div>
+
+    <div class="title">
+        <h2>How does the OSRS Bot Detector plugin work?</h2>
+    </div>
+    <p>The OSRS Bot Detector plugin works by sending nearby players' information to our machine learning algorithm,
+        trained
+        with data provided by Jagex Moderators. The algorithm then processes this information and assesses it for
+        bot-like
+        behavior. If a player is determined to be a likely bot account, their information is sent to Jagex's
+        anti-cheating
+        team for swift removal.</p>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>Getting started</h2>
+    </div>
+    <h3>Installing the Plugin</h3>
+    <ol>
+        <li>Open Runelite</li>
+        <li>Navigate to the Configuration wrench on the Top Right of the Sidebar</li>
+        <li>Click on Plugin Hub at the very bottom</li>
+        <li>Type in Bot Detector in the search bar</li>
+        <li>click install</li>
+        <li>Accept the warning message. (See the FAQ below if you have questions about this)</li>
+        <li>Done!</li>
+    </ol>
+</div>
+
+<hr>
+
+<div>
+    <div class="title">
+        <h2>Using the plugin</h2>
+    </div>
+    <h3>The Plugin's Settings</h3>
+    <table>
+        <tr>
+            <th>Setting Type</th>
+            <th>Setting Name</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Upload Settings</td>
+            <td>Anonymous Uploading</td>
+            <td>When enabled, your username will not be sent with your uploads. You also cannot manually flag players.
+            </td>
+        </tr>
+        <tr>
+            <td>Upload Settings</td>
+            <td>Send Names Only After Logout</td>
+            <td>Recommended for players with low bandwidth.</td>
+        </tr>
+        <tr>
+            <td>Upload Settings</td>
+            <td>Attempt Send on Close</td>
+            <td>Attempts to upload names when closing Runelite while being logged in. Take note that enabling this
+                option may cause the client to take a long time to close if our servers are being unresponsive.</td>
+        </tr>
+        <tr>
+            <td>Upload Settings</td>
+            <td>Send Names Every x mins</td>
+            <td>Determines how often the information collected by the plugin is flushed to our servers. The maximum rate
+                is once per 5 minutes.</td>
+        </tr>
+        <tr>
+            <td>Panel Settings</td>
+            <td>Prediction Autocomplete</td>
+            <td>Allows for prediction auto-completion for dialogue box entry.</td>
+        </tr>
+        <tr>
+            <td>Panel Settings</td>
+            <td>Show Breakdown in Special Cases</td>
+            <td>Displays the Prediction Breakdown when predicting certain types of accounts, such as ones with 'Stats
+                Too Low'.</td>
+        </tr>
+        <tr>
+            <td>Panel Settings</td>
+            <td>Show Feedback Textbox</td>
+            <td>Adds a textbox to the prediction feedback panel, so you can explain your choice in up to 250 characters.
+                Make sure you type your feedback before you make your choice!</td>
+        </tr>
+        <tr>
+            <td>Panel Settings</td>
+            <td>Panel Default Stats Tab</td>
+            <td>Sets panel default stats tab when the Plugin turns on.</td>
+        </tr>
+    </table>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>What are the settings for the OSRS Bot Detector plugin?</h2>
+    </div>
+    <p>The OSRS Bot Detector plugin has several settings that can be configured by the user. These include:</p>
+    <ul>
+        <li><strong>Anonymous Uploading:</strong> When enabled, your username will not be sent with your uploads. You
+            also cannot manually flag players.</li>
+        <li><strong>Send Names Only After Logout:</strong> Recommended for players with low bandwidth.</li>
+        <li><strong>Attempt Send on Close:</strong> Attempts to upload names when closing Runelite while being logged
+            in. Take note that enabling this option may cause the client to take a long time to close if our servers are
+            being unresponsive.</li>
+        <li><strong>Send Names Every x mins:</strong> Determines how often the information collected by the plugin is
+            flushed to our servers. The maximum rate is once per 5 minutes.</li>
+        <li><strong>Prediction Autocomplete:</strong> Allows for prediction auto-completion for dialogue box entry.</li>
+        <li><strong>Show Breakdown in Special Cases:</strong> Displays the Prediction Breakdown when predicting certain
+            types of accounts, such as ones with 'Stats Too Low'.</li>
+        <li><strong>Show Feedback Textbox:</strong> Adds a textbox to the prediction feedback panel, so you can explain
+            your choice in up to 250 characters. Make sure you type your feedback before you make your choice!</li>
+        <li><strong>Panel Default Stats Tab:</strong> Sets panel default stats tab when the Plugin turns on.</li>
+    </ul>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>Is the OSRS Bot Detector plugin safe to use?</h2>
+    </div>
+    <p>Yes, the OSRS Bot Detector plugin is safe to use. It is an open-source community-run project and its code is
+        publicly available for review on GitHub. However, as with any third-party software, it is always a good idea to
+        exercise caution and use it at your own risk.</p>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>How can I contribute to the OSRS Bot Detector plugin project?</h2>
+    </div>
+    <p>There are several ways you can contribute to the OSRS Bot Detector plugin project. You can join the project's
+        Discord server to get involved in the community and provide feedback or suggestions. You can also support the
+        project on Patreon or contribute code to the project's GitHub repository.</p>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>How accurate is the OSRS Bot Detector plugin?</h2>
+    </div>
+    <p>The accuracy of the OSRS Bot Detector plugin depends on several factors, including the quality and quantity of
+        data used to train its machine learning algorithms and the effectiveness of those algorithms in identifying
+        bot-like behavior. The plugin's developers are constantly working to improve its accuracy by collecting more
+        data and refining its algorithms.</p>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>Can the OSRS Bot Detector plugin detect all types of bots?</h2>
+    </div>
+    <p>No, the OSRS Bot Detector plugin is not capable of detecting all types of bots. Some bots may use advanced
+        techniques to avoid detection, and it is always possible for new types of bots to emerge that the plugin is not
+        yet capable of detecting. However, the plugin's developers are constantly working to improve its ability to
+        detect a wide range of bot-like behavior.</p>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>Is the OSRS Bot Detector plugin always accurate?</h2>
+    </div>
+    <p>Like any automated system, the OSRS Bot Detector plugin is not perfect and may occasionally produce false
+        positives or false negatives. Some players have expressed concern that certain types of accounts, such as
+        high-level 1 defense pures, may be more likely to be flagged as bots by the plugin due to their training
+        patterns[^1^][1]. The plugin's developers are aware of these concerns and are constantly working to improve the
+        accuracy of the plugin's algorithms.</p>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>Can botters use the OSRS Bot Detector plugin to avoid detection?</h2>
+    </div>
+    <p>Some players have expressed concern that botters may be able to use the open-source nature of the OSRS Bot
+        Detector plugin to learn how their accounts are being scored and adjust their behavior to reduce their profiling
+        score[^1^][1]. While this is a possibility, it is important to note that the plugin's developers are constantly
+        updating its algorithms and collecting new data to stay ahead of botting techniques. Additionally, Jagex's
+        anti-cheating team uses a variety of methods to detect and ban bots, so avoiding detection by the OSRS Bot
+        Detector plugin alone is not enough to guarantee that a bot account will not be banned.</p>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>Is the OSRS Bot Detector plugin invasive?</h2>
+    </div>
+    <p>Some players have expressed concern that the OSRS Bot Detector plugin may be invasive because it collects and
+        sends information about nearby players to a third-party server for analysis. However, it is important to note
+        that the plugin only collects publicly available information, such as player names and stats from the hiscores.
+        Additionally, the plugin has settings that allow users to control what information is sent and when it is sent.
+        The plugin's developers are committed to protecting user privacy and ensuring that the plugin operates in a
+        transparent and responsible manner.</p>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>Can the OSRS Bot Detector plugin hurt legitimate players?</h2>
+    </div>
+    <p>Some players have expressed concern that the OSRS Bot Detector plugin could potentially hurt legitimate players
+        if it produces false positives and mistakenly flags them as bots. While this is a possibility, it is important
+        to note that Jagex's anti-cheating team uses a variety of methods to detect and ban bots, and a single flag from
+        the OSRS Bot Detector plugin alone is not enough to result in a ban. Additionally, the plugin's developers are
+        constantly working to improve its accuracy and reduce the likelihood of false positives.</p>
+</div>
+<hr>
+<div>
+    <div class="title">
+        <h2>Is using machine learning algorithms to detect bot-like behavior effective?</h2>
+    </div>
+    <p>Some players have questioned the effectiveness of using machine learning algorithms to detect bot-like behavior,
+        given that some legitimate players may exhibit similar behavior patterns to bots on certain days. While it is
+        true that no automated system is perfect and there is always a possibility of false positives or false
+        negatives, machine learning algorithms have proven to be effective at detecting patterns and making predictions
+        in many different fields. The OSRS Bot Detector plugin's developers are constantly collecting new data and
+        refining their algorithms to improve their accuracy in detecting bot-like behavior.</p>
+</div>
+{% endblock %}
