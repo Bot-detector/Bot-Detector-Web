@@ -1,18 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="title">
+
+<div class="flex-box-home">
+    <img src="/static/images/GameAssets/bot.png" width="100px">
+    <div class="flex-box-home-row">
     <h1>
-        <img src="/static/images/GameAssets/bot.png" width="35px">
         Bot Detector
-        <img src="/static/images/GameAssets/bot.png" width="35px">
+        <!-- <img src="/static/images/GameAssets/bot.png" width="35px"> ** -->
     </h1>
+    <h4>
+        An Old School Runescape RuneLite Plugin
+        <!-- <img src="/static/images/GameAssets/bot.png" width="35px"> ** -->
+    </h4>
 </div>
-<hr>
+</div>
+
 <div>
     <div class="title">
         <h2>An Open-Source Machine Learning Plugin</h2>
     </div>
+    <hr>
     <p>
         The Bot Detector Plugin is an open-source community-run machine learning plugin made for Old School RuneScape using the popular third-party client RuneLite. We aim to use this plugin and the corresponding machine learning algorithms to separate players from bots, from a bird's eye view - and send likely bot accounts to Jagex's anti-cheating team for swift removal.
     </p>
@@ -23,7 +31,7 @@
 <hr>
 <div>
     <div class="title">
-        <h2>Account Search</h2>
+        <h3><a class="nbox-link" href="{{ url_for('account_search') }}">Account search</a></h3>
     </div>
     <!-- TODO: variable amount -->
     <p>
@@ -33,7 +41,7 @@
 <hr>
 <div>
     <div class="title">
-        <h2>Contributors</h2>
+        <h3><a class="nbox-link" href="{{ url_for('contributors') }}">Contributors</a></h3>
     </div>
     <p>
         The Bot Detector Plugin is a community-driven project, and we're grateful for the contributions of our many supporters. On our contributors page, we've displayed everyone that has contributed or supported the development of the Bot Detector Plugin. Becoming a contributor is a great way to support our efforts and get involved in the project. As a contributor, you'll have the opportunity to work with other passionate players to improve the plugin and make Old School RuneScape a better place for all players.
@@ -45,7 +53,7 @@
 <hr>
 <div>
     <div class="title">
-        <h2>Stats</h2>
+        <h3>Stats</h3>
     </div>
     <p>
         Total bans: {{ '{:,}'.format(stats.total_bans) }}<br>

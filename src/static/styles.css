@@ -1,25 +1,43 @@
 body {
     display: block;
     margin: 0px;
-    background: linear-gradient(90deg, 
+    background: linear-gradient(0deg, #121212 5.29%, #252525 100%);
+    /* background: linear-gradient(90deg, 
         #151515 0%, 
         black 30%,
         black 70%,
         #151515 100%
-    );
+    );*/
 }
 /* Add styles for the navigation bar */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
+    vertical-align: middle;
     padding: 0.5rem 1rem;
-    background-color: #333333;
+    background-color: #252E34;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+
 }
 
 .navbar-brand {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    align-content: center;
+}
+
+hr {
+    color: #6B7B17;
 }
 
 .navbar-nav {
@@ -28,12 +46,20 @@ body {
 }
 
 .nav-item {
-    margin-right: 1rem;
+    margin-right: 3rem;
+
 }
 
 .nav-link {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
 }
 
 .nav-link:hover,
@@ -47,7 +73,7 @@ div.content-container {
     flex-direction: column;
     align-items: center;
     background-size: contain;
-    background-image: url('/static/images/background.jpg');
+    /* background-image: url('/static/images/background.jpg'); */
     max-width: 70vh;
     min-width: 500px;
     margin: 0 auto;
@@ -56,13 +82,13 @@ div.content-container {
 
 div.navigation-box {
     display: flex;
-    background-color: #000;
+    background-color: #111111;
     border: 2px solid #382418;
     padding-left: 2%;
     padding-right: 2%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: .5em;
+    margin-top: 1em;
     margin-bottom: .5em;
     text-align: center;
     justify-content: space-between;
@@ -72,18 +98,19 @@ div.navigation-box {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding: 0;
-    margin: 0.5em;
+    padding: 0px;
+    margin: 0.2em;
     width: 100%;
 }
 
 .nbox-item {
-    margin-left: .5rem;
-    margin-right: .5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     color: #90c040;
     text-decoration: none;
     font-size: 90%;
     padding: 0rem;
+    font-family: 'Roboto';
 }
 
 a.nbox-link {
@@ -124,8 +151,104 @@ main.content {
     margin-right: 2em;
 }
 
-div.title h1,
-div.title h2,
+div.title h1 {
+    /* text-align: left;
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center; */
+
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    /* line-height: 48px; */
+
+    flex: none;
+order: 0;
+flex-grow: 1;
+    color: #1F1B12;
+}
+
+div.title h2 {
+    text-align: left;
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+
 div.title h3 {
-    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+}
+
+div.title h4 {
+    /* text-align: left;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px; */
+
+    font-family: 'Roboto'; 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    /* line-height: 18px; */
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+    color: #000000;
+}
+
+P {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.flex-box-home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    width: 395px;
+    height: 100px;
+    left: 40px;
+    top: 24px;
+}
+
+.flex-box-home-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    margin: 0px;
+    
+    width: 300px;
+    height: 76px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 1;
 }
