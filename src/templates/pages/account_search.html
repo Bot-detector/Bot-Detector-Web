@@ -1,44 +1,98 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="title">
-    <h1>
-        <img src="/static/images/GameAssets/runefullhelm.png" width="35px">
-        Account search
-        <img src="/static/images/GameAssets/runefullhelm.png" width="35px">
-    </h1>
-    <p>
-        If you would like to learn more about an Old School Runescape account, type in the name below. We cannot provide information with 24 hours of a sighting of a player, therefore we cannot provide latest locations and latest gear information for an account. 
-    </p>
-</div>
-<hr>
-<form action="/account-search" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
-    <input type="submit" value="Submit">
-</form>
-<hr>
-{% if prediction %}
-    <h2>Prediction</h2>
-    <ul>
-        {% for key, value in prediction.items() %}
-            {% if key == "predictions_breakdown" %}
-                <li>{{ key }}:
-                    <ul>
-                        {% for sub_key, sub_value in value.items() %}
-                            {% if sub_value != 0 %}
-                                <li>{{ sub_key }}: {{ sub_value * 100 }}%</li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </li>
-            {% elif key == "prediction_confidence" %}
-                <li>{{ key }}: {{ value * 100 }}%</li>
-            {% else %}
-                <li>{{ key }}: {{ value }}</li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-{% endif %}
+<div class="pt-5">
+    <div class="container">
+        <div class="row">
+            <!-- Main content column -->
+            <div class="col-md-8">
+                <article>
+                    <!-- Article card for Account Search information -->
+                    <div class="card card-article card-server mb-2">
+                        <div class="card-img text-center">
+                            <!-- You may want to add an image here -->
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon">
+                                <img src="/static/logotype.svg" alt="Bot Detector">
+                            </div>
+                            <h1 class="h3 mt-2">Account Search</h1>
+                            <p class="fs-16 mt-4 bt-plugin-desc">
+                                If you would like to learn more about an Old School RuneScape account, type in the name below. We cannot provide information within 24 hours of a sighting of a player, therefore we cannot provide the latest locations and the latest gear information for an account.
+                            </p>
+                            <hr>
 
+                            <!-- Account search form -->
+                            <form action="/account-search" method="post" class="row g-3">
+                                <center>
+                                    <div class="col-auto">
+                                        <label for="username" class="visually-hidden">Player username</label>
+                                        <input type="text" id="username" name="username" class="form-control" placeholder="Player username">
+                                    </div>
+                                    <br>
+                                    <div class="col-auto">
+                                        <input type="submit" value="Submit" class="btn btn-primary pt-2 pb-2 github-b">
+                                    </div>
+                                </center>
+                            </form>
+                            <hr>
+
+                            <!-- Display prediction results if available -->
+                            {% if prediction %}
+                                <h2>Prediction</h2>
+                                <ul>
+                                    {% for key, value in prediction.items() %}
+                                        {% if key == "predictions_breakdown" %}
+                                            <li>{{ key }}:
+                                                <ul>
+                                                    {% for sub_key, sub_value in value.items() %}
+                                                        {% if sub_value != 0 %}
+                                                            <li>{{ sub_key }}: {{ sub_value * 100 }}%</li>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </li>
+                                        {% elif key == "prediction_confidence" %}
+                                            <li>{{ key }}: {{ value * 100 }}%</li>
+                                        {% else %}
+                                            <li>{{ key }}: {{ value }}</li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar column for notifications and RuneLite installation -->
+            <div class="col-md-4 mb-4">
+                <!-- Notification card -->
+                <div class="card notify">
+                    <div class="card-body">
+                        <h2 class="h5 mb-4"><i class="fa-duotone fa-bell i-dsc"></i> Get notified about bans</h2>
+                        <div class="d-grid gap-2 col-12 mx-auto">
+                            <p class="mb-0">
+                                <a href="https://discord.gg/RZEf2ms4gs"><img src="https://discordapp.com/api/guilds/817916789668708384/widget.png?style=banner2" alt="Discord Server"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <!-- RuneLite installation card -->
+                <div class="card runelite">
+                    <div class="card-body">
+                        <h2 class="h5 mb-4"><i class="fa-duotone fa-badge-check i-runelite"></i> Get Bot Detector</h2>
+                        <div class="d-grid gap-2 col-12 mx-auto">
+                            <p class="mb-0">Install plugin in <strong>RuneLite</strong>:</p>
+                            <hr>
+                            <img src="/static/plugin.png" alt="Plugin installation instructions">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

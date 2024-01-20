@@ -1,17 +1,98 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="title">
-    <h1>
-        <img src="/static/images/GameAssets/coins.png" width="35px">
-        Contributors and Supporters
-        <img src="/static/images/GameAssets/coins.png" width="35px">
-    </h1>
-    <p>
-        Contributing to the OSRS Bot Detector plugin is a great way to support the Old School RuneScape community. By helping to identify and remove bots from the game, you can help improve the overall gaming experience for all players. The Bot Detector plugin is an open-source project, which means that anyone can contribute to its development and help make it even better. By joining the team of contributors, you can use your skills and knowledge to make a real difference in the game. Plus, it’s a great opportunity to work with other passionate gamers and developers who share your love for Old School RuneScape.
-    </p>
+<div class="pt-5">
+    <div class="container">
+        <div class="row">
+            <!-- Main content column -->
+            <div class="col-md-8">
+                <article>
+                    <!-- Article card for Contributors and Supporters information -->
+                    <div class="card card-article card-server mb-2">
+                        <div class="card-img text-center">
+                            <!-- You may want to add an image here -->
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon">
+                                <img src="/static/logotype.svg" alt="Bot Detector">
+                            </div>
+                            <h1 class="h3 mt-2">Contributors and Supporters</h1>
+                            <p class="fs-16 mt-4 bt-plugin-desc">
+                                Contributing to the OSRS Bot Detector plugin is a great way to support the Old School RuneScape community. By helping to identify and remove bots from the game, you can improve the overall gaming experience for all players. The Bot Detector plugin is an open-source project, allowing anyone to contribute to its development and make it even better. Join the team of contributors to use your skills and knowledge to make a real difference in the game and collaborate with other passionate gamers and developers who share your love for Old School RuneScape.
+                            </p>
+                            <hr>
+
+                            <!-- Support links -->
+                            <h1 class="h3 mt-2 text-center">Support us at</h1>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Discord</th>
+                                        <th scope="col">Patreon</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight:bold;"><span class="dcboost"><img src="https://i.imgur.com/TV6QSfm.png"> Boost our server <img src="https://i.imgur.com/TV6QSfm.png"></span><br>
+                                            <a href="https://discord.gg/RZEf2ms4gs" class="btn btn-sm btn-primary pt-2 pb-2"><i class="fab fa-discord" aria-hidden="true"></i> Join</a>
+                                        </td>
+                                        <td style="font-weight:bold;"><span style="color:#fff;">Help us financially</span><br>
+                                            <a href="https://www.patreon.com/bot_detector" class="btn btn-sm btn-primary patreon-b"><i class="fab fa-patreon" aria-hidden="true"></i> Patreon</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr>
+
+                            <!-- Contribute links -->
+                            <h1 class="h3 mt-2  text-center">Contribute</h1>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Github</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-weight:bold;">Code with us<br>
+                                            <a href="https://github.com/Bot-detector" class="btn btn-sm btn-primary github-b"><i class="fab fa-github" aria-hidden="true"></i> Our Repositories</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar column for notifications and RuneLite installation -->
+            <div class="col-md-4 mb-4">
+                <!-- Notification card -->
+                <div class="card notify">
+                    <div class="card-body">
+                        <h2 class="h5 mb-4"><i class="fa-duotone fa-bell i-dsc"></i> Get notified about bans</h2>
+                        <div class="d-grid gap-2 col-12 mx-auto">
+                            <p class="mb-0">
+                                <a href="https://discord.gg/RZEf2ms4gs"><img src="https://discordapp.com/api/guilds/817916789668708384/widget.png?style=banner2" alt="Discord Server"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <!-- RuneLite installation card -->
+                <div class="card runelite">
+                    <div class="card-body">
+                        <h2 class="h5 mb-4"><i class="fa-duotone fa-badge-check i-runelite"></i> Get Bot Detector</h2>
+                        <div class="d-grid gap-2 col-12 mx-auto">
+                            <p class="mb-0">Install plugin in <strong>RuneLite</strong>:</p>
+                            <hr>
+                            <img src="/static/plugin.png" alt="Plugin installation instructions">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<hr>
-
 {% endblock %}

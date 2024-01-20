@@ -1,57 +1,63 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="title">
-    <h1>
-        <img src="/static/images/GameAssets/bot.png" width="35px">
-        Bot Detector
-        <img src="/static/images/GameAssets/bot.png" width="35px">
-    </h1>
-</div>
-<hr>
-<div>
-    <div class="title">
-        <h2>An Open-Source Machine Learning Plugin</h2>
-    </div>
-    <p>
-        The Bot Detector Plugin is an open-source community-run machine learning plugin made for Old School RuneScape using the popular third-party client RuneLite. We aim to use this plugin and the corresponding machine learning algorithms to separate players from bots, from a bird's eye view - and send likely bot accounts to Jagex's anti-cheating team for swift removal.
-    </p>
-    <p>
-        If you're interested in supporting our efforts to combat botting in Old School RuneScape, consider joining our Discord community or making a donation to help fund the development of the Bot Detector Plugin. Every contribution helps us continue our work to make the game a better place for all players.
-    </p>
-</div>
-<hr>
-<div>
-    <div class="title">
-        <h2>Account Search</h2>
-    </div>
-    <!-- TODO: variable amount -->
-    <p>
-        In addition to our efforts to combat botting, we also offer an account search feature on our website. This allows you to check over {{ '{:,}'.format(stats.total_accounts) }} accounts' ban status, bot prediction likelihood, latest hiscore entry, xp-gains, and more! It's a great tool for players who want to keep track of their own accounts or those of their friends.
-    </p>
-</div>
-<hr>
-<div>
-    <div class="title">
-        <h2>Contributors</h2>
-    </div>
-    <p>
-        The Bot Detector Plugin is a community-driven project, and we're grateful for the contributions of our many supporters. On our contributors page, we've displayed everyone that has contributed or supported the development of the Bot Detector Plugin. Becoming a contributor is a great way to support our efforts and get involved in the project. As a contributor, you'll have the opportunity to work with other passionate players to improve the plugin and make Old School RuneScape a better place for all players.
-    </p>
-    <p>
-        Becoming a Patreon contributor to the Bot Detector project comes with several benefits. As a Patreon contributor, you'll have access to a custom Patreon channel on our Discord server where you can connect with other supporters and get exclusive updates on the project. Additionally, you'll have access to the heatmap command, which allows you to see detailed information about bot activity in Old School RuneScape. Your support helps us continue our work to combat botting and make the game a better place for all players.
-    </p>
-</div>
-<hr>
-<div>
-    <div class="title">
-        <h2>Stats</h2>
-    </div>
-    <p>
-        Total bans: {{ '{:,}'.format(stats.total_bans) }}<br>
-        Total real players: {{ '{:,}'.format(stats.total_real_players) }} (manually flagged)<br>
-        Total accounts: {{ '{:,}'.format(stats.total_accounts) }}
-    </p>
-</div>
+<div class="pt-5">
+    <div class="container">
+        <div class="row">
+            <!-- Main content column -->
+            <div class="col-md-8">
+                <article>
+                    <!-- Article card for Bot Detector information -->
+                    <div class="card card-article card-server mb-2">
+                        <div class="card-img text-center">
+                            <!-- You may want to add an image here -->
+                        </div>
+                        <div class="card-body">
+                            <div class="card-icon">
+                                <img src="/static/logotype.svg" alt="Bot Detector">
+                            </div>
+                            <h1 class="h3 mt-2">Bot Detector</h1>
+                            <div class="post-date mt-1">An Open-Source Machine Learning Plugin</div>
+                            <p class="fs-16 mt-4 bt-plugin-desc">
+                                The Bot Detector Plugin is an open-source community-run machine learning plugin made for Old School RuneScape using the popular third-party client RuneLite.<br><br>We aim to use this plugin and the corresponding machine learning algorithms to separate players from bots, from a bird's eye view - and send likely bot accounts to Jagex's anti-cheating team for swift removal.<br><br>
+                                If you're interested in supporting our efforts to combat botting in Old School RuneScape, consider joining our Discord community or making a donation to help fund the development of the Bot Detector Plugin. Every contribution helps us continue our work to make the game a better place for all players.
+                            </p>
+                            <hr>
+                        </div>
+                    </div>
+                </article>
+            </div>
 
+            <!-- Sidebar column for Bot Detector statistics and RuneLite installation -->
+            <div class="col-md-4 mb-4">
+                <!-- Bot statistics card -->
+                <div class="card botstats">
+                    <div class="card-body">
+                        <h2 class="h5 mb-4"><i class="fa-duotone fa-chart-pie-simple-circle-dollar i-bdstats" style="font-size:32px;"></i><br><br>Bot Detector stats</h2>
+                        <div class="d-grid gap-2 col-12 mx-auto">
+                            <p class="mb-0">
+                                <h5 class="mb-2 stat-bt">Total bans<br><span class="badge bt-stat">{{ '{:,}'.format(stats.total_bans) }}</span></h5>
+                                <h5 class="mb-2 stat-bt">Total real players<br><span style="font-size:11px;opacity:0.3;text-transform:uppercase;font-weight:normal">(manually flagged)</span><br><span class="badge bt-stat">{{ '{:,}'.format(stats.total_real_players) }}</span></h5>
+                                <h5 class="mb-2 stat-bt">Total accounts<br><span class="badge bt-stat">{{ '{:,}'.format(stats.total_accounts) }}</span></h5>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <!-- RuneLite installation card -->
+                <div class="card runelite">
+                    <div class="card-body">
+                        <h2 class="h5 mb-4"><i class="fa-duotone fa-badge-check i-runelite" style="font-size:32px;"></i><br><br>Get Bot Detector</h2>
+                        <div class="d-grid gap-2 col-12 mx-auto">
+                            <p class="mb-0">Install plugin in <strong>RuneLite</strong>:</p>
+                            <hr>
+                            <img src="/static/plugin.png" alt="Plugin installation instructions">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

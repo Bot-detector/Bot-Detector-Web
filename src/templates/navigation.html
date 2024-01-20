@@ -1,21 +1,35 @@
 {% block navigation %}
-<div class="navigation-box">
-    <ul class="nbox-nav">
-        <li class="nbox-item">
-            <a class="nbox-link" href="{{ url_for('home') }}">Home</a>
-        </li>
-        <li class="nbox-item">
-            <a class="nbox-link" href="{{ url_for('account_search') }}">Account search</a>
-        </li>
-        <li class="nbox-item">
-            <a class="nbox-link" href="{{ url_for('contributors') }}">Contributors</a>
-        </li>
-        <li class="nbox-item">
-            <a class="nbox-link" href="{{ url_for('faq') }}">FAQ</a>
-        </li>
-        <li class="nbox-item">
-            <a class="nbox-link" href="{{ url_for('contact') }}">Contact</a>
-        </li>
-    </ul>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-nav px-0 py-1 border-bottom">
+  <div class="container">
+
+    <!-- Navbar toggler for responsive design -->
+    <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar brand/logo -->
+    <a class="navbar-brand" href="https://osrsbotdetector.com">
+      <img src="/static/logotype.svg" alt="Bot Detector"> Bot Detector
+    </a>
+
+    <!-- Navbar links for support and social media -->
+    <div class="order order-lg-3 ms-lg-4">
+      <a href="https://discord.gg/RZEf2ms4gs" class="btn btn-sm btn-primary pt-2 pb-2"><i class="fab fa-discord" aria-hidden="true"></i> Support</a>
+      <a href="https://github.com/Bot-detector" class="btn btn-sm btn-primary github-b"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="https://www.patreon.com/bot_detector" class="btn btn-sm btn-primary patreon-b"><i class="fab fa-patreon" aria-hidden="true"></i></a>
+    </div>
+
+    <!-- Navbar links for navigation -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+        <a class="nav-item nav-link" href="{{ url_for('account_search') }}">Account search</a>
+        <a class="nav-item nav-link" href="{{ url_for('contributors') }}">Contributors</a>
+        <a class="nav-item nav-link" href="{{ url_for('faq') }}">FAQ</a>
+        <a class="nav-item nav-link" href="{{ url_for('contact') }}">Contact</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
 {% endblock %}
