@@ -1,28 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="title">
-    <h1>
-        <img src="/static/images/GameAssets/contact.png" width="35px">
-        Contact us
-        <img src="/static/images/GameAssets/contact.png" width="35px">
-    </h1>
-    <p>
-        If you're looking to get in touch with us, feel free to message any of the following links at your convenience. They are monitored on a weekly basis, and we will try to respond as quickly as we can! 
-    </p>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <!-- Main content column -->
+
+            <article>
+                <!-- Article card for Contributors and Supporters information -->
+                <div class="card card-article card-server mb-2">
+                    <div class="card-img text-center">
+                        <!-- You may want to add an image here -->
+                    </div>
+                    <div class="card-body">
+                        <div class="card-icon text-center">
+                            <img src="/static/logotype.svg" alt="Bot Detector">
+                        </div>
+                        <h1 class="h3 mt-2 text-center">Contact us</h1>
+                        <p class="fs-16 mt-4 bt-plugin-desc text-center">
+                            If you're looking to get in touch with us, feel free to message any of the following links at your convenience.<br>
+                            They are monitored on a weekly basis, and we will try to respond as quickly as we can!
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </article>
+
+            <br>
+
+            <div>
+                <p>
+                    <i class="fa-brands fa-x-twitter"></i> - <a href="https://x.com/osrsbotdetector" target="_blank">@Osrsbotdetector</a><br>
+                    <i class="fa-brands fa-discord"></i> - <a href="https://discord.gg/RZEf2ms4gs" target="_blank">Bot Detector Plugin Discord</a><br>
+                    <i class="fa-solid fa-mailbox"></i> - <a href="mailto:osrsbotdetector@gmail.com" target="_blank">osrsbotdetector@gmail.com</a><br>
+                    <i class="fa-brands fa-patreon"></i> - <a href="https://www.patreon.com/bot_detector" target="_blank">https://www.patreon.com/bot_detector</a><br>
+                    <i class="fa-brands fa-github"></i> - <a href="https://github.com/Bot-detector" target="_blank">https://github.com/Bot-detector/</a><br>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
-
-<hr>
-
-<div>
-    <p>
-        Twitter - <a href="https://twitter.com/osrsbotdetector" target="_blank">@Osrsbotdetector</a><br>
-        Discord - <a href="https://discord.gg/RZEf2ms4gs" target="_blank">Bot Detector Plugin Discord</a><br>
-        Email - <a href="mailto:osrsbotdetector@gmail.com" target="_blank">osrsbotdetector@gmail.com</a><br>
-        Patreon - <a href="https://www.patreon.com/bot_detector" target="_blank">https://www.patreon.com/bot_detector</a><br>
-        Github - <a href="https://github.com/Bot-detector" target="_blank">https://github.com/Bot-detector/</a><br>
-    </p>
-</div>
-
 
 {% endblock %}
