@@ -732,3 +732,7 @@ article .card-icon img {
     margin: 0px;
 }
 }
+.loltable {
+  font-size:14px;
+  max-width:680px;
+}
