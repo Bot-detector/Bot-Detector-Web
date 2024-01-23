@@ -4,7 +4,7 @@
    <div class="container">
       <div class="row">
          <article>
-            <div class="card card-article card-server mb-2">
+            <div class="card card-article card-server mb-4">
                <div class="card-img text-center">
                </div>
                <div class="card-body">
@@ -18,8 +18,7 @@
                      <a href="https://discord.gg/RZEf2ms4gs"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a>.
                   </p>
                   <hr>
-               </div>
-            </div>
+
             <br>
             <div class="accordion">
                <div class="accordion-item">
@@ -36,9 +35,11 @@
                      </div>
                   </div>
                </div>
+              </div>
+              <div class="accordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="">
                      How does the OSRS Bot Detector plugin work?
                      </button>
                   </h2>
@@ -111,65 +112,121 @@
                Plugin settings
             </p>
             <hr>
-            <table class="table">
-               <thead style="text-align:left;">
-                  <tr>
-                     <th scope="col">Setting type</th>
-                     <th scope="col">Setting name</th>
-                     <th scope="col">Description</th>
-                  </tr>
-               </thead>
-               <tbody style="text-align:left;">
-                  <tr>
-                     <td>Upload Settings</td>
-                     <td>Anonymous Uploading</td>
-                     <td>When enabled, your username will not be sent with your uploads.<br>You also cannot manually flag players.</td>
-                  </tr>
-                  <tr>
-                     <td>Upload Settings</td>
-                     <td>Send Names Only After Logout</td>
-                     <td>Recommended for players with low bandwidth.</td>
-                  </tr>
-                  <tr>
-                     <td>Upload Settings</td>
-                     <td>Attempt Send on Close</td>
-                     <td>Attempts to upload names when closing Runelite<br> while being logged in. Take note that<br>enabling this
-                        option may cause the client to take a long time<br>to close if our servers are being unresponsive.
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>Upload Settings</td>
-                     <td>Send Names Every x mins</td>
-                     <td>Determines how often the information collected<br>by the plugin is flushed to our servers.<br>The maximum rate
-                        is once per 5 minutes.
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>Panel Settings</td>
-                     <td>Prediction Autocomplete</td>
-                     <td>Allows for prediction auto-completion for dialogue box entry.</td>
-                  </tr>
-                  <tr>
-                     <td>Panel Settings</td>
-                     <td>Show Breakdown in Special Cases</td>
-                     <td>Displays the Prediction Breakdown when predicting<br>certain types of accounts, such as ones with 'Stats
-                        Too Low'.
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>Panel Settings</td>
-                     <td>Show Feedback Textbox</td>
-                     <td>Adds a textbox to the prediction feedback panel,<br>so you can explain your choice in up to 250 characters.<br>
-                        Make sure you type your feedback before you make your choice!
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>Panel Settings</td>
-                     <td>Panel Default Stats Tab</td>
-                     <td>Sets panel default stats tab when the Plugin turns on.</td>
-                  </tr>
-               </tbody>
-            </table>
+            </div>
+            <div class="container loltable">
+
+  <!-- Header Row -->
+  <div class="row">
+    <div class="col">
+      <h4>Setting type</h4>
+    </div>
+    <div class="col">
+      <h4>Setting name</h4>
+    </div>
+    <div class="col">
+      <h4>Description</h4>
+    </div>
+  </div>
+
+  <!-- Data Rows -->
+  <div class="row">
+    <div class="col">
+      <p>Upload Settings</p>
+    </div>
+    <div class="col">
+      <p>Anonymous Uploading</p>
+    </div>
+    <div class="col">
+      <p>When enabled, your username will not be sent with your uploads. You also cannot manually flag players.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Upload Settings</p>
+    </div>
+    <div class="col">
+      <p>Send Names Only After Logout</p>
+    </div>
+    <div class="col">
+      <p>Recommended for players with low bandwidth.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Upload Settings</p>
+    </div>
+    <div class="col">
+      <p>Attempt Send on Close</p>
+    </div>
+    <div class="col">
+      <p>Attempts to upload names when closing Runelite while being logged in. Take note that enabling this option may cause the client to take a long time to close if our servers are being unresponsive.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Upload Settings</p>
+    </div>
+    <div class="col">
+      <p>Send Names Every x mins</p>
+    </div>
+    <div class="col">
+      <p>Determines how often the information collected by the plugin is flushed to our servers. The maximum rate is once per 5 minutes.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Panel Settings</p>
+    </div>
+    <div class="col">
+      <p>Prediction Autocomplete</p>
+    </div>
+    <div class="col">
+      <p>Allows for prediction auto-completion for dialogue box entry.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Panel Settings</p>
+    </div>
+    <div class="col">
+      <p>Show Breakdown in Special Cases</p>
+    </div>
+    <div class="col">
+      <p>Displays the Prediction Breakdown when predicting certain types of accounts, such as ones with 'Stats Too Low'.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Panel Settings</p>
+    </div>
+    <div class="col">
+      <p>Show Feedback Textbox</p>
+    </div>
+    <div class="col">
+      <p>Adds a textbox to the prediction feedback panel, so you can explain your choice in up to 250 characters. Make sure you type your feedback before you make your choice!</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Panel Settings</p>
+    </div>
+    <div class="col">
+      <p>Panel Default Stats Tab</p>
+    </div>
+    <div class="col">
+      <p>Sets panel default stats tab when the Plugin turns on.</p>
+    </div>
+  </div>
+
+</div>
+
             <br>
             <hr>
             <div class="accordion">
@@ -179,7 +236,7 @@
                      What are the settings for the OSRS Bot Detector plugin?
                      </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
                      <div class="accordion-body">
                         <strong>The OSRS Bot Detector plugin</strong> is an open-source community-run machine learning plugin made for Old School
                         RuneScape using the popular third-party client RuneLite. The plugin aims to use machine learning algorithms to
@@ -209,6 +266,8 @@
                      </div>
                   </div>
                </div>
+             </div>
+             <div class="accordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
@@ -223,13 +282,16 @@
                      </div>
                   </div>
                </div>
+               </div>
+
+               <div class="accordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                      How can I contribute to the OSRS Bot Detector plugin project?
                      </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                      <div class="accordion-body">
                         There are several ways you can contribute to the OSRS Bot Detector plugin project. You can join the project's
                         Discord server to get involved in the community and provide feedback or suggestions. You can also support the
@@ -237,13 +299,15 @@
                      </div>
                   </div>
                </div>
+               </div>
+             <div class="accordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
                      How accurate is the OSRS Bot Detector plugin?
                      </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
                      <div class="accordion-body">
                         The accuracy of the OSRS Bot Detector plugin depends on several factors, including the quality and quantity of
                         data used to train its machine learning algorithms and the effectiveness of those algorithms in identifying
@@ -252,13 +316,15 @@
                      </div>
                   </div>
                </div>
+             </div>
+             <div class="accordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
                      Can the OSRS Bot Detector plugin detect all types of bots?
                      </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
                      <div class="accordion-body">
                         No, the OSRS Bot Detector plugin is not capable of detecting all types of bots. Some bots may use advanced
                         techniques to avoid detection, and it is always possible for new types of bots to emerge that the plugin is not
@@ -267,13 +333,15 @@
                      </div>
                   </div>
                </div>
+             </div>
+             <div class="accordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
                      Is the OSRS Bot Detector plugin always accurate?
                      </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
                      <div class="accordion-body">
                         Like any automated system, the OSRS Bot Detector plugin is not perfect and may occasionally produce false
                         positives or false negatives. Some players have expressed concern that certain types of accounts, such as
@@ -283,13 +351,15 @@
                      </div>
                   </div>
                </div>
+             </div>
+             <div class="accordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
                      Can botters use the OSRS Bot Detector plugin to avoid detection?
                      </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
                      <div class="accordion-body">
                         Some players have expressed concern that botters may be able to use the open-source nature of the OSRS Bot
                         Detector plugin to learn how their accounts are being scored and adjust their behavior to reduce their profiling
@@ -300,13 +370,15 @@
                      </div>
                   </div>
                </div>
+             </div>
+             <div class="accordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
                      Is the OSRS Bot Detector plugin invasive?
                      </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
                      <div class="accordion-body">
                         Some players have expressed concern that the OSRS Bot Detector plugin may be invasive because it collects and
                         sends information about nearby players to a third-party server for analysis. However, it is important to note
@@ -317,13 +389,15 @@
                      </div>
                   </div>
                </div>
+             </div>
+             <div class="accordion">
                <div class="accordion-item">
                   <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
                      Can the OSRS Bot Detector plugin hurt legitimate players?
                      </button>
                   </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                  <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
                      <div class="accordion-body">
                         Some players have expressed concern that the OSRS Bot Detector plugin could potentially hurt legitimate players
                         if it produces false positives and mistakenly flags them as bots. While this is a possibility, it is important
@@ -332,13 +406,16 @@
                         constantly working to improve its accuracy and reduce the likelihood of false positives.
                      </div>
                   </div>
+                </div>
+                </div>
+                <div class="accordion">
                   <div class="accordion-item">
                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false" aria-controls="panelsStayOpen-collapseTen">
                         Is using machine learning algorithms to detect bot-like behavior effective?
                         </button>
                      </h2>
-                     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                     <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse">
                         <div class="accordion-body">
                            Some players have questioned the effectiveness of using machine learning algorithms to detect bot-like behavior,
                            given that some legitimate players may exhibit similar behavior patterns to bots on certain days. While it is
@@ -351,6 +428,8 @@
                   </div>
                </div>
             </div>
+          </div>
+       </div>
          </article>
       </div>
    </div>
