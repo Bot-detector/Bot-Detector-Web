@@ -1,10 +1,11 @@
-from pydantic_settings import BaseSettings
 import os
+
+import dotenv
+from fastapi.templating import Jinja2Templates
+from pydantic_settings import BaseSettings
 
 from src.app.controllers.bot_detector import BotDetector
 from src.app.controllers.patreon import Patreon
-import dotenv
-from fastapi.templating import Jinja2Templates
 from src.core.fastapi.middelware import https_url_for
 
 dotenv.load_dotenv()

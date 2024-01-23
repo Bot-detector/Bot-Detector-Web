@@ -13,7 +13,8 @@
     <!-- Primary Meta Tags -->
     <meta name="title" content="OSRS Bot Detector" />
     <meta name="theme-color" content="#f06262" />
-    <meta name="description" content="We aim to detect bots in Old School RuneScape using Machine Learning Algorithms." />
+    <meta name="description"
+        content="We aim to detect bots in Old School RuneScape using Machine Learning Algorithms." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -38,7 +39,7 @@
 
     <!-- Block for additional head content (may include scripts, styles, etc.) -->
     {% block head %}
-        {% include 'head.html' %}
+    {% include 'head.html' %}
     {% endblock %}
 
     <!-- Font Awesome icon library -->
@@ -49,7 +50,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Custom font styles from Google Fonts (Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Custom stylesheets for the application -->
     <link rel="stylesheet" href="{{ url_for('static', path='boot.botdetector.css') }}">
@@ -61,12 +63,12 @@
 
     <!-- Block for including the header content -->
     {% block header %}
-        {% include 'header.html' %}
+    {% include 'header.html' %}
     {% endblock %}
 
     <!-- Block for including the navigation content -->
     {% block navigation %}
-        {% include 'navigation.html' %}
+    {% include 'navigation.html' %}
     {% endblock %}
 
     <!-- Block for the main content of the page -->
@@ -75,47 +77,49 @@
 
     <!-- Block for including the footer content -->
     {% block footer %}
-        <!-- Footer section -->
-        <footer class="bg-nav">
-            <div class="container">
+    <!-- Footer section -->
+    <footer class="bg-nav">
+        <div class="container">
 
-                <!-- Horizontal rule for separation -->
-                <hr class="mt-4 mb-7 border-light opacity-10">
+            <!-- Horizontal rule for separation -->
+            <hr class="mt-4 mb-7 border-light opacity-10">
 
-                <!-- Row for copyright and links -->
-                <div class="row align-items-center justify-content-md-between pb-7">
+            <!-- Row for copyright and links -->
+            <div class="row align-items-center justify-content-md-between pb-7">
 
-                    <!-- Copyright information -->
-                    <div class="col-md-6">
-                        <div class="copyright text-sm text-center text-md-start text-light">
-                            © 2024 <a href="#" class="h6 text-light text-sm font-bold">osrsbotdetector.com</a>, All rights reserved.
-                        </div>
-                    </div>
-
-                    <!-- Navigation links for terms, privacy, and cookies -->
-                    <div class="col-md-6">
-                        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0 mx-n3">
-                            <li class="nav-item">
-                                <a class="nav-link text-white text-opacity-75 text-white-hover" href="#">
-                                    Terms
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white text-opacity-75 text-white-hover" href="">
-                                    Privacy
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white text-opacity-75 text-white-hover nn-cmp-show" href="#" style="display: inline-block;">
-                                    Cookies
-                                </a>
-                            </li>
-                        </ul>
+                <!-- Copyright information -->
+                <div class="col-md-6">
+                    <div class="copyright text-sm text-center text-md-start text-light">
+                        © 2024 <a href="#" class="h6 text-light text-sm font-bold">osrsbotdetector.com</a>, All rights
+                        reserved.
                     </div>
                 </div>
 
+                <!-- Navigation links for terms, privacy, and cookies -->
+                <div class="col-md-6">
+                    <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0 mx-n3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-opacity-75 text-white-hover" href="#">
+                                Terms
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-opacity-75 text-white-hover" href="">
+                                Privacy
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-opacity-75 text-white-hover nn-cmp-show" href="#"
+                                style="display: inline-block;">
+                                Cookies
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </footer>
+
+        </div>
+    </footer>
     {% endblock %}
 
 </body>

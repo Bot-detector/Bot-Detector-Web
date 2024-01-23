@@ -2,9 +2,10 @@ from fastapi import FastAPI, Request
 from fastapi.middleware import Middleware
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
+
 from src import api
 from src.core.config import CONFIG
-from fastapi.staticfiles import StaticFiles
 
 
 def init_routers(_app: FastAPI) -> None:

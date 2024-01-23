@@ -32,7 +32,7 @@ class BotDetector:
         async with self.session.get(url) as response:
             data = await response.json()
             return data
-    
+
     async def get_project_stats(self):
         url = f"{self.base_url}/site/dashboard/projectstats"
         async with self.session.get(url) as response:
