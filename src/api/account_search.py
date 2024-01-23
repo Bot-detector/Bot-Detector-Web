@@ -1,8 +1,7 @@
-from fastapi import APIRouter, Request, Form
+from fastapi import APIRouter, Form, Request
 from fastapi.responses import HTMLResponse
 
-from src.core.config import CONFIG, templates, BD_API
-
+from src.core.config import BD_API, CONFIG, templates
 
 router = APIRouter()
 

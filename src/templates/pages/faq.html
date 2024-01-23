@@ -15,423 +15,511 @@
                   <p class="fs-16 mt-4 bt-plugin-desc text-center">
                      Have a question about the plugin? We've answered most of them here!
                      If your question still has not been answered - feel free to message us on
-                     <a href="https://discord.gg/RZEf2ms4gs"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a>.
+                     <a href="https://discord.gg/RZEf2ms4gs"><i class="fab fa-discord" aria-hidden="true"></i>
+                        Discord</a>.
                   </p>
                   <hr>
 
-            <br>
-            <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                     What is the OSRS Bot Detector plugin?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                     <div class="accordion-body">
-                        <strong>The OSRS Bot Detector plugin</strong> is an open-source community-run machine learning plugin made for Old School
-                        RuneScape using the popular third-party client RuneLite. The plugin aims to use machine learning algorithms to
-                        separate players from bots and send likely bot accounts to Jagex's anti-cheating team for swift removal.
+                  <br>
+                  <div class="accordion">
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                              aria-controls="panelsStayOpen-collapseOne">
+                              What is the OSRS Bot Detector plugin?
+                           </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                           <div class="accordion-body">
+                              <strong>The OSRS Bot Detector plugin</strong> is an open-source community-run machine
+                              learning plugin made for Old School
+                              RuneScape using the popular third-party client RuneLite. The plugin aims to use machine
+                              learning algorithms to
+                              separate players from bots and send likely bot accounts to Jagex's anti-cheating team for
+                              swift removal.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion">
+                     <div class="accordion-item">
+                        <h2 class="accordion-header">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="">
+                              How does the OSRS Bot Detector plugin work?
+                           </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                           <div class="accordion-body">
+                              The OSRS Bot Detector plugin works by sending nearby players' information to our machine
+                              learning algorithm,
+                              trained
+                              with data provided by Jagex Moderators. The algorithm then processes this information and
+                              assesses it for
+                              bot-like
+                              behavior. If a player is determined to be a likely bot account, their information is sent
+                              to Jagex's
+                              anti-cheating
+                              team for swift removal.
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+                  <h1 class="h3 mt-2 text-center">Getting started</h1>
+                  <p class="fs-16 mt-4 bt-plugin-desc text-center">
+                     Installing the plugin
+                  </p>
+                  <hr>
+                  <ol class="list-group list-group-numbered">
+                     <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                           <div class="fw-bold">Open Runelite</div>
+                           <small>You can download from <a href="https://runelite.net/">runelite.net</a> or <a
+                                 href="https://oldschool.runescape.com/">Oldschool RuneScape website</a></small>
+                        </div>
+                        <span class="badge setup rounded-pill">1</span>
+                     </li>
+                     <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                           <div class="fw-bold">Click on the wrench icon <img src="https://i.imgur.com/uWfiIlM.png"> in
+                              top-right of the sidebar</div>
+                           This will open an additional menu
+                        </div>
+                        <span class="badge setup rounded-pill">2</span>
+                     </li>
+                     <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                           <div class="fw-bold">Click on the 3rd button on very top <img
+                                 src="https://i.imgur.com/6cJhr0S.png"></div>
+                           This will open an RuneLite plugin hub.
+                        </div>
+                        <span class="badge setup rounded-pill">3</span>
+                     </li>
+                     <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                           <div class="fw-bold">Type in <code
+                                 style="color:#fff;border:1px solid #008aff;padding:6px;border-radius:3px;">Bot Detector</code>
+                              like <img src="https://i.imgur.com/sraEG16.png"></div>
+                           This is our official plugin name.
+                        </div>
+                        <span class="badge setup rounded-pill">4</span>
+                     </li>
+                     <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                           <div class="fw-bold">Click install button at <img src="/static/plugin.png"></div>
+                           Accept the warning message. (See the FAQ below if you have questions about this)
+                        </div>
+                        <span class="badge setup rounded-pill">5</span>
+                     </li>
+                     <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                           <div class="fw-bold">Done!</div>
+                           You have successfully installed our plugin and can conquer bots.
+                        </div>
+                        <span class="badge setup rounded-pill">6</span>
+                     </li>
+                  </ol>
+                  <hr>
+                  <h1 class="h3 mt-2 text-center">Using the plugin</h1>
+                  <p class="fs-16 mt-4 bt-plugin-desc text-center">
+                     Plugin settings
+                  </p>
+                  <hr>
+               </div>
+               <div class="container loltable">
+
+                  <!-- Header Row -->
+                  <div class="row">
+                     <div class="col">
+                        <h4>Setting type</h4>
+                     </div>
+                     <div class="col">
+                        <h4>Setting name</h4>
+                     </div>
+                     <div class="col">
+                        <h4>Description</h4>
+                     </div>
+                  </div>
+
+                  <!-- Data Rows -->
+                  <div class="row">
+                     <div class="col">
+                        <p>Upload Settings</p>
+                     </div>
+                     <div class="col">
+                        <p>Anonymous Uploading</p>
+                     </div>
+                     <div class="col">
+                        <p>When enabled, your username will not be sent with your uploads. You also cannot manually flag
+                           players.</p>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <p>Upload Settings</p>
+                     </div>
+                     <div class="col">
+                        <p>Send Names Only After Logout</p>
+                     </div>
+                     <div class="col">
+                        <p>Recommended for players with low bandwidth.</p>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <p>Upload Settings</p>
+                     </div>
+                     <div class="col">
+                        <p>Attempt Send on Close</p>
+                     </div>
+                     <div class="col">
+                        <p>Attempts to upload names when closing Runelite while being logged in. Take note that enabling
+                           this option may cause the client to take a long time to close if our servers are being
+                           unresponsive.</p>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <p>Upload Settings</p>
+                     </div>
+                     <div class="col">
+                        <p>Send Names Every x mins</p>
+                     </div>
+                     <div class="col">
+                        <p>Determines how often the information collected by the plugin is flushed to our servers. The
+                           maximum rate is once per 5 minutes.</p>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <p>Panel Settings</p>
+                     </div>
+                     <div class="col">
+                        <p>Prediction Autocomplete</p>
+                     </div>
+                     <div class="col">
+                        <p>Allows for prediction auto-completion for dialogue box entry.</p>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <p>Panel Settings</p>
+                     </div>
+                     <div class="col">
+                        <p>Show Breakdown in Special Cases</p>
+                     </div>
+                     <div class="col">
+                        <p>Displays the Prediction Breakdown when predicting certain types of accounts, such as ones
+                           with 'Stats Too Low'.</p>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <p>Panel Settings</p>
+                     </div>
+                     <div class="col">
+                        <p>Show Feedback Textbox</p>
+                     </div>
+                     <div class="col">
+                        <p>Adds a textbox to the prediction feedback panel, so you can explain your choice in up to 250
+                           characters. Make sure you type your feedback before you make your choice!</p>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="col">
+                        <p>Panel Settings</p>
+                     </div>
+                     <div class="col">
+                        <p>Panel Default Stats Tab</p>
+                     </div>
+                     <div class="col">
+                        <p>Sets panel default stats tab when the Plugin turns on.</p>
+                     </div>
+                  </div>
+
+               </div>
+
+               <br>
+               <hr>
+               <div class="accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                           aria-controls="panelsStayOpen-collapseOne">
+                           What are the settings for the OSRS Bot Detector plugin?
+                        </button>
+                     </h2>
+                     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                           <strong>The OSRS Bot Detector plugin</strong> is an open-source community-run machine
+                           learning plugin made for Old School
+                           RuneScape using the popular third-party client RuneLite. The plugin aims to use machine
+                           learning algorithms to
+                           separate players from bots and send likely bot accounts to Jagex's anti-cheating team for
+                           swift removal.
+                           <p>The OSRS Bot Detector plugin has several settings that can be configured by the user.
+                              These include:</p>
+                           <ul>
+                              <li><strong>Anonymous Uploading:</strong> When enabled, your username will not be sent
+                                 with your uploads. You
+                                 also cannot manually flag players.
+                              </li>
+                              <li><strong>Send Names Only After Logout:</strong> Recommended for players with low
+                                 bandwidth.</li>
+                              <li><strong>Attempt Send on Close:</strong> Attempts to upload names when closing Runelite
+                                 while being logged
+                                 in. Take note that enabling this option may cause the client to take a long time to
+                                 close if our servers are
+                                 being unresponsive.
+                              </li>
+                              <li><strong>Send Names Every x mins:</strong> Determines how often the information
+                                 collected by the plugin is
+                                 flushed to our servers. The maximum rate is once per 5 minutes.
+                              </li>
+                              <li><strong>Prediction Autocomplete:</strong> Allows for prediction auto-completion for
+                                 dialogue box entry.</li>
+                              <li><strong>Show Breakdown in Special Cases:</strong> Displays the Prediction Breakdown
+                                 when predicting certain
+                                 types of accounts, such as ones with 'Stats Too Low'.
+                              </li>
+                              <li><strong>Show Feedback Textbox:</strong> Adds a textbox to the prediction feedback
+                                 panel, so you can explain
+                                 your choice in up to 250 characters. Make sure you type your feedback before you make
+                                 your choice!
+                              </li>
+                              <li><strong>Panel Default Stats Tab:</strong> Sets panel default stats tab when the Plugin
+                                 turns on.</li>
+                           </ul>
+                        </div>
                      </div>
                   </div>
                </div>
-              </div>
-              <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="">
-                     How does the OSRS Bot Detector plugin work?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        The OSRS Bot Detector plugin works by sending nearby players' information to our machine learning algorithm,
-                        trained
-                        with data provided by Jagex Moderators. The algorithm then processes this information and assesses it for
-                        bot-like
-                        behavior. If a player is determined to be a likely bot account, their information is sent to Jagex's
-                        anti-cheating
-                        team for swift removal.
+               <div class="accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                           aria-controls="panelsStayOpen-collapseTwo">
+                           Is the OSRS Bot Detector plugin safe to use?
+                        </button>
+                     </h2>
+                     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                           Yes, the OSRS Bot Detector plugin is safe to use. It is an open-source community-run project
+                           and its code is
+                           publicly available for review on GitHub. However, as with any third-party software, it is
+                           always a good idea to
+                           exercise caution and use it at your own risk.
+                        </div>
                      </div>
                   </div>
-               </div>
-            </div>
-            <br>
-            <h1 class="h3 mt-2 text-center">Getting started</h1>
-            <p class="fs-16 mt-4 bt-plugin-desc text-center">
-               Installing the plugin
-            </p>
-            <hr>
-            <ol class="list-group list-group-numbered">
-               <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                     <div class="fw-bold">Open Runelite</div>
-                     <small>You can download from <a href="https://runelite.net/">runelite.net</a> or <a href="https://oldschool.runescape.com/">Oldschool RuneScape website</a></small>
-                  </div>
-                  <span class="badge setup rounded-pill">1</span>
-               </li>
-               <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                     <div class="fw-bold">Click on the wrench icon <img src="https://i.imgur.com/uWfiIlM.png"> in top-right of the sidebar</div>
-                     This will open an additional menu
-                  </div>
-                  <span class="badge setup rounded-pill">2</span>
-               </li>
-               <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                     <div class="fw-bold">Click on the 3rd button on very top <img src="https://i.imgur.com/6cJhr0S.png"></div>
-                     This will open an RuneLite plugin hub.
-                  </div>
-                  <span class="badge setup rounded-pill">3</span>
-               </li>
-               <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                     <div class="fw-bold">Type in <code style="color:#fff;border:1px solid #008aff;padding:6px;border-radius:3px;">Bot Detector</code> like <img src="https://i.imgur.com/sraEG16.png"></div>
-                     This is our official plugin name.
-                  </div>
-                  <span class="badge setup rounded-pill">4</span>
-               </li>
-               <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                     <div class="fw-bold">Click install button at  <img src="/static/plugin.png"></div>
-                     Accept the warning message. (See the FAQ below if you have questions about this)
-                  </div>
-                  <span class="badge setup rounded-pill">5</span>
-               </li>
-               <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                     <div class="fw-bold">Done!</div>
-                     You have successfully installed our plugin and can conquer bots.
-                  </div>
-                  <span class="badge setup rounded-pill">6</span>
-               </li>
-            </ol>
-            <hr>
-            <h1 class="h3 mt-2 text-center">Using the plugin</h1>
-            <p class="fs-16 mt-4 bt-plugin-desc text-center">
-               Plugin settings
-            </p>
-            <hr>
-            </div>
-            <div class="container loltable">
-
-  <!-- Header Row -->
-  <div class="row">
-    <div class="col">
-      <h4>Setting type</h4>
-    </div>
-    <div class="col">
-      <h4>Setting name</h4>
-    </div>
-    <div class="col">
-      <h4>Description</h4>
-    </div>
-  </div>
-
-  <!-- Data Rows -->
-  <div class="row">
-    <div class="col">
-      <p>Upload Settings</p>
-    </div>
-    <div class="col">
-      <p>Anonymous Uploading</p>
-    </div>
-    <div class="col">
-      <p>When enabled, your username will not be sent with your uploads. You also cannot manually flag players.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <p>Upload Settings</p>
-    </div>
-    <div class="col">
-      <p>Send Names Only After Logout</p>
-    </div>
-    <div class="col">
-      <p>Recommended for players with low bandwidth.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <p>Upload Settings</p>
-    </div>
-    <div class="col">
-      <p>Attempt Send on Close</p>
-    </div>
-    <div class="col">
-      <p>Attempts to upload names when closing Runelite while being logged in. Take note that enabling this option may cause the client to take a long time to close if our servers are being unresponsive.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <p>Upload Settings</p>
-    </div>
-    <div class="col">
-      <p>Send Names Every x mins</p>
-    </div>
-    <div class="col">
-      <p>Determines how often the information collected by the plugin is flushed to our servers. The maximum rate is once per 5 minutes.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <p>Panel Settings</p>
-    </div>
-    <div class="col">
-      <p>Prediction Autocomplete</p>
-    </div>
-    <div class="col">
-      <p>Allows for prediction auto-completion for dialogue box entry.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <p>Panel Settings</p>
-    </div>
-    <div class="col">
-      <p>Show Breakdown in Special Cases</p>
-    </div>
-    <div class="col">
-      <p>Displays the Prediction Breakdown when predicting certain types of accounts, such as ones with 'Stats Too Low'.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <p>Panel Settings</p>
-    </div>
-    <div class="col">
-      <p>Show Feedback Textbox</p>
-    </div>
-    <div class="col">
-      <p>Adds a textbox to the prediction feedback panel, so you can explain your choice in up to 250 characters. Make sure you type your feedback before you make your choice!</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <p>Panel Settings</p>
-    </div>
-    <div class="col">
-      <p>Panel Default Stats Tab</p>
-    </div>
-    <div class="col">
-      <p>Sets panel default stats tab when the Plugin turns on.</p>
-    </div>
-  </div>
-
-</div>
-
-            <br>
-            <hr>
-            <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                     What are the settings for the OSRS Bot Detector plugin?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        <strong>The OSRS Bot Detector plugin</strong> is an open-source community-run machine learning plugin made for Old School
-                        RuneScape using the popular third-party client RuneLite. The plugin aims to use machine learning algorithms to
-                        separate players from bots and send likely bot accounts to Jagex's anti-cheating team for swift removal.
-                        <p>The OSRS Bot Detector plugin has several settings that can be configured by the user. These include:</p>
-                        <ul>
-                           <li><strong>Anonymous Uploading:</strong> When enabled, your username will not be sent with your uploads. You
-                              also cannot manually flag players.
-                           </li>
-                           <li><strong>Send Names Only After Logout:</strong> Recommended for players with low bandwidth.</li>
-                           <li><strong>Attempt Send on Close:</strong> Attempts to upload names when closing Runelite while being logged
-                              in. Take note that enabling this option may cause the client to take a long time to close if our servers are
-                              being unresponsive.
-                           </li>
-                           <li><strong>Send Names Every x mins:</strong> Determines how often the information collected by the plugin is
-                              flushed to our servers. The maximum rate is once per 5 minutes.
-                           </li>
-                           <li><strong>Prediction Autocomplete:</strong> Allows for prediction auto-completion for dialogue box entry.</li>
-                           <li><strong>Show Breakdown in Special Cases:</strong> Displays the Prediction Breakdown when predicting certain
-                              types of accounts, such as ones with 'Stats Too Low'.
-                           </li>
-                           <li><strong>Show Feedback Textbox:</strong> Adds a textbox to the prediction feedback panel, so you can explain
-                              your choice in up to 250 characters. Make sure you type your feedback before you make your choice!
-                           </li>
-                           <li><strong>Panel Default Stats Tab:</strong> Sets panel default stats tab when the Plugin turns on.</li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-             </div>
-             <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                     Is the OSRS Bot Detector plugin safe to use?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        Yes, the OSRS Bot Detector plugin is safe to use. It is an open-source community-run project and its code is
-                        publicly available for review on GitHub. However, as with any third-party software, it is always a good idea to
-                        exercise caution and use it at your own risk.
-                     </div>
-                  </div>
-               </div>
                </div>
 
                <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                     How can I contribute to the OSRS Bot Detector plugin project?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        There are several ways you can contribute to the OSRS Bot Detector plugin project. You can join the project's
-                        Discord server to get involved in the community and provide feedback or suggestions. You can also support the
-                        project on Patreon or contribute code to the project's GitHub repository.
-                     </div>
-                  </div>
-               </div>
-               </div>
-             <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                     How accurate is the OSRS Bot Detector plugin?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        The accuracy of the OSRS Bot Detector plugin depends on several factors, including the quality and quantity of
-                        data used to train its machine learning algorithms and the effectiveness of those algorithms in identifying
-                        bot-like behavior. The plugin's developers are constantly working to improve its accuracy by collecting more
-                        data and refining its algorithms.
-                     </div>
-                  </div>
-               </div>
-             </div>
-             <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-                     Can the OSRS Bot Detector plugin detect all types of bots?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        No, the OSRS Bot Detector plugin is not capable of detecting all types of bots. Some bots may use advanced
-                        techniques to avoid detection, and it is always possible for new types of bots to emerge that the plugin is not
-                        yet capable of detecting. However, the plugin's developers are constantly working to improve its ability to
-                        detect a wide range of bot-like behavior.
-                     </div>
-                  </div>
-               </div>
-             </div>
-             <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
-                     Is the OSRS Bot Detector plugin always accurate?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        Like any automated system, the OSRS Bot Detector plugin is not perfect and may occasionally produce false
-                        positives or false negatives. Some players have expressed concern that certain types of accounts, such as
-                        high-level 1 defense pures, may be more likely to be flagged as bots by the plugin due to their training
-                        patterns[^1^][1]. The plugin's developers are aware of these concerns and are constantly working to improve the
-                        accuracy of the plugin's algorithms.
-                     </div>
-                  </div>
-               </div>
-             </div>
-             <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
-                     Can botters use the OSRS Bot Detector plugin to avoid detection?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        Some players have expressed concern that botters may be able to use the open-source nature of the OSRS Bot
-                        Detector plugin to learn how their accounts are being scored and adjust their behavior to reduce their profiling
-                        score[^1^][1]. While this is a possibility, it is important to note that the plugin's developers are constantly
-                        updating its algorithms and collecting new data to stay ahead of botting techniques. Additionally, Jagex's
-                        anti-cheating team uses a variety of methods to detect and ban bots, so avoiding detection by the OSRS Bot
-                        Detector plugin alone is not enough to guarantee that a bot account will not be banned
-                     </div>
-                  </div>
-               </div>
-             </div>
-             <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
-                     Is the OSRS Bot Detector plugin invasive?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        Some players have expressed concern that the OSRS Bot Detector plugin may be invasive because it collects and
-                        sends information about nearby players to a third-party server for analysis. However, it is important to note
-                        that the plugin only collects publicly available information, such as player names and stats from the hiscores.
-                        Additionally, the plugin has settings that allow users to control what information is sent and when it is sent.
-                        The plugin's developers are committed to protecting user privacy and ensuring that the plugin operates in a
-                        transparent and responsible manner.
-                     </div>
-                  </div>
-               </div>
-             </div>
-             <div class="accordion">
-               <div class="accordion-item">
-                  <h2 class="accordion-header">
-                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
-                     Can the OSRS Bot Detector plugin hurt legitimate players?
-                     </button>
-                  </h2>
-                  <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
-                     <div class="accordion-body">
-                        Some players have expressed concern that the OSRS Bot Detector plugin could potentially hurt legitimate players
-                        if it produces false positives and mistakenly flags them as bots. While this is a possibility, it is important
-                        to note that Jagex's anti-cheating team uses a variety of methods to detect and ban bots, and a single flag from
-                        the OSRS Bot Detector plugin alone is not enough to result in a ban. Additionally, the plugin's developers are
-                        constantly working to improve its accuracy and reduce the likelihood of false positives.
-                     </div>
-                  </div>
-                </div>
-                </div>
-                <div class="accordion">
                   <div class="accordion-item">
                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false" aria-controls="panelsStayOpen-collapseTen">
-                        Is using machine learning algorithms to detect bot-like behavior effective?
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                           aria-controls="panelsStayOpen-collapseThree">
+                           How can I contribute to the OSRS Bot Detector plugin project?
+                        </button>
+                     </h2>
+                     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                           There are several ways you can contribute to the OSRS Bot Detector plugin project. You can
+                           join the project's
+                           Discord server to get involved in the community and provide feedback or suggestions. You can
+                           also support the
+                           project on Patreon or contribute code to the project's GitHub repository.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                           aria-controls="panelsStayOpen-collapseFour">
+                           How accurate is the OSRS Bot Detector plugin?
+                        </button>
+                     </h2>
+                     <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                           The accuracy of the OSRS Bot Detector plugin depends on several factors, including the
+                           quality and quantity of
+                           data used to train its machine learning algorithms and the effectiveness of those algorithms
+                           in identifying
+                           bot-like behavior. The plugin's developers are constantly working to improve its accuracy by
+                           collecting more
+                           data and refining its algorithms.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                           aria-controls="panelsStayOpen-collapseFive">
+                           Can the OSRS Bot Detector plugin detect all types of bots?
+                        </button>
+                     </h2>
+                     <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                           No, the OSRS Bot Detector plugin is not capable of detecting all types of bots. Some bots may
+                           use advanced
+                           techniques to avoid detection, and it is always possible for new types of bots to emerge that
+                           the plugin is not
+                           yet capable of detecting. However, the plugin's developers are constantly working to improve
+                           its ability to
+                           detect a wide range of bot-like behavior.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                           aria-controls="panelsStayOpen-collapseSix">
+                           Is the OSRS Bot Detector plugin always accurate?
+                        </button>
+                     </h2>
+                     <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                           Like any automated system, the OSRS Bot Detector plugin is not perfect and may occasionally
+                           produce false
+                           positives or false negatives. Some players have expressed concern that certain types of
+                           accounts, such as
+                           high-level 1 defense pures, may be more likely to be flagged as bots by the plugin due to
+                           their training
+                           patterns[^1^][1]. The plugin's developers are aware of these concerns and are constantly
+                           working to improve the
+                           accuracy of the plugin's algorithms.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+                           aria-controls="panelsStayOpen-collapseSeven">
+                           Can botters use the OSRS Bot Detector plugin to avoid detection?
+                        </button>
+                     </h2>
+                     <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                           Some players have expressed concern that botters may be able to use the open-source nature of
+                           the OSRS Bot
+                           Detector plugin to learn how their accounts are being scored and adjust their behavior to
+                           reduce their profiling
+                           score[^1^][1]. While this is a possibility, it is important to note that the plugin's
+                           developers are constantly
+                           updating its algorithms and collecting new data to stay ahead of botting techniques.
+                           Additionally, Jagex's
+                           anti-cheating team uses a variety of methods to detect and ban bots, so avoiding detection by
+                           the OSRS Bot
+                           Detector plugin alone is not enough to guarantee that a bot account will not be banned
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false"
+                           aria-controls="panelsStayOpen-collapseEight">
+                           Is the OSRS Bot Detector plugin invasive?
+                        </button>
+                     </h2>
+                     <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                           Some players have expressed concern that the OSRS Bot Detector plugin may be invasive because
+                           it collects and
+                           sends information about nearby players to a third-party server for analysis. However, it is
+                           important to note
+                           that the plugin only collects publicly available information, such as player names and stats
+                           from the hiscores.
+                           Additionally, the plugin has settings that allow users to control what information is sent
+                           and when it is sent.
+                           The plugin's developers are committed to protecting user privacy and ensuring that the plugin
+                           operates in a
+                           transparent and responsible manner.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false"
+                           aria-controls="panelsStayOpen-collapseNine">
+                           Can the OSRS Bot Detector plugin hurt legitimate players?
+                        </button>
+                     </h2>
+                     <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                           Some players have expressed concern that the OSRS Bot Detector plugin could potentially hurt
+                           legitimate players
+                           if it produces false positives and mistakenly flags them as bots. While this is a
+                           possibility, it is important
+                           to note that Jagex's anti-cheating team uses a variety of methods to detect and ban bots, and
+                           a single flag from
+                           the OSRS Bot Detector plugin alone is not enough to result in a ban. Additionally, the
+                           plugin's developers are
+                           constantly working to improve its accuracy and reduce the likelihood of false positives.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="false"
+                           aria-controls="panelsStayOpen-collapseTen">
+                           Is using machine learning algorithms to detect bot-like behavior effective?
                         </button>
                      </h2>
                      <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                           Some players have questioned the effectiveness of using machine learning algorithms to detect bot-like behavior,
-                           given that some legitimate players may exhibit similar behavior patterns to bots on certain days. While it is
-                           true that no automated system is perfect and there is always a possibility of false positives or false
-                           negatives, machine learning algorithms have proven to be effective at detecting patterns and making predictions
-                           in many different fields. The OSRS Bot Detector plugin's developers are constantly collecting new data and
+                           Some players have questioned the effectiveness of using machine learning algorithms to detect
+                           bot-like behavior,
+                           given that some legitimate players may exhibit similar behavior patterns to bots on certain
+                           days. While it is
+                           true that no automated system is perfect and there is always a possibility of false positives
+                           or false
+                           negatives, machine learning algorithms have proven to be effective at detecting patterns and
+                           making predictions
+                           in many different fields. The OSRS Bot Detector plugin's developers are constantly collecting
+                           new data and
                            refining their algorithms to improve their accuracy in detecting bot-like behavior.
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-          </div>
-       </div>
-         </article>
       </div>
    </div>
+   </article>
+</div>
+</div>
 </div>
 {% endblock %}
