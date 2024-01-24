@@ -38,7 +38,7 @@ jobs:
 
       - name: Docker Build
         run: |
-          docker build . --file Dockerfile --network=host -t "${REGISTRY}:${{ steps.vars.outputs.GIT_HASH }}" --target production --build-arg api_port=5000 --build-arg root_path=""
+          docker build . --file Dockerfile --network=host -t "${REGISTRY}:${{ steps.vars.outputs.GIT_HASH }}" --target production --build-arg api_port=8000 --build-arg root_path=""
 
       - name: Login to Quay registry
         run: echo "${{ secrets.QUAY_REGISTERY_PASSWORD }}" | docker login -u "bot_detector+quay_robot" quay.io --password-stdin
