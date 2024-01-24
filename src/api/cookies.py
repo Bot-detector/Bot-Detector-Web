@@ -7,5 +7,5 @@ router = APIRouter()
 
 
 @router.get("/")
-async def contact(request: Request) -> HTMLResponse:
-    return templates.TemplateResponse("pages/contact.html", {"request": request})
+async def cookies(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse("pages/cookies.html", {"request": request})
