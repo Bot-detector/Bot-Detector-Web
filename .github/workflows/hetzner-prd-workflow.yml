@@ -59,7 +59,7 @@ jobs:
           valueFile: "${{ steps.vars.outputs.VALUE_FILE }}"
           token: ${{ secrets.HETZNER_ACTIONS_RUNNER_TOKEN }}
           commitChange: true
-          branch: "${{ steps.vars.outputs.GIT_HASH }}"
+          branch: "${{ steps.vars.outputs.GIT_HASH }}-${{ steps.vars.outputs.VALUE_FILE }}" 
           targetBranch: develop
           masterBranchName: develop
           createPR: true
