@@ -98,28 +98,21 @@ table{
 }
 
 .runelite {
-  border-bottom: 2px solid #8fb55e;
+  border-left: 2px solid #8fb55e;
   text-align: center;
-  box-shadow: inset 0px -44px 55px 0px rgba(143,181,94,0.5);
-
   border-radius:0;
 }
 
 .botstats {
-  border-bottom: 2px solid #008aff;
+  border-left: 2px solid #008aff;
   text-align: center;
-  box-shadow: inset 0px -44px 55px 0px rgba(0,138,255,0.5);
-
   border-radius:0;
 }
 
 .notify {
-border-bottom: 2px solid #8a9ef6;
+border-left: 2px solid #8a9ef6;
 text-align: center;
-box-shadow: inset 0px -44px 55px 0px rgba(138,158,246,0.5);
 border-radius:0;
-
-
 }
 
 .dcboost {
