@@ -5,6 +5,6 @@ from src.core.config import CONFIG, templates
 router = APIRouter()
 
 
-@router.get("/")
+@router.get("/about")
 async def faq(request: Request):
     return templates.TemplateResponse("pages/faq.html", {"request": request})

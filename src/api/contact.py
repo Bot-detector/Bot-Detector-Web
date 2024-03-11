@@ -6,6 +6,6 @@ from src.core.config import CONFIG, templates
 router = APIRouter()
 
 
-@router.get("/")
+@router.get("/contact")
 async def contact(request: Request) -> HTMLResponse:
     return templates.TemplateResponse("pages/contact.html", {"request": request})
