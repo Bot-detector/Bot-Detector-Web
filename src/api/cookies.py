@@ -6,6 +6,6 @@ from src.core.config import CONFIG, templates
 router = APIRouter()
 
 
-@router.get("/")
+@router.get("/cookies")
 async def cookies(request: Request) -> HTMLResponse:
     return templates.TemplateResponse("pages/cookies.html", {"request": request})

@@ -12,7 +12,7 @@ class Stats(BaseModel):
     total_accounts: int
 
 
-@router.get("/")
+@router.get("/home")
 async def home(request: Request):
     stats = await BD_API.get_project_stats()
     stats = Stats(**stats)
