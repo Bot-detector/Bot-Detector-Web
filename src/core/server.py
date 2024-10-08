@@ -39,7 +39,10 @@ def create_app() -> FastAPI:
 
 app = create_app()
 
-
+@app.head("/")
+def root(request: Request):
+    return {"hello":"world"}
+    
 @app.get("/")
 def root(request: Request):
     return RedirectResponse(request.url_for("home"))
