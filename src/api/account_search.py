@@ -12,8 +12,11 @@ async def get_account_search(request: Request) -> HTMLResponse:
 
 
 @router.post("/account-search")
-async def post_account_search(request: Request, username: str = Form(...)) -> HTMLResponse:
-    # You can access the submitted username using the "username" variable
-    prediction = await BD_API.get_prediction(name=username)
-    response = {"request": request, "prediction": prediction}
+async def post_account_search(
+    request: Request, username: str = Form(...)
+) -> HTMLResponse:
+    results = await BD_API.get_prediction(name=username)  # returns a list
+    if not isinstance(results, list):
+        results = []
+    response = {"request": request, "predictions": results}
     return templates.TemplateResponse("pages/account_search.html", response)

@@ -41,28 +41,93 @@
                             </form>
                             <hr>
 
-                            <!-- Display prediction results if available -->
-                            {% if prediction %}
-                            <h2>Prediction</h2>
-                            <ul>
-                                {% for key, value in prediction.items() %}
-                                {% if key == "predictions_breakdown" %}
-                                <li>{{ key }}:
-                                    <ul>
-                                        {% for sub_key, sub_value in value.items() %}
-                                        {% if sub_value != 0 %}
-                                        <li>{{ sub_key }}: {{ sub_value * 100 }}%</li>
+                            <!-- Display prediction results if available (inline-styled, color-harmonized) -->
+                            {% if predictions %}
+                            {% for prediction in predictions %}
+                                {# compute hues: map score 0.0->220 (cool blue) to 1.0->140 (soft green) #}
+                                {% set conf_hue = (220 - (prediction.prediction_confidence * 80))|int %}
+                                <div
+                                class="card mb-4"
+                                style="background:#16171a;border-radius:0.75rem;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 18px rgba(4,6,10,0.65);overflow:hidden;"
+                                >
+                                <!-- Header -->
+                                <div
+                                    class="d-flex align-items-center justify-content-between"
+                                    style="padding:0.9rem 1rem;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));"
+                                >
+                                    <div style="display:flex;align-items:center;gap:.75rem;">
+                                    <div style="width:10px;height:38px;border-radius:6px;background: hsl({{ conf_hue }},48%,50%); box-shadow:0 2px 6px rgba(0,0,0,0.45)"></div>
+                                    <div>
+                                        <div style="font-weight:700;color:#e6e9ee;font-size:1.05rem;">{{ prediction.player_name }}</div>
+                                        <div style="font-size:0.78rem;color:#9aa0ab;margin-top:2px;">Result snapshot • {{ prediction.created if prediction.created is defined else '' }}</div>
+                                    </div>
+                                    </div>
+
+                                    <div style="display:flex;align-items:center;gap:.5rem;">
+                                    {# confidence pill uses the same hue but softer #}
+                                    <div style="font-weight:600;font-size:0.9rem;color:#0f1417;padding:6px 10px;border-radius:999px;
+                                                background: linear-gradient(180deg, hsl({{ conf_hue }},55%,72%), hsl({{ conf_hue }},55%,66%));
+                                                border:1px solid rgba(255,255,255,0.06);">
+                                        {{ (prediction.prediction_confidence * 100)|round(1) }}%
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <!-- Body -->
+                                <div style="padding:1rem 1rem 1.25rem;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));">
+                                    <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:0.75rem;">
+                                    <div style="color:#cdd3da;font-weight:700;font-size:0.95rem;">Prediction Breakdown</div>
+                                    <div style="color:#9aa0ab;font-size:0.85rem;">Model confidence: <strong style="color:#e6eef7">{{ (prediction.prediction_confidence * 100)|round(1) }}%</strong></div>
+                                    </div>
+
+                                    <div class="d-flex flex-wrap" style="gap:0.5rem;">
+                                    {# badges: hue derived per-score (220->140), softer saturation/lightness for subtle look #}
+                                    {% for bot_type, score in prediction.predictions_breakdown.items() %}
+                                        {% if score != 0 %}
+                                        {% set hue = (220 - (score * 80))|int %}
+                                        <div
+                                            style="display:inline-flex;align-items:center;gap:.6rem;padding:.45rem .65rem;border-radius:0.45rem;
+                                                background: linear-gradient(180deg, hsla({{ hue }},35%,22%,0.95), hsla({{ hue }},32%,18%,0.95));
+                                                border:1px solid rgba(255,255,255,0.03); min-width:fit-content;"
+                                        >
+                                            <div style="width:8px;height:8px;border-radius:50%;
+                                                        background: linear-gradient(180deg, hsl({{ hue }},60%,60%), hsl({{ hue }},60%,50%));
+                                                        box-shadow:0 1px 4px rgba(0,0,0,0.5);"></div>
+
+                                            <div style="display:flex;flex-direction:column;">
+                                            <span style="font-size:0.78rem;color:#e6eef7;font-weight:600;">{{ bot_type.replace('_', ' ') }}</span>
+                                            <span style="font-size:0.72rem;color:#9aa0ab;">{{ (score * 100)|round(2) }}%</span>
+                                            </div>
+                                        </div>
                                         {% endif %}
-                                        {% endfor %}
-                                    </ul>
-                                </li>
-                                {% elif key == "prediction_confidence" %}
-                                <li>{{ key }}: {{ value * 100 }}%</li>
-                                {% else %}
-                                <li>{{ key }}: {{ value }}</li>
-                                {% endif %}
-                                {% endfor %}
-                            </ul>
+                                    {% endfor %}
+                                    </div>
+
+                                    {# Optional: breakdown as small progress bars for more visual weight #}
+                                    <div style="margin-top:0.9rem;">
+                                    {% for bot_type, score in prediction.predictions_breakdown.items() %}
+                                        {% if score != 0 %}
+                                        {% set hue = (220 - (score * 80))|int %}
+                                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.45rem;">
+                                            <div style="color:#c9ced5;font-size:0.82rem;">{{ bot_type.replace('_', ' ') }}</div>
+                                            <div style="width:55%;max-width:380px;margin-left:1rem;">
+                                            <div style="background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
+                                                        border-radius:6px;height:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.02);">
+                                                <div style="height:10px;width:{{ (score * 100)|round(2) }}%;
+                                                            background: linear-gradient(90deg, hsl({{ hue }},60%,60%), hsl({{ hue }},60%,50%));
+                                                            box-shadow: inset 0 -1px 0 rgba(0,0,0,0.25);"></div>
+                                            </div>
+                                            </div>
+                                            <div style="width:62px;text-align:right;color:#9aa0ab;font-size:0.78rem;margin-left:0.75rem;">
+                                            {{ (score * 100)|round(2) }}%
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </div>
+                                </div>
+                                </div>
+                            {% endfor %}
                             {% endif %}
                         </div>
                     </div>
