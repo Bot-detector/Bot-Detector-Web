@@ -13,17 +13,12 @@ dotenv.load_dotenv()
 
 class Config(BaseSettings):
     BD_TOKEN: str
-    ENV: str
+    ENV: str = "PRD"
     RELEASE_VERSION: str = "0.1"
     PATREON_CLIENT_ID: str = ""
     PATREON_CLIENT_SECRET: str = ""
 
-
-CONFIG: Config = Config(
-    BD_TOKEN=os.environ.get("TOKEN"),
-    ENV=os.environ.get("ENV", "PRD"),
-    RELEASE_VERSION="0.1",
-)
+CONFIG: Config = Config()
 
 BD_API = BotDetector(token=CONFIG.BD_TOKEN)
 
