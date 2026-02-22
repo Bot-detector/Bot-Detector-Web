@@ -13,7 +13,9 @@ async def get_account_search(request: Request) -> HTMLResponse:
 
 @router.post("/account-search")
 async def post_account_search(request: Request, username: str = Form(...)) -> HTMLResponse:
-    results = await BD_API.get_prediction(name=username)  # returns a list
-    print(results)
+    results:dict = await BD_API.get_prediction(name=username)  # returns a list
+    print(username, results)
+    if not isinstance(results,list):
+        results = []
     response = {"request": request, "predictions": results}
     return templates.TemplateResponse("pages/account_search.html", response)
