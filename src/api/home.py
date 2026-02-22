@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Request
 from pydantic import BaseModel
 
-from src.core.config import BD_API, CONFIG, templates
+from src.core.config import BD_API, templates
 
 router = APIRouter()
 
