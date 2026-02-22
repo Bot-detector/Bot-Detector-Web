@@ -41,29 +41,31 @@
                             </form>
                             <hr>
 
-                            <!-- Display prediction results if available -->
-                            {% if prediction %}
-                            <h2>Prediction</h2>
-                            <ul>
-                                {% for key, value in prediction.items() %}
-                                {% if key == "predictions_breakdown" %}
-                                <li>{{ key }}:
-                                    <ul>
-                                        {% for sub_key, sub_value in value.items() %}
-                                        {% if sub_value != 0 %}
-                                        <li>{{ sub_key }}: {{ sub_value * 100 }}%</li>
-                                        {% endif %}
+                        <!-- Display prediction results if available -->
+                        {% if predictions %}
+                            {% for prediction in predictions %}
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-header bg-primary text-white">
+                                    <h4 class="mb-0">{{ prediction.player_name }}</h4>
+                                    <small>Prediction confidence: {{ (prediction.prediction_confidence * 100)|round(1) }}%</small>
+                                </div>
+                                <div class="card-body" style="background-color: #202225;">
+                                    <h5 class="card-title">Prediction Breakdown</h5>
+                                    <div class="row">
+                                        {% for bot_type, score in prediction.predictions_breakdown.items() %}
+                                            {% if score != 0 %}
+                                            <div class="col-md-4 mb-2">
+                                                <span class="badge bg-info text-dark w-100 text-center">
+                                                    {{ bot_type.replace('_', ' ') }}: {{ (score * 100)|round(1) }}%
+                                                </span>
+                                            </div>
+                                            {% endif %}
                                         {% endfor %}
-                                    </ul>
-                                </li>
-                                {% elif key == "prediction_confidence" %}
-                                <li>{{ key }}: {{ value * 100 }}%</li>
-                                {% else %}
-                                <li>{{ key }}: {{ value }}</li>
-                                {% endif %}
-                                {% endfor %}
-                            </ul>
-                            {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
                         </div>
                     </div>
                 </article>
